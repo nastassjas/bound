@@ -7,7 +7,7 @@ class CreateMissions < ActiveRecord::Migration[5.2]
       t.datetime :end_time
       t.integer :volunteers_count
       t.string :address
-      t.references :association, foreign_key: true
+      t.references :charity, foreign_key: true
       t.string :category
       t.references :skill, foreign_key: true
 
