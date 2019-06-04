@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'missions#home'
   devise_for :users
-  resources :associations, only: :show do
+  resources :charities, only:[:index, :show]do
     resources :missions, only: :create
   end
   resources :missions, only:[:index, :show] do

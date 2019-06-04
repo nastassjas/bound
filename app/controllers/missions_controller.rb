@@ -1,4 +1,8 @@
 class MissionsController < ApplicationController
+  def index
+    @missions = Mission.all
+  end
+
   # skip_before_action :authenticate_user!, only: [:index, :show, :all]
   # def index
   #   @missions = MissionPolicy::Scope.new(current_user, Mission).index
