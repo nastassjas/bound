@@ -5,10 +5,41 @@
     <div class="container-home">
 
 
+add cards here
+
       <button class="btn btn-primary" type="submit">Button</button>
-      <button type="button" class="btn btn-primary btn-lg">Large button</button>
-      <button type="button" class="btn btn-primary btn-sm">Small button</button>
-      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+<div class="bg-white">
+
+
+<!-- All Mission -->
+
+
+<div class="container container-header">
+  </div>
+    <div class="container bg-white">
+      <div class="container-ind">
+        <% @artworks.each do |artwork| %>
+        <%= link_to artwork_path(artwork) do%>
+        <div class="card-result">
+        <div class="inner-div" style="background: url(<%= cl_image_path artwork.photo %>) center">
+        </div>
+      </div>
+
+    <div class="infos-card-ind">
+      <h3 class="artwork-artist"><strong><%= artwork.user.username %></strong></h3>
+      <h5><%= artwork.price %>€</h5>
+    </div>
+      <h4 class="artwork-title"><em><%= artwork.title %></em>, <%= artwork.art_date %></h4>
+    <%end%>
+  <%end%>
+</div>
+</div>
+</div>
+
+
+
+
+
     </div>
   </div>
 </div>
