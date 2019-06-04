@@ -1,14 +1,14 @@
 class MissionsController < ApplicationController
+  def home
+    @missions = Mission.all
+  end
+
   def index
     @missions = Mission.all
   end
 
   def show
     @mission = Mission.find(params[:id])
-  end
-
-  def home
-    @missions = Mission.all
   end
 
   private
