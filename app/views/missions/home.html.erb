@@ -1,22 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://2.bp.blogspot.com/-tXKI8DU4_QE/V_Kzh1Bx5jI/AAAAAAAAAoA/vCycQdtr4QASYbnqCoDw0zHi7T0tCh5tQCEw/s1600/w%25C5%2582a%25C5%259Bciwe.jpg);">
 
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);">
   <div class="form-home">
     <div class="container-home">
-          <h1>DON'T WATCH, ACT!</h1>
-        <br>
-         <!--  <a href="#" class="cta-home">
-            <span>Load more</span>
-              <svg width="13px" height="10px" viewBox="0 0 13 10">
-                <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-          </a> -->
+      <%= form_tag(all_artworks_path, method: "get") do %>
+           <h1>Don't watch, act !</h1>
+        <%#= label_tag(:address, "Where") %>
+        <div class ="search-bar-index">
+        <%= text_field_tag(:address) %>
+        <%#= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
+        <%= submit_tag "Search", class: "card-btn-search" %>
+        </div>
+      
+      <button class="btn btn-primary" type="submit">Button</button>
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
 
-<button class="btn btn-primary" type="submit">Button</button>
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-
+      <% end %>
     </div>
   </div>
 </div>
