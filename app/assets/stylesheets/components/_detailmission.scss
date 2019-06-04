@@ -1,0 +1,130 @@
+.banner-show {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.banner-show h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner-show p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#mission-description {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+#mission-description h3{
+  border-bottom: 4px solid #000;
+  padding-bottom: 5px;
+}
+
+#mission-description p{
+  font-weight: lighter;
+}
+
+#mission-booking {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+#mission-more {
+  padding: 40px;
+  background-color: #042A2B;
+  margin: 10px 0px;
+  border: 0px;
+}
+
+
+#mission-more h3{
+  padding-bottom: 5px;
+  color: white;
+}
+
+#mission-more p{
+  color: white;
+  font-weight: lighter;
+  font-size:14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color:white;
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 19px;
+  transition: all .2s ease;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    display: block;
+    border-radius: 28px;
+    background: rgba($primary,.8);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease;
+  }
+  span {
+    position: relative;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    }
+  svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+  }
+  &:hover {
+    &:before{
+      width: 100%;
+      background: rgba($primary,1);
+    }
+    svg{
+      transform: translateX(0);
+    }
+  }
+  &:active {
+    transform: scale(.96);
+  }
+}
+
+#more-info {
+  background-color: #042A2B;
+}
+
