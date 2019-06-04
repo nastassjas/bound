@@ -1,6 +1,6 @@
   User.destroy_all
   Skill.destroy_all
-  Association.destroy_all
+  Charity.destroy_all
 
   userTest1 = User.new(
   first_name: "Van",
@@ -80,7 +80,7 @@
   skill_teaching = Skill.create!(name: "Professeur.e")
 
 
-hop_hop_food =  Association.new(
+hop_hop_food =  Charity.new(
   name: "HopHopFood",
   description: "Réduction du gaspillage alimentaire des particuliers par une plateforme digitale géolocalisée Par cette plateforme, création de solidarité en luttant contre la précarité alimentaire de populations fragiles (étudiants, migrants, etc.)",
   phone_number: "09 53 40 25 79",
@@ -91,7 +91,7 @@ hop_hop_food =  Association.new(
   )
 hop_hop_food.save!
 
-agence_innovation_solidaire_et_des_loisirs =  Association.new(
+agence_innovation_solidaire_et_des_loisirs =  Charity.new(
   name: "Agence d'innovation solidaire et des loisirs",
   description: "Groupe de réflexion sur la meilleur façon de répondre aux besoins des ménages les plus démunis dans le domaine économique, l'accès aux différents dispositifs sociaux et culturels, la santé etc...débouchant sur la création de concepts et de produits ou de services ouverts à tous.",
   phone_number: "01 47 56 78 39",
@@ -102,7 +102,7 @@ agence_innovation_solidaire_et_des_loisirs =  Association.new(
   )
 agence_innovation_solidaire_et_des_loisirs.save!
 
-secours_populaire_31 =  Association.new(
+secours_populaire_31 =  Charity.new(
   name: "Secours Populaire 31",
   description: "Né en 1945, le Secours populaire est une association à but non lucratif, reconnue d’utilité publique et déclarée Grande cause nationale. Celle-ci est habilitée à recevoir des dons, des legs et des donations. L’association s'est donnée pour mission d’agir contre la pauvreté et l'exclusion en France et dans le monde et de promouvoir la solidarité et ses valeurs. Elle rassemble des personnes de toutes opinions, conditions et origines qui souhaitent faire vivre la solidarité.",
   phone_number: "05 61 27 84 84",
@@ -113,7 +113,7 @@ secours_populaire_31 =  Association.new(
   )
 secours_populaire_31.save!
 
-a_livres_ouverts =  Association.new(
+a_livres_ouverts =  Charity.new(
   name: "A livres ouverts",
   description: "réunir ses adhérents de manière périodique autour d’activités liées à la lecture et l’écriture et au perfectionnement en langue française",
   phone_number: "04 91 45 39 12",
@@ -124,7 +124,7 @@ a_livres_ouverts =  Association.new(
   )
 a_livres_ouverts.save!
 
-nid_lyon =  Association.new(
+nid_lyon =  Charity.new(
   name: "Mouvement du Nid - Délégation du Rhône",
   description: "Le Mouvement du Nid est une association reconnue d'utilité publique qui agit depuis 70 ans dans le domaine du droit des femmes auprès des personnes prostituées.
   Ses activités sont : la rencontre  des personnes prostituées, leur accompagnement dans une démarche de réinsertion, la formation des acteurs sociaux, la prévention auprès des jeunes la sensibilisation du grand public et le plaidoyer politique afin de faire émerger une société sans prostitution.
@@ -137,7 +137,7 @@ nid_lyon =  Association.new(
   )
 nid_lyon.save!
 
-asso3 =  Association.new(
+asso3 =  Charity.new(
   name: "Asso3",
   description: "secours aux SDF",
   phone_number: "02 38 49 15 27",

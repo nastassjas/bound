@@ -1,4 +1,4 @@
 class Enrollment < ApplicationRecord
-  belongs_to :association
+  belongs_to :charity
   belongs_to :user
 end

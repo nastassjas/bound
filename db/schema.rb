@@ -15,7 +15,16 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "associations", force: :cascade do |t|
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "mission_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mission_id"], name: "index_bookings_on_mission_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "charities", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "phone_number"
@@ -27,22 +36,13 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "bookings", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "mission_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["mission_id"], name: "index_bookings_on_mission_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
-  end
-
   create_table "enrollments", force: :cascade do |t|
-    t.bigint "association_id"
+    t.bigint "charity_id"
     t.bigint "user_id"
     t.string "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["association_id"], name: "index_enrollments_on_association_id"
+    t.index ["charity_id"], name: "index_enrollments_on_charity_id"
     t.index ["user_id"], name: "index_enrollments_on_user_id"
   end
 
@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
     t.datetime "end_time"
     t.integer "volunteers_count"
     t.string "address"
-    t.bigint "association_id"
+    t.bigint "charity_id"
     t.string "category"
     t.bigint "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["association_id"], name: "index_missions_on_association_id"
+    t.index ["charity_id"], name: "index_missions_on_charity_id"
     t.index ["skill_id"], name: "index_missions_on_skill_id"
   end
 
@@ -98,9 +98,9 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
 
   add_foreign_key "bookings", "missions"
   add_foreign_key "bookings", "users"
-  add_foreign_key "enrollments", "associations"
+  add_foreign_key "enrollments", "charities"
   add_foreign_key "enrollments", "users"
-  add_foreign_key "missions", "associations"
+  add_foreign_key "missions", "charities"
   add_foreign_key "missions", "skills"
   add_foreign_key "user_skills", "skills"
   add_foreign_key "user_skills", "users"
