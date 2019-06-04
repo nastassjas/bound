@@ -1,1 +1,27 @@
-_button.scss
+.btn-primary {
+  background-color: #042A2B;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
+}
+
+
+.btn-primary btn-lg {
+  background-color: #042A2B;
+  border-radius: 5px;
+}
+
+
+.btn-primary btn-sm {
+  color: #054042;
+  border-radius: 5px;
+}
+
+.btn-primary btn-lg btn-block {
+  color: #054042;
+  border-radius: 5px;
+}
+
