@@ -15,21 +15,22 @@ add cards here
 
 
 <div class="container container-header">
+ <!--  searchbar -->
   </div>
+
     <div class="container bg-white">
       <div class="container-ind">
-        <% @artworks.each do |artwork| %>
-        <%= link_to artwork_path(artwork) do%>
+        <% @missions.each do |mission| %>
+        <%= link_to mission_path(mission) do%>
         <div class="card-result">
-        <div class="inner-div" style="background: url(<%= cl_image_path artwork.photo %>) center">
+        <div class="inner-div" style="background: url(https://www.foundationlist.org/wp-content/uploads/2015/03/Nonprofit-Image.jpg) center">
         </div>
       </div>
 
     <div class="infos-card-ind">
-      <h3 class="artwork-artist"><strong><%= artwork.user.username %></strong></h3>
-      <h5><%= artwork.price %>€</h5>
+      <h3 class="mission-title"><strong><%= mission.title %></strong></h3>
     </div>
-      <h4 class="artwork-title"><em><%= artwork.title %></em>, <%= artwork.art_date %></h4>
+      <h4 class="association-name"><%= "asso name" %></h4>
     <%end%>
   <%end%>
 </div>
