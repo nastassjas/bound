@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_100746) do
+ActiveRecord::Schema.define(version: 2019_06_05_111004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,14 +52,25 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer "volunteers_count"
-    t.string "address"
     t.bigint "charity_id"
-    t.string "category"
     t.bigint "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "project_id"
     t.index ["charity_id"], name: "index_missions_on_charity_id"
+    t.index ["project_id"], name: "index_missions_on_project_id"
     t.index ["skill_id"], name: "index_missions_on_skill_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.bigint "charity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "address"
+    t.string "category"
+    t.index ["charity_id"], name: "index_projects_on_charity_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -101,7 +112,9 @@ ActiveRecord::Schema.define(version: 2019_06_04_100746) do
   add_foreign_key "enrollments", "charities"
   add_foreign_key "enrollments", "users"
   add_foreign_key "missions", "charities"
+  add_foreign_key "missions", "projects"
   add_foreign_key "missions", "skills"
+  add_foreign_key "projects", "charities"
   add_foreign_key "user_skills", "skills"
   add_foreign_key "user_skills", "users"
 end
