@@ -1,4 +1,5 @@
   Charity.destroy_all
+  Project.destroy_all
   Mission.destroy_all
   Skill.destroy_all
   User.destroy_all
@@ -150,67 +151,115 @@ asso3 =  Charity.new(
 asso3.save!
 
 
-garde_manger_solidaire = Mission.new(
-  title: "Garde-manger solidaire",
+
+garde_manger_solidaire = Project.new(
+  name: "Garde-manger solidaire",
   description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
-  start_time: "2019-02-18 09:00:00",
-  end_time: "2019-07-30 19:00:00",
-  volunteers_count: 4,
   address: "142 rue saint maur 75011 Paris",
   charity: nid_lyon,
   category: "Food",
   )
 garde_manger_solidaire.save!
 
-webmaster_experimente = Mission.new(
-  title: "Webmaster experimente",
+journey1 = Mission.new(
+  start_time: "2019-02-18 09:00:00",
+  end_time: "2019-07-30 19:00:00",
+  volunteers_count: 4,
+  charity: nid_lyon,
+  project: garde_manger_solidaire,
+  )
+journey1.save!
+
+journey2 = Mission.new(
+  start_time: "2019-08-01 09:00:00",
+  end_time: "2019-08-02 19:00:00",
+  volunteers_count: 7,
+  charity: nid_lyon,
+  project: garde_manger_solidaire,
+  )
+journey2.save!
+
+journey3 = Mission.new(
+  start_time: "2019-08-03 09:00:00",
+  end_time: "2019-08-05 19:00:00",
+  volunteers_count: 8,
+  charity: nid_lyon,
+  project: garde_manger_solidaire
+  )
+journey3.save!
+
+webmaster_experimente = Project.new(
+  name: "Webmaster experimente",
   description: "Dans le cadre du developpement de sa communication, l'Agence d'innovation solidaire et des loisirs recherche des benevoles ayant des competences de niveau professionnel en creation de site web afin de pouvoir developper les sites internet de ses antennes et son cloud. Il est possible de s'engager pour une mission en particulier ou sur le long terme en diversifiant les productions ! Le rythme est selon vos contraintes perso et pro.",
-  start_time: "2019-06-15 10:00:00",
-  end_time: "2019-08-31 17:00:00",
-  volunteers_count: 1,
   address: "À effectuer sur le lieu de son choix.",
   charity: a_livres_ouverts,
-  category: "Activites artistiques & culturelles",
-  skill: skill_it
+  category: "Activites artistiques & culturelles"
   )
 webmaster_experimente.save!
 
-formateur_benevole_alpha = Mission.new(
-  title: "Formateur benevole alpha/fle",
+journey_webmaster = Mission.new(
+  start_time: "2019-06-15 10:00:00",
+  end_time: "2019-08-31 17:00:00",
+  volunteers_count: 1,
+  charity: a_livres_ouverts,
+  project: webmaster_experimente
+  )
+journey_webmaster.save!
+
+formateur_benevole_alpha = Project.new(
+  name: "Formateur benevole alpha/fle",
   description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
-  start_time: "2019-07-02 09:30:00",
-  end_time: "2019-12-23 17:30:00",
-  volunteers_count: 10,
   address: "DOMAINE DE VALBOIS, BÂTIMENT A1, 72, RUE HENRI TOMASI, 13009  MARSEILLE",
   charity: secours_populaire_31,
-  category: "Aide aux devoirs, enseignement & formation",
-  skill: skill_teaching
+  category: "Aide aux devoirs, enseignement & formation"
   )
 formateur_benevole_alpha.save!
 
-distribution_flyers_chatbot = Mission.new(
-  title: "Distribution de flyers et collecte de donnees !",
+formateur_journey = Mission.new(
+  start_time: "2019-07-02 09:30:00",
+  end_time: "2019-12-23 17:30:00",
+  volunteers_count: 10,
+  charity: secours_populaire_31,
+  project: formateur_benevole_alpha,
+  skill: skill_teaching
+  )
+formateur_journey.save!
+
+distribution_flyers_chatbot = Project.new(
+  name: "Distribution de flyers et collecte de donnees !",
   description: "Aidez-nous, engagez-vous ! A l'occasion de la sortie officielle de son chatbot à destination des jeunes femmes victimes de violences, l'association Elle Caetera organise une grande distribution de Flyers, à Paris!",
-  start_time: "2019-06-21 09:00:00",
-  end_time: "2019-06-21 18:00:00",
-  volunteers_count: 15,
   address: "Les Halles, Paris",
   charity: secours_populaire_31,
   category: "Collecte & Distribution (nourriture, vêtements, dons…)"
   )
 distribution_flyers_chatbot.save!
 
-accompagnement_aîne = Mission.new(
-  title: "Accompagnement de nos aînes",
+distribution_journey = Mission.new(
+  start_time: "2019-06-21 09:00:00",
+  end_time: "2019-06-21 18:00:00",
+  volunteers_count: 15,
+  charity: secours_populaire_31,
+  project: distribution_flyers_chatbot
+  )
+distribution_journey.save!
+
+accompagnement_aine = Project.new(
+  name: "Accompagnement de nos aînes",
   description: "La mission consiste à accompagner nos aînes dans leurs deplacements de proximite (une balade dans le quartier, une sortie au musee, un rendez-vous medical...). Les accompagnements peuvent avoir lieu du lundi au dimanche, dans tout Toulouse.",
+  address: "31000",
+  charity: a_livres_ouverts,
+  category: "Lien social. Aide au deplacement"
+  )
+accompagnement_aine.save!
+
+accompagnement_aine_journey = Mission.new(
   start_time: "2019-06-17 09:00:00",
   end_time: "2019-06-17 18:00:00",
   volunteers_count: 30,
-  address: "31000",
   charity: a_livres_ouverts,
-  category: "Lien social. Aide au deplacement",
+  project: accompagnement_aine
   )
-accompagnement_aîne.save!
+accompagnement_aine_journey.save!
 
 
 puts "Seeded 🦇"
