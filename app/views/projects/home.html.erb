@@ -10,28 +10,35 @@
   <div class="section-title">
     <h4 id="section-title"><i class="fas fa-arrow-circle-down"></i>Latest missions</h4>
   </div>
-  <div class="container-header-button">
-    <button class="btn btn-primary" href="#">View all</button>
+
+  <div class="container-search-bar">
+      <%= form_tag(projects_path, method: "get") do %>
+        <div class ="search-bar-index">
+        <%= text_field_tag(:address,nil,class: "search-address") %>
+        <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+      <% end %>
   </div>
 </div>
 
 
 <div class="container-cards">
   <div class="card">
-    <div class="card-img-mission" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)"></div>
+    <div class="card-img-project" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)"></div>
     <div class="card-body">
-      <h5 class="mission-title"><strong> Mission Titel</strong></h5>
-      <h3 class="association-name">Association name</h5>
+      <h5 class="project-title"><strong> Project Name</strong></h5>
+      <h3 class="charity-name">Charity name</h5>
       <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
       <button class="btn btn-primary btn-sm">More details</button>
     </div>
   </div>
 
   <div class="card">
-   <div class="card-img-mission" style="background-image: url(https://www.foundationlist.org/wp-content/uploads/2015/03/Nonprofit-Image.jpg)"></div>
+   <div class="card-img-project" style="background-image: url(https://www.foundationlist.org/wp-content/uploads/2015/03/Nonprofit-Image.jpg)"></div>
   <div class="card-body">
-    <h5 class="mission-title"><strong> Mission Titel</strong></h5>
-    <h3 class="association-name">Association name</h5>
+    <h5 class="project-name"><strong> Project Name</strong></h5>
+    <h3 class="charity-name">Charity name</h5>
     <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
     <button class="btn btn-primary btn-sm">More details</button>
   </div>
@@ -40,11 +47,14 @@
 <div class="card">
    <div class="card-img-mission" style="background-image: url(https://assets.nationalnewswatch.com/wp-content/uploads/2016/07/CKL212349972.jpg)"></div>
   <div class="card-body">
-    <h5 class="mission-title"><strong> Mission Titel</strong></h5>
-    <h3 class="association-name">Association name</h5>
+    <h5 class="project-name"><strong> Project Name</strong></h5>
+    <h3 class="charity-name">Charity name</h5>
     <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
     <button class="btn btn-primary btn-sm">More details</button>
   </div>
 </div>
 
 </div>
+  <div class="container-header-button">
+    <button class="btn-primary btn-lg" href="#">Load more projects</button>
+  </div>

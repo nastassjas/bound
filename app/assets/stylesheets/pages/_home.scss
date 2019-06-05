@@ -25,10 +25,53 @@
   margin: 50px auto 20px auto;
 }
 
+.container-search-bar {
+  display: flex;
+
+}
+
 .container-bannertop {
   text-align: center;
 }
 
 .container-bannertop > button {
   font-size: 22px;
+}
+
+.container-header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px
+}
+
+
+#category {
+  justify-content: center;
+  background-color: #054042;
+  margin: 20px auto;
+  width: 196px;
+  color: white;
+  border: 1px solid #144C52;
+  padding: 3px;
+  display: inline-block;
+  border-radius : 5px;
+  height: 20px;
+}
+
+
+.algolia-places {
+ width: 350px;
+ margin-left: 20px;
+ margin-bottom: 25px;
+ margin-top: 25px;
+
+}
+
+.search-bar-index {
+  margin-left: -25px;
+}
+
+.ap-input-icon svg {
+  fill: #054042;
 }
