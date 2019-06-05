@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :projects, only: :create
   end
 
-  resources :projects, only:[:index, :show]do
+  resources :projects, only:[:home, :index, :show]do
     resources :missions, only: :create
   end
 
