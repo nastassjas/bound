@@ -14,10 +14,20 @@
   border-radius: 5px;
 }
 
+.btn-primary btn-lg :hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
+}
+
 
 .btn-primary btn-sm {
   color: #054042;
   border-radius: 5px;
+}
+
+.btn-primary btn-sm :hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
 }
 
 .btn-primary btn-lg btn-block {

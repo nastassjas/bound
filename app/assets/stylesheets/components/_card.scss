@@ -1,3 +1,11 @@
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .card {
     display: flex;
     background-color: #fff;
@@ -11,25 +19,17 @@
     width: 350px;
     height: 273px;
     background-size: cover;
+    object-fit: cover;
+    transform-origin: top center;
+    vertical-align: middle;
 }
 
-// img {
-//     vertical-align: middle;
-//     border-style: none;
-// }
 
 .card-body {
   width: 350px;
   height: 273px;
 }
 
-.container-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

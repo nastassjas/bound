@@ -1,10 +1,17 @@
 class MissionsController < ApplicationController
+skip_before_action :authenticate_user!, only: [:home, :show, :index]
+skip_after_action :verify_authorized, only: [:home, :show, :index]
+
   def home
     @missions = Mission.all
   end
 
   def index
     @missions = Mission.all
+  end
+
+  def new
+    @mission = Mission.new
   end
 
   def show
@@ -14,17 +21,14 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:title, :description, :address, :latitude, :longitude)
+    params.require(:mission).permit(:title, :description, :start_time, :end_time, :volunteers_count, :address, :association_id, :category, :skill_id, :latitude, :longitude)
   end
+end
 
-  # skip_before_action :authenticate_user!, only: [:index, :show, :all]
   # def index
   #   @missions = MissionPolicy::Scope.new(current_user, Mission).index
   # end
 
-  # def new
-  #   @mission = Mission.new
-  # end
 
   # def all
   #   @missions = policy_scope(Mission).where.not(latitude: nil, longitude: nil)
@@ -61,15 +65,3 @@ class MissionsController < ApplicationController
   #   end
   # end
 
-  # def show
-  #   @mission = Mission.find(params[:id])
-  #   @booking = Booking.new
-  # end
-
-  # private
-
-  # def mission_params
-  #   params.require(:mission).permit(:title, :description, :start_time, :end_time, :volunteers_count, :address, :association_id, :category, :skill_id, :latitude, :longitude)
-  # end
-
-end
