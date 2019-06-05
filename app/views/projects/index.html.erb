@@ -1,50 +1,17 @@
-<div class ="all-view">
-  <%= form_tag(all_artworks_path, method: "get") do %>
-        <%= label_tag(:address, "Where") %>
-        <%= text_field_tag(:address) %>
-        <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
-        <%= select_tag(:size, options_for_select(Artwork::ARTSIZE)) %>
-        <%= select_tag(:category, options_for_select(Artwork::ARTCATEGORY)) %>
-        <%= submit_tag("Search") %>
-      <% end %>
-</div>
-
-<div class="map-content">
-      <div class="map-cards">
-  <% @artworks.each do |artwork| %>
-  <%= link_to artwork_path(artwork) do%>
-    <div class="card-result">
-    <div class="inner-div" style="background: url(<%= cl_image_path artwork.photo %>) center">
-    </div>
-  </div>
-
-    <div class="infos-card-ind">
-      <h3 class="artwork-artist"><strong><%= artwork.title %></strong></h3>
-      <h5><%= artwork.price %>€</h5>
-      </div>
-      <h4 class="artwork-title"><em><%= artwork.title %></em>, <%= artwork.art_date %></h4>
-  <%end%>
-  <%end%>
-
-</div>
-
 <div class="container-cards">
-  <div class="card">
-    <div class="card-img-project" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)"></div>
-    <div class="card-body">
-      <h5 class="project-name"><strong><%= project.name %></strong></h5>
-      <h3 class="charity-name"><%= charity.name %></h5>
-      <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
-      <button class="btn btn-primary btn-sm">More details</button>
-    </div>
-  </div>
-
-
-      <div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+  <% @projects.each do |project| %>
+    <div class="card">
+      <div class="card-img-project" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)"></div>
+      <div class="card-body">
+        <h5 class="project-name"><strong><%= project.name %></strong></h5>
+        <h3 class="charity-name"><%= project.charity.name %></h5>
+        <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
+        <button class="btn btn-primary btn-sm">
+          <%= link_to 'More details', project_path(project) %>
+        </button>
+      </div>
+      <%end%>
 </div>
+
+
+
