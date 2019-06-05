@@ -1,10 +1,20 @@
 class MissionsController < ApplicationController
+  def home
+    @missions = Mission.all
+  end
+
   def index
     @missions = Mission.all
   end
 
   def show
     @mission = Mission.find(params[:id])
+  end
+
+  private
+
+  def mission_params
+    params.require(:mission).permit(:title, :description, :address, :latitude, :longitude)
   end
 
   # skip_before_action :authenticate_user!, only: [:index, :show, :all]
@@ -61,4 +71,5 @@ class MissionsController < ApplicationController
   # def mission_params
   #   params.require(:mission).permit(:title, :description, :start_time, :end_time, :volunteers_count, :address, :association_id, :category, :skill_id, :latitude, :longitude)
   # end
+
 end
