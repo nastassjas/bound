@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="form-inputs">
+<h2>Ajouter une association</h2>
+
+<%= simple_form_for @charity do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%= f.input :description,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "description" }%>
+    <%= f.input :phone_number,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "phone_number" }%>
+    <%= f.input :address,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "address" }%>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :registration_nb,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "registration_nb" }%>
+  <div class="form-actions">
+    <%= f.button :submit, "Valider" %>
+  </div>
+    <% end %>
+    </div>
+  </div>
+</div>
