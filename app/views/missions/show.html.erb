@@ -4,7 +4,7 @@
       <div class="col-lg-6">
         <div class="card" id="mission-description">
           <h3>La mission</h3>
-          <p>DESCRIPTION Dans le cadre du développement de sa communication, la Protection Civile Paris Seine recherche des bénévoles ayant des compétences de niveau professionnel en création de site web afin de pouvoir développer les sites internet de ses antennes et son cloud. Il est possible de s'engager pour une mission en particulier ou sur le long terme en diversifiant les productions ! Le rythme est selon vos contraintes perso et pro.</p>
+          <p><%= @mission.description%></p>
         </div>
       </div>
 
@@ -13,9 +13,10 @@
 
       <div class="col-lg-4">
         <div class="card" id="mission-booking">
-          <h3>Webmaster confirmé</h3>
-          <p>Association: <strong>Le Carillon</strong></p>
-          <p>Adresse(picto)</p>
+          <p class="grey"><%= @mission.category%></p>
+          <h3><%= @mission.title%></h3>
+          <p>Association: <strong><%= @mission.charity.name%></strong></p>
+          <p>Adresse (picto) <%= @mission.address%></p>
           <p>Dates</p>
           <a href="#" class="cta">
           <span>Participer</span>
