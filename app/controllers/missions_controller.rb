@@ -16,6 +16,7 @@ skip_after_action :verify_authorized, only: [:home, :show, :index]
 
   def show
     @mission = Mission.find(params[:id])
+    @booking = Booking.new
   end
 
   private
