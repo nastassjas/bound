@@ -1,0 +1,47 @@
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.cristalmarbre.com/mineraux-1280/terrazzo.jpg);">
+
+  <div class="container-dashboard">
+    <div class="dashboard-elements">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4>Mes rendez-vous</h4>
+        </div>
+        <div class="col-lg-6">
+          <h4>Mon profil</h4>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-mybookings">
+      <div class="cards-dashboard">
+        <div class="card-img-txt">
+            <% @booking.missions.each do |mission| %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              Breakfast
+            </div>
+            <div class="card-txt">
+            <p><%= booking.project.name%></p>
+            <p><i class="fas fa-map-marker-alt"></i> <%= @project.address%></p>
+            <p><%= mission.start_time.strftime("%m/%d/%Y %k") %>h - <%= mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
+            <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
+            </div>
+            <% end %>
+          </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+          Lunch
+        </div>
+
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+          Dinner
+        </div>
+
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+          Dinner
+        </div>
+      </div>
+
+    </div>
+    <div class="dashboard-myprofile">
+    </div>
+
+  </div>
+</div>
