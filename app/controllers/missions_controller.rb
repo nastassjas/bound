@@ -22,7 +22,7 @@ skip_after_action :verify_authorized, only: [:home, :show, :index]
   private
 
   def mission_params
-    params.require(:mission).permit(:title, :description, :start_time, :end_time, :volunteers_count, :address, :association_id, :category, :skill_id, :latitude, :longitude)
+    params.require(:mission).permit(:title, :description, :start_time, :end_time, :volunteers_count, :charity_id, :skill_id, :latitude, :longitude)
   end
 end
 
