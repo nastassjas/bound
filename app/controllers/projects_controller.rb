@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
     @projects = policy_scope(Project)
   end
 
+  def new
+    @project = Project.new
+  end
+
   def show
     @project = Project.find(params[:id])
   end
