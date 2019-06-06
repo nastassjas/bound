@@ -17,7 +17,7 @@
           <%end %>
 
        <% if user_signed_in? %>
-          Welcome back <strong><%= current_user.first_name %></strong> !!
+          Merci d'être là <strong><%= current_user.first_name %></strong> !!
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
         <li class="nav-item active">
@@ -29,7 +29,7 @@
         <div class="nav-button">
           <div class="container-button">
          <%= link_to "S'inscrire", new_user_registration_path, class: "btnsignsm"  %>
-         <%= link_to "Log in", new_user_session_path, class: "btnsignsm"  %>
+         <%= link_to "Connexion", new_user_session_path, class: "btnsignsm"  %>
         </div>
       </div>
       <% end %>
@@ -39,10 +39,10 @@
         <% if user_signed_in? %>
           <%= image_tag "https://storage.gra3.cloud.ovh.net/v1/AUTH_ca60d77ddd5e42749d7c4c17f753540d/ugm-data/pictures/larabesque/896133-pochoir-de-batman-sigle-de-batman-logo-de-batman-ref-415-2-1_medium.webp?1551742798", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Mon profil", user_path(current_user), class: "dropdown-item" %>
           <%= link_to "Ajouter une association", new_charity_path, class: "dropdown-item" %>
           <%#= link_to "My Profile", class: "dropdown-item" %>
-          <%= link_to "Log out", destroy_user_session_path,class: "dropdown-item", method: "delete" %>
+          <%= link_to "Me deconnecter", destroy_user_session_path,class: "dropdown-item", method: "delete" %>
           </div>
         <% end %>
       </li>

@@ -6,9 +6,12 @@
   ">
   <div class="container-bannertop">
     <h1> Don't watch, act!</h1>
-    <button class="btn btn-primary" href="#">Choose your mission now</button>
+    <div class="btn btn-primary">
+<%= link_to "Trouve ta mission !", projects_path%>
+</div>
   </div>
 </div>
+
 
 <div style="margin: 420px auto;">
   <div class="container-header">
@@ -45,24 +48,29 @@
       <h5 class="project-name"><strong> Project Name</strong></h5>
       <h3 class="charity-name">Charity name</h5>
       <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
-      <button class="btn btn-primary btn-sm">More details</button>
+      <button class="btn btn-primary btn-sm">Plus de détails</button>
     </div>
   </div>
 
   <div class="card">
-     <div class="card-img-project" style="background-image: url(https://www.ahealthiermichigan.org/wp-content/uploads/2016/11/GettyImages-462940167-600x300.jpg)"></div>
-    <div class="card-body">
-      <h5 class="project-name"><strong> Project Name</strong></h5>
-      <h3 class="charity-name">Charity name</h5>
-      <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
-      <button class="btn btn-primary btn-sm">More details</button>
-    </div>
+   <div class="card-img-project" style="background-image: url(https://www.helpguide.org/wp-content/uploads/2018/11/woman-in-volunteer-group-500.jpg)"></div>
+  <div class="card-body">
+    <h5 class="project-name"><strong> Project Name</strong></h5>
+    <h3 class="charity-name">Charity name</h5>
+    <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
+    <button class="btn btn-primary btn-sm">Plus de détails</button>
   </div>
 
-  </div>
-    <div class="container-header-button">
-      <button class="btn-primary btn-lg" href="#">Load more projects</button>
-    </div>
+<div class="card">
+   <div class="card-img-project" style="background-image: url(https://www.ahealthiermichigan.org/wp-content/uploads/2016/11/GettyImages-462940167-600x300.jpg)"></div>
+  <div class="card-body">
+    <h5 class="project-name"><strong> Project Name</strong></h5>
+    <h3 class="charity-name">Charity name</h5>
+    <p class="card-text"><i class="fas fa-map-marker-alt"></i>Localization - 75011, Paris</p>
+    <button class="btn btn-primary btn-sm">Plus de détails</button>
 
+  <div class="container-header-button">
+        <div class="btn-primary btn-lg">
+<%= link_to "Plus de missions", projects_path%>
 </div>
-<div id="home-page"></div>
+  </div>
