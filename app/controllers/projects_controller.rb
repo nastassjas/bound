@@ -14,7 +14,8 @@ class ProjectsController < ApplicationController
     @markers = @projects.map do |project|
       {
         lat: project.latitude,
-        lng: project.longitude
+        lng: project.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { project: project })
       }
     end
   end
