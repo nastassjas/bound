@@ -1,4 +1,4 @@
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 
 const initSweetalert = (selector, options = {timer: 3000}, callback = () => {}) => {
   const swalButton = document.querySelector(selector);
