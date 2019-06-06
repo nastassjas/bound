@@ -1,12 +1,12 @@
-import swal from 'sweetalert2';
+// import swal from 'sweetalert';
 
-const initSweetalert = (selector, options = {timer: 3000}, callback = () => {}) => {
-  const swalButton = document.querySelector(selector);
-  if (swalButton) { // protect other pages
-    swalButton.addEventListener('click', () => {
-      swal(options).then(callback); // <-- add the `.then(callback)`
-    });
-  }
-};
+// const initSweetalert = () => {
+//   const swalButton = document.querySelector(".add-booking");
+//   if (swalButton) { // protect other pages
+//     swalButton.addEventListener('click', (e) => {
+//       swal("Merci", "Votre inscription a bien été prise en compte!", "success");
+//     });
+//   }
+// };
 
-export { initSweetalert };
+// export { initSweetalert };

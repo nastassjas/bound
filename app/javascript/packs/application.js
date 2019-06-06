@@ -13,15 +13,14 @@ import { categorySkill } from '../plugins/category_skill';
 
 
 // sweet alert
-import { initSweetalert } from '../plugins/init_sweetalert';
+// import { initSweetalert } from '../plugins/init_sweetalert';
 
-initSweetalert('#sweet-alert-demo', {
-  title: "Merci",
-  text: "Votre inscription a bien été prise en compte !",
-  icon: "success"
-}, (value) => {
-  if (value) {
-    const link = document.querySelector('#add-booking');
-    link.click();
-  }
-});
+// initSweetalert();
+
+const homePage = document.getElementById("home-page");
+const navbar = document.querySelector(".navbar");
+if (homePage && navbar) {
+  window.addEventListener("DOMContentLoaded", (e) => {
+    console.log(navbar.style)
+  })
+}
