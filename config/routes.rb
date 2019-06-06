@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  root to: 'missions#home'
+  root to: 'projects#home'
   devise_for :users
 
+  resources :users, only: :show
   resources :charities, only:[:index, :show, :new, :create]do
+
     resources :projects, only: :create
   end
 
-  resources :projects, only:[:index, :show]do
+  resources :projects, only:[:home, :index, :show]do
     resources :missions, only: :create
   end
 

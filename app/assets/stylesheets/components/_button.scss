@@ -1,5 +1,5 @@
 .btn-primary {
-  background-color: #042A2B;
+  background-color: #144C52;
   border-radius: 5px;
 }
 
@@ -10,18 +10,33 @@
 
 
 .btn-primary btn-lg {
-  background-color: #042A2B;
+  background-color: #144C52;
   border-radius: 5px;
+}
+
+.btn-primary btn-lg :hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
 }
 
 
 .btn-primary btn-sm {
-  color: #054042;
+  background-color: #144C52;
   border-radius: 5px;
 }
 
+.btn-primary btn-sm :hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
+}
+
 .btn-primary btn-lg btn-block {
-  color: #054042;
+  background-color: #144C52;
   border-radius: 5px;
+}
+
+.btn-primary btn-lg btn-block :hover {
+  background-color: #B93A07;
+  border-color: #B93A07;
 }
 

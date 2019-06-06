@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
 }
 
+#show-project {
+  padding-left:0px;
+}
+
 .banner-show h1 {
   margin: 0;
   color: white;
@@ -16,6 +20,31 @@
 
 .banner-show p {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-custom {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    align-items: left;
+    position: relative;
+}
+
+.pick-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  margin: 10px;
+  padding-bottom: 30px;
+
+}
+
+.button-display {
+  padding-top: 15px;
+  margin: 10px;
 }
 
 #mission-description {
@@ -40,6 +69,14 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
   margin-bottom: 20px;
+}
+
+#mission-booking-btn {
+  padding-top: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding-left: 0px;
 }
 
 
@@ -126,5 +163,10 @@ a:hover {
 
 #more-info {
   background-color: #042A2B;
+}
+
+p .green {
+  color: #042A2B;
+  text-align:left;
 }
 

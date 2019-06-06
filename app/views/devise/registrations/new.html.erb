@@ -1,53 +1,89 @@
-<div class="container">
-  <div class="row">
-    <div class="form-inputs">
-<h2>Sign up</h2>
+<div class="login-sign">
+  <div class="container-form">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "first_name" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "last_name" }%>
-    <%= f.input :username,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "username" }%>
-    <%= f.input :description,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "description" }%>
-    <%= f.input :mobile_phone,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "mobile_phone" }%>
-    <%= f.input :birth_year,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "birth_year" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-                <p>My Precious Skills Are :</p>
-   <%= f.association :skills, as: :check_boxes %>
+          <div class="form-login">
+            <h2>Sign up</h2>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<%= render "devise/shared/links" %>
-<% end %>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <div class="form-inputs">
+              <%= f.error_notification %>
+
+              <div class="row custom-sign">
+                <div class="col-xs-6">
+                  <%= f.input :first_name,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "first_name" }, class: "string"%>
+
+                </div>
+                <div class="col-xs-6">
+                  <%= f.input :last_name,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "last_name" }%>
+                </div>
+              </div>
+
+              <%= f.input :email,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "email" }%>
+
+              <div class="row custom-sign">
+                <div class="col-xs-6">
+                  <%= f.input :password,
+                            required: true,
+                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                            input_html: { autocomplete: "new-password" } %>
+                </div>
+                <div class="col-xs-6">
+                  <%= f.input :password_confirmation,
+                            required: true,
+                            input_html: { autocomplete: "new-password" } %>
+                </div>
+              </div>
+
+                <%= f.input :mobile_phone,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "mobile_phone" }%>
+                <%= f.input :birth_year,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "birth_year" }%>
+
+
+                <%= f.input :description,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "description" }%>
+
+
+
+               <%#= f.association :skills, as: :check_boxes %>
+                <div class="form-group">
+                  <label class="control-label check_boxes optional">My Precious skills are:</label>
+                  <input type="hidden" name="skill[category_ids][]" value="">
+                  <div class="category-skills">
+                    <% Skill.all.each do |skill| %>
+                      <input type="checkbox" class="hidden" value="<%= skill.id %>" name="skill[category_ids][]" id="skill_category_ids_<%= skill.id %>">
+                      <label class="category-skill" for="skill_category_ids_<%= skill.id %>">
+                        <%= skill.name %>
+                      </label>
+                    <% end %>
+                   </div>
+                </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Sign up", class: "btn-form btn-primary" %>
+              </div>
+            <%= render "devise/shared/links" %>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 </div>
