@@ -4,12 +4,15 @@ class ProjectPolicy < ApplicationPolicy
       scope.all
     end
   end
-
-  def show?
-    true
+  def create?
+    project.charity.users.include?(user)
   end
 
   def new?
+    create?
+  end
+
+  def show?
     true
   end
 end

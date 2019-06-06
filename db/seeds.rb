@@ -1,6 +1,6 @@
-  Charity.destroy_all
-  Project.destroy_all
   Mission.destroy_all
+  Project.destroy_all
+  Charity.destroy_all
   Skill.destroy_all
   User.destroy_all
 
@@ -194,7 +194,7 @@ journey3.save!
 webmaster_experimente = Project.new(
   name: "Webmaster experimente",
   description: "Dans le cadre du developpement de sa communication, l'Agence d'innovation solidaire et des loisirs recherche des benevoles ayant des competences de niveau professionnel en creation de site web afin de pouvoir developper les sites internet de ses antennes et son cloud. Il est possible de s'engager pour une mission en particulier ou sur le long terme en diversifiant les productions ! Le rythme est selon vos contraintes perso et pro.",
-  address: "À effectuer sur le lieu de son choix.",
+  address: "10 Rue Galilée, 75116 Paris",
   charity: a_livres_ouverts,
   category: "Activites artistiques & culturelles"
   )
@@ -212,7 +212,7 @@ journey_webmaster.save!
 formateur_benevole_alpha = Project.new(
   name: "Formateur benevole alpha/fle",
   description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
-  address: "DOMAINE DE VALBOIS, BÂTIMENT A1, 72, RUE HENRI TOMASI, 13009  MARSEILLE",
+  address: "72, RUE HENRI TOMASI, 13009  MARSEILLE",
   charity: secours_populaire_31,
   category: "Aide aux devoirs, enseignement & formation"
   )
@@ -231,7 +231,7 @@ formateur_journey.save!
 distribution_flyers_chatbot = Project.new(
   name: "Distribution de flyers et collecte de donnees !",
   description: "Aidez-nous, engagez-vous ! A l'occasion de la sortie officielle de son chatbot à destination des jeunes femmes victimes de violences, l'association Elle Caetera organise une grande distribution de Flyers, à Paris!",
-  address: "Les Halles, Paris",
+  address: "34 Rue Amelot, 75011 Paris",
   charity: secours_populaire_31,
   category: "Collecte & Distribution (nourriture, vêtements, dons…)"
   )
@@ -249,7 +249,7 @@ distribution_journey.save!
 accompagnement_aine = Project.new(
   name: "Accompagnement de nos aînes",
   description: "La mission consiste à accompagner nos aînes dans leurs deplacements de proximite (une balade dans le quartier, une sortie au musee, un rendez-vous medical...). Les accompagnements peuvent avoir lieu du lundi au dimanche, dans tout Toulouse.",
-  address: "31000",
+  address: "52 Rue de la Chaussée d'Antin, 75009 Paris",
   charity: a_livres_ouverts,
   category: "Lien social. Aide au deplacement"
   )

@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2019_06_06_093033) do
     t.string "address"
     t.string "category"
     t.string "photo"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["charity_id"], name: "index_projects_on_charity_id"
   end
 

@@ -8,6 +8,15 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
+
+    @projects = Project.where.not(latitude: nil, longitude: nil)
+
+    @markers = @projects.map do |project|
+      {
+        lat: project.latitude,
+        lng: project.longitude
+      }
+    end
   end
 
   def new
@@ -17,6 +26,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    authorize(@project)
     @project.user = current_user
     if @project.save!
       redirect_to projects_path
