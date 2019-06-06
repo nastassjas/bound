@@ -6,4 +6,9 @@ class UsersController < ApplicationController
     @bookings = current_user.bookings
     @missions = current_user.missions
   end
+
+  def destroy
+    @booking = booking.find(params[:id])
+    @booking.destroy
+  end
 end
