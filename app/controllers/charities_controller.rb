@@ -13,15 +13,17 @@ class CharitiesController < ApplicationController
 
   def create
     @charity = Charity.new(charity_params)
-    CheckAsso.call(@charity.registration_nb)
-    if @charity.save
+    if CheckAsso.call(@charity.registration_nb) == true
+      @charity.save
       @enrollment = Enrollment.new(
         charity: @charity,
         user: current_user
       )
       @enrollment.save
+      flash[:notice] = "Association créée !"
       redirect_to charities_path
     else
+      flash[:notice] = "Association inexistante"
       render :new
     end
   end
