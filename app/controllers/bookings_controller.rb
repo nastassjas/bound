@@ -2,9 +2,14 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new
     @mission = Mission.find(params[:mission_id])
-    @booking.mission = @mission
+
+    if @mission.volunteers_count > @mission.bookings.count
+      @booking.mission = @mission
+    end
+
     @booking.user = current_user
     authorize @booking
+
     if @booking.save!
       #flash[:notice] = 'Bravo...'
       redirect_to project_path(@mission.project)
@@ -40,6 +45,12 @@ class BookingsController < ApplicationController
 
 #   def status_change
 #   end
+
+    def destroy
+      @booking = Booking.find(params[:id])
+      authorize @booking
+      @booking.destroy
+    end
 
   private
 
