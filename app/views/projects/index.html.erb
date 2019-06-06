@@ -1,0 +1,37 @@
+<div style="display: flex;">
+  <div
+    style="margin: 20px"
+    class="container-cards">
+    <% @projects.each do |project| %>
+      <div class="card">
+        <div class="card-img-project" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)">
+        </div>
+        <div class="card-body">
+          <h5 class="project-name"><strong><%= project.name %></strong></h5>
+          <h3 class="charity-name"><%= project.charity.name %></h3>
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
+          <button class="btn btn-primary btn-sm">
+            <%= link_to 'More details', project_path(project) %>
+          </button>
+        </div>
+      </div>
+    <%end%>
+  </div>
+
+  <div
+    id="map"
+    style="
+      width: 40%;
+      height: 600px;
+      position: sticky;
+      top: 0;
+      margin-top: 20px;
+    "
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
+
+
+
+

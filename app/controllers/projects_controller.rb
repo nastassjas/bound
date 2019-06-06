@@ -8,6 +8,15 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = policy_scope(Project)
+
+    @projects = Project.where.not(latitude: nil, longitude: nil)
+
+    @markers = @projects.map do |project|
+      {
+        lat: project.latitude,
+        lng: project.longitude
+      }
+    end
   end
 
   def new
