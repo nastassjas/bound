@@ -2,7 +2,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(<%= image_path "people-to-people.jpg", height: "450px"%>);">
   <div class="container-bannertop">
     <h1> Don't watch, act!</h1>
-<button class="btn btn-primary" href="#">Trouve ta mission !</button>
+    <div class="btn btn-primary">
+<%= link_to "Trouve ta mission !", projects_path%>
+</div>
   </div>
 </div>
 
@@ -55,6 +57,9 @@
 </div>
 
 </div>
+
   <div class="container-header-button">
-    <button class="btn-primary btn-lg" href="#">Plus de missions</button>
+        <div class="btn-primary btn-lg">
+<%= link_to "Plus de missions", projects_path%>
+</div>
   </div>
