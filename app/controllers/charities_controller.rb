@@ -15,6 +15,7 @@ class CharitiesController < ApplicationController
 
   def create
     @charity = Charity.new(charity_params)
+    authorize @charity
     if CheckAsso.call(@charity.registration_nb) == true
       @charity.save
       @enrollment = Enrollment.new(

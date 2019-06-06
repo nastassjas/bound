@@ -5,7 +5,7 @@ class ProjectPolicy < ApplicationPolicy
     end
   end
   def create?
-    project.charity.users.include?(user)
+    record.charity.users.include?(user)
   end
 
   def new?
