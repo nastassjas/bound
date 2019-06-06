@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :charities, only:[:index, :show, :new, :create]do
 
-    resources :projects, only: :create
+    resources :projects, only: [:create, :new]
   end
 
   resources :projects, only:[:home, :index, :show]do

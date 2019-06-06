@@ -9,4 +9,5 @@ class Project < ApplicationRecord
   validates :charity, presence: true
   validates :category, presence: true
 
+  mount_uploader :photo, PhotoUploader
 end
