@@ -24,9 +24,6 @@
             <i class="fas fa-calendar-week"></i> Du: <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
             <p><%= (mission.volunteers_count - mission.bookings.count)%> places restantes</p>
               </div>
-              <% if mission.bookings.count == 0 %>
-              <% "Plus de places disponibles" %>
-              <% else %>
               <div class = "button-display">
                 <%= link_to mission_bookings_path(mission), class: "cta", method: :post do %>
                   <span>Participer</span>
@@ -34,9 +31,8 @@
                   <path d="M1,5 L11,5"></path>
                   <polyline points="8 1 12 5 8 9"></polyline>
                   </svg>
-                <% end %>
-              </div>
               <% end %>
+              </div>
             </div>
           <% end %>
           </div>
