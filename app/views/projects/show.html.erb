@@ -22,15 +22,16 @@
             <div class ="pick-date">
               <div class="date-display">
             <i class="fas fa-calendar-week"></i> Du: <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
+            <p><%= (mission.volunteers_count - mission.bookings.count)%> places restantes</p>
               </div>
               <div class = "button-display">
-                <a href="#" class="cta">
-                <span>Participer</span>
-                <svg width="13px" height="10px" viewBox="0 0 13 10">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-                </a>
+                <%= link_to mission_bookings_path(mission), class: "cta", method: :post do %>
+                  <span>Participer</span>
+                  <svg width="13px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+              <% end %>
               </div>
             </div>
           <% end %>
