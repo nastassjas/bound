@@ -1,0 +1,15 @@
+<div class="map-img" style="position: relative">
+  <%= cl_image_tag project.photo, :width => 200 %>
+<div class="caption"><%= project.charity.name %></div>
+</div>
+<br>
+<center>
+<div class="mapwindow-details">
+  <h5><strong><%= project.name %></strong></h5>
+</div>
+</center>
+<br>
+<div class="mapwindow-link">
+  <%= link_to 'More details', project_path(project) %>
+</div>
+

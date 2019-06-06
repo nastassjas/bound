@@ -98,7 +98,68 @@ hop_hop_food =  Charity.new(
   )
 hop_hop_food.save!
 
+
 # PROJECT 1
+agence_innovation_solidaire_et_des_loisirs =  Charity.new(
+  name: "Agence d'innovation solidaire et des loisirs",
+  description: "Groupe de reflexion sur la meilleur façon de repondre aux besoins des menages les plus demunis dans le domaine economique, l'accès aux differents dispositifs sociaux et culturels, la sante etc...debouchant sur la creation de concepts et de produits ou de services ouverts à tous.",
+  phone_number: "01 47 56 78 39",
+  address: "75019",
+  email: "lydia.vergerolle@gmail.com",
+  status: "pending",
+  registration_nb: "751P00108654"
+  )
+agence_innovation_solidaire_et_des_loisirs.save!
+
+secours_populaire_31 =  Charity.new(
+  name: "Secours Populaire 31",
+  description: "Ne en 1945, le Secours populaire est une association à but non lucratif, reconnue d’utilite publique et declaree Grande cause nationale. Celle-ci est habilitee à recevoir des dons, des legs et des donations. L’association s'est donnee pour mission d’agir contre la pauvrete et l'exclusion en France et dans le monde et de promouvoir la solidarite et ses valeurs. Elle rassemble des personnes de toutes opinions, conditions et origines qui souhaitent faire vivre la solidarite.",
+  phone_number: "05 61 27 84 84",
+  address: "6 rue Jean-Marie Arnaud 31320 Castanet Tolosan",
+  email: "info@secourspopulaire.fr",
+  status: "approved",
+  registration_nb: "731S0731005711"
+  )
+secours_populaire_31.save!
+
+a_livres_ouverts =  Charity.new(
+  name: "A livres ouverts",
+  description: "reunir ses adherents de manière periodique autour d’activites liees à la lecture et l’ecriture et au perfectionnement en langue française",
+  phone_number: "04 91 45 39 12",
+  address: "DOMAINE DE VALBOIS, BÂTIMENT A1, 72, RUE HENRI TOMASI, 13009  MARSEILLE",
+  email: "alolesmots@orange.fr",
+  status: "approved",
+  registration_nb: "W044001847"
+  )
+a_livres_ouverts.save!
+
+nid_lyon =  Charity.new(
+  name: "Mouvement du Nid - Delegation du Rhône",
+  description: "Le Mouvement du Nid est une association reconnue d'utilite publique qui agit depuis 70 ans dans le domaine du droit des femmes auprès des personnes prostituees.
+  Ses activites sont : la rencontre  des personnes prostituees, leur accompagnement dans une demarche de reinsertion, la formation des acteurs sociaux, la prevention auprès des jeunes la sensibilisation du grand public et le plaidoyer politique afin de faire emerger une societe sans prostitution.
+  ",
+  phone_number: "06 33 40 94 98",
+  address: "70 rue Rachais 69007 LYON",
+  email: "rhonealpes-69@mouvementdunid.org",
+  status: "pending",
+  registration_nb: "031S0031003275"
+  )
+nid_lyon.save!
+
+asso3 =  Charity.new(
+  name: "Asso3",
+  description: "secours aux SDF",
+  phone_number: "02 38 49 15 27",
+  address: "2 avenue du general Leclerc 44",
+  email: "contact@asso3.fr",
+  status: "declined",
+  registration_nb: "?"
+  )
+asso3.save!
+
+
+  # PROJECT PROFILES
+
 garde_manger_solidaire = Project.new(
   name: "Garde-manger solidaire",
   description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
