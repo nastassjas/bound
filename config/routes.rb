@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :charities, only:[:index, :show, :new, :create]do
 
-    resources :projects, only: :create
+    resources :projects, only: [:create, :new]
   end
 
   resources :projects, only:[:home, :index, :show]do
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :missions, only:[:index, :show] do
     resources :bookings, only: :create
   end
+
+  resources :bookings, only: [:destroy]
 
   resources :user_skills, only: :create
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

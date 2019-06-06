@@ -1,4 +1,5 @@
 class CharitiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show, :all]
   def index
     @charities = Charity.all
   end
@@ -9,10 +10,12 @@ class CharitiesController < ApplicationController
 
   def new
     @charity = Charity.new
+      authorize(@charity)
   end
 
   def create
     @charity = Charity.new(charity_params)
+    authorize @charity
     if CheckAsso.call(@charity.registration_nb) == true
       @charity.save
       @enrollment = Enrollment.new(

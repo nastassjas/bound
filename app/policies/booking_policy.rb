@@ -8,4 +8,8 @@ class BookingPolicy < ApplicationPolicy
   def create?
     record.mission.volunteers_count >= record.mission.bookings.count
   end
+
+  def destroy?
+    record.user == user
+  end
 end

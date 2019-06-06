@@ -4,6 +4,8 @@
   Skill.destroy_all
   User.destroy_all
 
+  # USER PROFILES
+
   userTest1 = User.new(
   first_name: "Van",
   last_name: "Wayne",
@@ -82,6 +84,7 @@
   skill_teaching = Skill.create!(name: "Professeur.e")
 
 
+  # CHARITY PROFILES
 hop_hop_food =  Charity.new(
   name: "HopHopFood",
   description: "Reduction du gaspillage alimentaire des particuliers par une plateforme digitale geolocalisee Par cette plateforme, creation de solidarite en luttant contre la precarite alimentaire de populations fragiles (etudiants, migrants, etc.)",
@@ -149,6 +152,9 @@ asso3 =  Charity.new(
   registration_nb: "?"
   )
 asso3.save!
+
+
+  # PROJECT PROFILES
 
 
 garde_manger_solidaire = Project.new(
