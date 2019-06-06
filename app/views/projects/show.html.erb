@@ -27,7 +27,7 @@
             <% if mission.volunteers_count - mission.bookings.count == 1 %>
               <p>1 place restante</p>
             <% elsif mission.volunteers_count - mission.bookings.count < 1 %>
-             <p style="text-align:center; color: red"><i class="far fa-times-circle red"></i> Plus de places disponibles</p>
+             <p></p>
             <% else %>
               <p><%= mission.volunteers_count - mission.bookings.count%> places restantes</p>
             <% end %>
