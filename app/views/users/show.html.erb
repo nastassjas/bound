@@ -1,4 +1,4 @@
-<div class="banner-show" style="background: linear-gradient(45deg, rgba(18,64,55,1) 0%, rgba(20,76,82,1) 76%, rgba(20,76,82,1) 100%);">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://images.fastcompany.net/image/upload/w_1153,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/12/p-1-huffpost-editor-steps-down-to-launch-a-new-york-centric-nonprofit-news-project.jpg);">
 
   <div class="container-dashboard">
     <div class="dashboard-elements">
@@ -24,7 +24,7 @@
             <p><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h - <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
             <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
             <%= link_to 'Annuler', booking_path(booking),
-                    method: :delete, data: { confirm: 'Êtes-vous sûr.e ?' } %>
+                    method: :delete, remote: true, data: { confirm: 'Êtes-vous sûr.e ?' } %>
             </div>
 
           </div>
