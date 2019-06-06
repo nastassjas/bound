@@ -21,13 +21,16 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @charity = Charity.find(params[:charity_id])
+    @project.charity = @charity
     authorize(@project)
   end
 
   def create
     @project = Project.new(project_params)
+    @charity = Charity.find(params[:charity_id])
+    @project.charity = @charity
     authorize(@project)
-    @project.user = current_user
     if @project.save!
       redirect_to projects_path
     else
