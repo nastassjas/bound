@@ -71,6 +71,7 @@
   )
   userTest5.save!
 
+#SKILLS
 
   skill_legal = Skill.create!(name: "Juridique")
   skill_it = Skill.create!(name: "Developpement Informatique")
@@ -84,7 +85,8 @@
   skill_teaching = Skill.create!(name: "Professeur.e")
 
 
-  # CHARITY PROFILES
+#CHARITY 1
+
 hop_hop_food =  Charity.new(
   name: "HopHopFood",
   description: "Reduction du gaspillage alimentaire des particuliers par une plateforme digitale geolocalisee Par cette plateforme, creation de solidarite en luttant contre la precarite alimentaire de populations fragiles (etudiants, migrants, etc.)",
@@ -96,41 +98,178 @@ hop_hop_food =  Charity.new(
   )
 hop_hop_food.save!
 
-agence_innovation_solidaire_et_des_loisirs =  Charity.new(
-  name: "Agence d'innovation solidaire et des loisirs",
+# PROJECT 1
+garde_manger_solidaire = Project.new(
+  name: "Garde-manger solidaire",
+  description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
+  address: "281 Rue du Faubourg Saint-Antoine, 75011 Paris",
+  charity: hop_hop_food,
+  category: "Collecte & Distribution",
+  )
+garde_manger_solidaire.remote_photo_url = "https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg"
+garde_manger_solidaire.save!
+
+# MISSIONS of PROJECT 1
+journey1 = Mission.new(
+  title: "Distribution nourriture",
+  start_time: "2019-08-17 09:00:00",
+  end_time: "2019-08-18 19:00:00",
+  volunteers_count: 4,
+  charity: hop_hop_food,
+  project: garde_manger_solidaire
+  )
+journey1.save!
+
+journey2 = Mission.new(
+  title: "Preparation repas",
+  start_time: "2019-08-17 09:00:00",
+  end_time: "2019-08-18 19:00:00",
+  volunteers_count: 1,
+  charity: hop_hop_food,
+  project: garde_manger_solidaire,
+  skill:skill_cooking
+  )
+journey2.save!
+
+journey3 = Mission.new(
+  title: "Transport de nourriture",
+  start_time: "2019-08-17 09:00:00",
+  end_time: "2019-08-18 19:00:00",
+  volunteers_count: 5,
+  charity: hop_hop_food,
+  project: garde_manger_solidaire
+  )
+journey3.save!
+
+#CHARITY 2
+agence_innovation_solidaire =  Charity.new(
+  name: "Agence d'innovation solidaire",
   description: "Groupe de reflexion sur la meilleur façon de repondre aux besoins des menages les plus demunis dans le domaine economique, l'accès aux differents dispositifs sociaux et culturels, la sante etc...debouchant sur la creation de concepts et de produits ou de services ouverts à tous.",
   phone_number: "01 47 56 78 39",
-  address: "75019",
+  address: "187 Rue de Clignancourt, 75018 Paris",
   email: "lydia.vergerolle@gmail.com",
   status: "pending",
   registration_nb: "751P00108654"
   )
-agence_innovation_solidaire_et_des_loisirs.save!
+agence_innovation_solidaire.save!
 
+# PROJECT 2
+formateur_benevole_alpha = Project.new(
+  name: "Formateur benevole alpha/fle",
+  description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
+  address: "187 Rue de Clignancourt, 75018 Paris",
+  charity: agence_innovation_solidaire,
+  category: "Langues & éducationn"
+  )
+formateur_benevole_alpha.remote_photo_url = "https://static1.squarespace.com/static/540f698be4b05f0d2fb47512/59d76d744c326dcba5df2187/59d76d766f4ca3f9b42da1b1/1507290552799/IMG_2050.JPG?format=750w"
+formateur_benevole_alpha.save!
+
+# MISSIONS PROJECT 2
+formateur_journey = Mission.new(
+  title: "Cours de français",
+  start_time: "2019-06-14 09:30:00",
+  end_time: "2019-06-24 17:30:00",
+  volunteers_count: 10,
+  charity: agence_innovation_solidaire,
+  project: formateur_benevole_alpha,
+  skill: skill_teaching
+  )
+formateur_journey.save!
+
+#CHARITY 3
 secours_populaire_31 =  Charity.new(
   name: "Secours Populaire 31",
   description: "Ne en 1945, le Secours populaire est une association à but non lucratif, reconnue d’utilite publique et declaree Grande cause nationale. Celle-ci est habilitee à recevoir des dons, des legs et des donations. L’association s'est donnee pour mission d’agir contre la pauvrete et l'exclusion en France et dans le monde et de promouvoir la solidarite et ses valeurs. Elle rassemble des personnes de toutes opinions, conditions et origines qui souhaitent faire vivre la solidarite.",
   phone_number: "05 61 27 84 84",
-  address: "6 rue Jean-Marie Arnaud 31320 Castanet Tolosan",
+  address: "34 Rue Amelot, 75011 Paris",
   email: "info@secourspopulaire.fr",
   status: "approved",
   registration_nb: "731S0731005711"
   )
 secours_populaire_31.save!
 
-a_livres_ouverts =  Charity.new(
-  name: "A livres ouverts",
-  description: "reunir ses adherents de manière periodique autour d’activites liees à la lecture et l’ecriture et au perfectionnement en langue française",
-  phone_number: "04 91 45 39 12",
-  address: "DOMAINE DE VALBOIS, BÂTIMENT A1, 72, RUE HENRI TOMASI, 13009  MARSEILLE",
-  email: "alolesmots@orange.fr",
-  status: "approved",
-  registration_nb: "W044001847"
+#PROJECT 3
+distribution_flyers_chatbot = Project.new(
+  name: "Distribution de flyers",
+  description: "Aidez-nous, engagez-vous ! A l'occasion de la sortie officielle de son chatbot à destination des jeunes femmes victimes de violences, l'association Elle Caetera organise une grande distribution de Flyers, à Paris!",
+  address: "34 Rue Amelot, 75011 Paris",
+  charity: secours_populaire_31,
+  category: "Langues & éducation"
   )
-a_livres_ouverts.save!
+distribution_flyers_chatbot.remote_photo_url = "https://www.leflyer.fr/images/devis/lyon_distribution-flyers.jpg"
+distribution_flyers_chatbot.save!
 
+#MISSIONS of PROJECT 3
+distribution_journey = Mission.new(
+  title: "Conducteur",
+  start_time: "2019-06-21 09:00:00",
+  end_time: "2019-06-21 18:00:00",
+  volunteers_count: 1,
+  charity: secours_populaire_31,
+  project: distribution_flyers_chatbot
+  )
+distribution_journey.save!
+
+distribution_journey = Mission.new(
+  title: "Distribution flyers",
+  start_time: "2019-06-21 09:00:00",
+  end_time: "2019-06-21 18:00:00",
+  volunteers_count: 15,
+  charity: secours_populaire_31,
+  project: distribution_flyers_chatbot
+  )
+distribution_journey.save!
+
+
+#CHARITY 4
+la_reserve_des_arts =  Charity.new(
+  name: "LaReservedesArts",
+  description: "La Réserve des arts est une association qui récupère des rebuts et chutes de matériaux dans les entreprises, les valorise et les revend aux professionnel·le·s de la création.
+  La Réserve des arts répond à une triple mission : réduire durablement les déchets, soutenir le secteur culturel et promouvoir le réemploi.
+  L’écologie est une révolution culturelle. Devenez, vous aussi, acteur·rice du changement.",
+  phone_number: "02 38 49 15 27",
+  address: "Rue Prévost Paradol, 75014 Paris",
+  email: "contact@lareservedesarts.org",
+  status: "approved",
+  registration_nb: "48077929700013"
+  )
+la_reserve_des_arts.save!
+
+#PROJECT 4
+agir_pour_la_prévention_des_déchets = Project.new(
+  name: "Acteurs.trice d’une révolution environnementale",
+  description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnels du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
+  address: "Rue Prévost Paradol, 75014 Paris",
+  charity: la_reserve_des_arts,
+  category: "Arts & culture"
+  )
+agir_pour_la_prévention_des_déchets.remote_photo_url = "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/79/34/1/originale.jpg?itok=7nKKHVis"
+agir_pour_la_prévention_des_déchets.save!
+
+#MISSIONS of PROJECT 5
+agir_pour_la_prévention_des_déchets_journey = Mission.new(
+  title: "Tri, rangement et assortiment",
+  start_time: "2019-06-17 09:00:00",
+  end_time: "2019-06-20 18:00:00",
+  volunteers_count: 5,
+  charity: la_reserve_des_arts,
+  project: agir_pour_la_prévention_des_déchets
+  )
+agir_pour_la_prévention_des_déchets_journey.save
+
+agir_pour_la_prévention_des_déchets_journey2 = Mission.new(
+  title: "Décoration",
+  start_time: "2019-07-17 09:00:00",
+  end_time: "2019-07-17 18:00:00",
+  volunteers_count: 1,
+  charity: la_reserve_des_arts,
+  project: agir_pour_la_prévention_des_déchets
+  )
+agir_pour_la_prévention_des_déchets_journey2.save
+
+#CHARITY 6
 nid_lyon =  Charity.new(
-  name: "Mouvement du Nid - Delegation du Rhône",
+  name: "Mouvement du Nid",
   description: "Le Mouvement du Nid est une association reconnue d'utilite publique qui agit depuis 70 ans dans le domaine du droit des femmes auprès des personnes prostituees.
   Ses activites sont : la rencontre  des personnes prostituees, leur accompagnement dans une demarche de reinsertion, la formation des acteurs sociaux, la prevention auprès des jeunes la sensibilisation du grand public et le plaidoyer politique afin de faire emerger une societe sans prostitution.
   ",
@@ -142,6 +281,7 @@ nid_lyon =  Charity.new(
   )
 nid_lyon.save!
 
+#CHARITY 7
 asso3 =  Charity.new(
   name: "Asso3",
   description: "secours aux SDF",
@@ -152,117 +292,5 @@ asso3 =  Charity.new(
   registration_nb: "?"
   )
 asso3.save!
-
-  # PROJECT PROFILES
-
-garde_manger_solidaire = Project.new(
-  name: "Garde-manger solidaire",
-  description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
-  address: "142 rue saint maur 75011 Paris",
-  charity: nid_lyon,
-  category: "Food",
-  )
-garde_manger_solidaire.save!
-
-journey1 = Mission.new(
-  start_time: "2019-02-18 09:00:00",
-  end_time: "2019-07-30 19:00:00",
-  volunteers_count: 4,
-  charity: nid_lyon,
-  project: garde_manger_solidaire,
-  )
-journey1.save!
-
-journey2 = Mission.new(
-  start_time: "2019-08-01 09:00:00",
-  end_time: "2019-08-02 19:00:00",
-  volunteers_count: 7,
-  charity: nid_lyon,
-  project: garde_manger_solidaire,
-  )
-journey2.save!
-
-journey3 = Mission.new(
-  start_time: "2019-08-03 09:00:00",
-  end_time: "2019-08-05 19:00:00",
-  volunteers_count: 8,
-  charity: nid_lyon,
-  project: garde_manger_solidaire
-  )
-journey3.save!
-
-webmaster_experimente = Project.new(
-  name: "Webmaster experimente",
-  description: "Dans le cadre du developpement de sa communication, l'Agence d'innovation solidaire et des loisirs recherche des benevoles ayant des competences de niveau professionnel en creation de site web afin de pouvoir developper les sites internet de ses antennes et son cloud. Il est possible de s'engager pour une mission en particulier ou sur le long terme en diversifiant les productions ! Le rythme est selon vos contraintes perso et pro.",
-  address: "10 Rue Galilée, 75116 Paris",
-  charity: a_livres_ouverts,
-  category: "Activites artistiques & culturelles"
-  )
-webmaster_experimente.save!
-
-journey_webmaster = Mission.new(
-  start_time: "2019-06-15 10:00:00",
-  end_time: "2019-08-31 17:00:00",
-  volunteers_count: 1,
-  charity: a_livres_ouverts,
-  project: webmaster_experimente
-  )
-journey_webmaster.save!
-
-formateur_benevole_alpha = Project.new(
-  name: "Formateur benevole alpha/fle",
-  description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
-  address: "72, RUE HENRI TOMASI, 13009  MARSEILLE",
-  charity: secours_populaire_31,
-  category: "Aide aux devoirs, enseignement & formation"
-  )
-formateur_benevole_alpha.save!
-
-formateur_journey = Mission.new(
-  start_time: "2019-07-02 09:30:00",
-  end_time: "2019-12-23 17:30:00",
-  volunteers_count: 10,
-  charity: secours_populaire_31,
-  project: formateur_benevole_alpha,
-  skill: skill_teaching
-  )
-formateur_journey.save!
-
-distribution_flyers_chatbot = Project.new(
-  name: "Distribution de flyers et collecte de donnees !",
-  description: "Aidez-nous, engagez-vous ! A l'occasion de la sortie officielle de son chatbot à destination des jeunes femmes victimes de violences, l'association Elle Caetera organise une grande distribution de Flyers, à Paris!",
-  address: "34 Rue Amelot, 75011 Paris",
-  charity: secours_populaire_31,
-  category: "Collecte & Distribution (nourriture, vêtements, dons…)"
-  )
-distribution_flyers_chatbot.save!
-
-distribution_journey = Mission.new(
-  start_time: "2019-06-21 09:00:00",
-  end_time: "2019-06-21 18:00:00",
-  volunteers_count: 15,
-  charity: secours_populaire_31,
-  project: distribution_flyers_chatbot
-  )
-distribution_journey.save!
-
-accompagnement_aine = Project.new(
-  name: "Accompagnement de nos aînes",
-  description: "La mission consiste à accompagner nos aînes dans leurs deplacements de proximite (une balade dans le quartier, une sortie au musee, un rendez-vous medical...). Les accompagnements peuvent avoir lieu du lundi au dimanche, dans tout Toulouse.",
-  address: "52 Rue de la Chaussée d'Antin, 75009 Paris",
-  charity: a_livres_ouverts,
-  category: "Lien social. Aide au deplacement"
-  )
-accompagnement_aine.save!
-
-accompagnement_aine_journey = Mission.new(
-  start_time: "2019-06-17 09:00:00",
-  end_time: "2019-06-17 18:00:00",
-  volunteers_count: 30,
-  charity: a_livres_ouverts,
-  project: accompagnement_aine
-  )
-accompagnement_aine_journey.save!
-
 
 puts "Seeded 🦇"
