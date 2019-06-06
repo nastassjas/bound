@@ -45,7 +45,20 @@
                             required: true,
                             input_html: { autocomplete: "new-password" } %>
                             <p>My Precious Skills Are :</p>
-               <%= f.association :skills, as: :check_boxes %>
+               <%#= f.association :skills, as: :check_boxes %>
+                <div class="form-group">
+                  <label class="control-label check_boxes optional">My Precious skills are:</label>
+                  <input type="hidden" name="skill[category_ids][]" value="">
+                  <div class="category-skills">
+                    <% Skill.all.each do |skill| %>
+                      <input type="checkbox" class="hidden" value="<%= skill.id %>" name="skill[category_ids][]" id="skill_category_ids_<%= skill.id %>">
+                      <label class="category-skill" for="skill_category_ids_<%= skill.id %>">
+                        <%= skill.name %>
+                        <i class="fa fa-check"></i>
+                      </label>
+                    <% end %>
+                   </div>
+                </div>
 
               <div class="form-actions">
                 <%= f.button :submit, "Sign up", class: "btn-form btn-primary" %>
