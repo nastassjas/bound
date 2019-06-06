@@ -1,0 +1,24 @@
+<div class="newproject-img">
+  <div class="container-form">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <div class="form-newproject">
+          <h2>Créer votre mission</h2>
+
+          <%= simple_form_for @project do |f| %>
+          <%= f.input :name, label: "Nom"%>
+          <%= f.input :description, label: "Description"%>
+          <%= f.input :category, collection: Project::PROJECTCATEGORY, label: "Catégorie"%>
+          <%= f.input :address,label: "Adresse" %>
+          <%= f.input :photo, label: "Photo" %>
+          <%= f.input :photo_cache, as: :hidden %>
+         </div>
+      <div class="form-actions">
+    <%= f.button :submit, "Submit your project", class: "btn-form btn-primary"  %>
+      </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
