@@ -153,7 +153,9 @@ asso3 =  Charity.new(
   )
 asso3.save!
 
+
   # PROJECT PROFILES
+
 
 garde_manger_solidaire = Project.new(
   name: "Garde-manger solidaire",
