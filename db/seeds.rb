@@ -151,7 +151,6 @@ asso3 =  Charity.new(
 asso3.save!
 
 
-
 garde_manger_solidaire = Project.new(
   name: "Garde-manger solidaire",
   description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
