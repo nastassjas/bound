@@ -155,7 +155,7 @@
 
   # PROJECT 2
   formateur_benevole_alpha = Project.new(
-    name: "Formateur benevole alpha/fle",
+    name: "Formateur/trice benevole alpha/fle",
     description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
     address: "187 Rue de Clignancourt, 75018 Paris",
     charity: agence_innovation_solidaire,
@@ -237,7 +237,7 @@
 
   #PROJECT 4
   agir_pour_la_prévention_des_déchets = Project.new(
-    name: "Acteurs.trice d’une révolution environnementale",
+    name: "Acteurs.trices d’une révolution environnementale",
     description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnels du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
     address: "Rue Prévost Paradol, 75014 Paris",
     charity: la_reserve_des_arts,
