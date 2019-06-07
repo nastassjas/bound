@@ -24,7 +24,7 @@
           <div class ="search-bar-index">
           <%= text_field_tag(:address,nil,class: "search-address") %>
           <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= submit_tag "Trouver", class: "btn btn-primary" %>
           </div>
         <% end %>
     </div>
@@ -40,7 +40,7 @@
           <h3 class="charity-name"><%= project.charity.name %></h3>
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
           <button class="btn btn-primary btn-sm">
-          <%= link_to 'More details', project_path(project) %>
+          <%= link_to 'Plus de details', project_path(project) %>
           </button>
       </div>
     </div>
