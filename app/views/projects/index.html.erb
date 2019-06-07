@@ -1,4 +1,13 @@
 <div style="display: flex;">
+
+  <%= form_tag(projects_path, method: "get") do %>
+        <%#= label_tag(:address, "Where") %>
+        <%= text_field_tag :address, placeholder: "Mon adresse"%>
+        <%= select_tag(:start_time, options_for_select(Mission::start_time)) %>
+        <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
+        <%= submit_tag "Trouver", class: "card-btn-search"  %>
+      <% end %>
+
   <div
     style="margin: 20px"
     class="container-cards-2">
