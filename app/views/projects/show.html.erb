@@ -34,8 +34,8 @@
 
             <% if mission.volunteers_count - mission.bookings.count > 0 %>
               </div>
-              <% if mission.bookings.where(user_id: current_user.id).any? %>
-                <p style="color:rgba(5, 64, 66, 0.8)"> <i class="fas fa-check green"></i>   <strong>Vous êtes bien inscrit.e !</strong></p>
+              <% if user_signed_in? && mission.bookings.where(user_id: current_user.id).any? %>
+                  <p style="color:rgba(5, 64, 66, 0.8)"> <i class="fas fa-check green"></i>   <strong>Vous êtes bien inscrit.e !</strong></p>
               <% else %>
                 <div class = "button-display">
                   <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post do %>
