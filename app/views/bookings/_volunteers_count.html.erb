@@ -1,0 +1,7 @@
+<% if mission.volunteers_count - mission.bookings.count == 1 %>
+  1 place restante
+<% elsif mission.volunteers_count - mission.bookings.count < 1 %>
+
+<% else %>
+  <%= mission.volunteers_count - mission.bookings.count%> places restantes
+<% end %>

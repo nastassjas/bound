@@ -1,0 +1,17 @@
+function bookingValid() {
+  const bookingDiv = document.getElementById('booking-mission_<%= @mission.id %>');
+  bookingDiv.innerHTML = '<%= j render "bookings/confirmation" %>';
+}
+
+function displayPopup() {
+  document.getElementById('booking-popup-button-mission_<%= @mission.id %>').click();
+}
+
+function updateVolunteersCount() {
+  const paragraph = document.getElementById('volunteers-count-mission_<%= @mission.id %>');
+  paragraph.innerHTML = '<%= j render "bookings/volunteers_count", mission: @mission %>';
+}
+
+bookingValid();
+updateVolunteersCount();
+displayPopup();
