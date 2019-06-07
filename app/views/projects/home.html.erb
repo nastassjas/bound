@@ -16,7 +16,7 @@
 <div style="margin: 420px auto 28px auto;">
   <div class="container-header">
     <div class="section-title">
-      <h4 id="section-title"><i class="fas fa-arrow-circle-down"></i>Dernières mission</h4>
+      <h4 id="section-title"><i class="fas fa-arrow-circle-down"></i>Dernières missions</h4>
     </div>
 
     <div class="container-search-bar">
@@ -24,7 +24,7 @@
           <div class ="search-bar-index">
           <%= text_field_tag(:address,nil,class: "search-address") %>
           <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= submit_tag "Trouver", class: "btn btn-primary" %>
           </div>
         <% end %>
     </div>
@@ -40,7 +40,7 @@
           <h3 class="charity-name"><%= project.charity.name %></h3>
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
           <button class="btn btn-primary btn-sm">
-          <%= link_to 'Plus de détails', project_path(project) %>
+            <%= link_to 'Plus de détails', project_path(project) %>
           </button>
       </div>
     </div>

@@ -11,9 +11,13 @@
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5px;
-    align-items: center;
+    align-items: stretch;
     position: relative;
     min-height: 500px;
+}
+
+.fa-map-marker-alt:before {
+    padding-right: 5px;
 }
 
 .card-img-project {
