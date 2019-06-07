@@ -39,7 +39,7 @@
 
               <div id="booking-mission_<%= mission.id %>">
                 <% if mission.volunteers_count - mission.bookings.count > 0 %>
-                  <% if mission.bookings.where(user_id: current_user.id).any? %>
+                  <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
                     <%= render 'bookings/confirmation' %>
                   <% else %>
                     <div class = "button-display">

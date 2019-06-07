@@ -14,7 +14,9 @@
         </button>
       </div>
       <div class="modal-body">
-        Merci <%= current_user.first_name.capitalize %> ! Rendez-vous le <%= mission.start_time.strftime("%d/%m/%Y")%> au  <%= @project.address%>
+        <% if current_user %>
+          Merci <%= current_user.first_name.capitalize %> ! Rendez-vous le <%= mission.start_time.strftime("%d/%m/%Y")%> au  <%= @project.address%>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
