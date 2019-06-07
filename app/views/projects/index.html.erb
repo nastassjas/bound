@@ -1,7 +1,7 @@
 <div style="margin: 20px" class="container-search-bar">
     <%= form_tag(projects_path, method: "get") do %>
       <div class ="search-bar-index">
-      <%= text_field_tag(:address,nil,class: "search-address") %>
+      <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Paris') %>
       <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
       <%= submit_tag "Trouver", class: "btn btn-primary" %>
       </div>
@@ -15,7 +15,7 @@
     class="container-cards-2">
     <% @projects.each do |project| %>
       <div class="card" style="position: relative;">
-        <div class="card-img-project" style="background-image: url(https://diabetestimes.co.uk/wp-content/uploads/2015/09/refugee-1024x768.jpg)">
+        <div class="card-img-project" style="background-image: url(<%= project.photo %>)">
         </div>
         <div class="card-body">
           <h5 class="project-name"><strong><%= project.name %></strong></h5>
@@ -23,7 +23,7 @@
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
           <div style="position: absolute; bottom: 10px">
             <button class="btn btn-primary btn-sm">
-              <%= link_to 'More details', project_path(project) %>
+              <%= link_to 'Plus de détails', project_path(project) %>
             </button>
           </div>
         </div>

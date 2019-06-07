@@ -7,13 +7,13 @@
   <div class="container-bannertop">
     <h1> Don't watch, act!</h1>
     <div class="btn btn-primary">
-<%= link_to "Trouve ta mission !", projects_path%>
-</div>
+      <%= link_to "Trouve ta mission !", projects_path%>
+    </div>
   </div>
 </div>
 
 
-<div style="margin: 420px auto;">
+<div style="margin: 420px auto 28px auto;">
   <div class="container-header">
     <div class="section-title">
       <h4 id="section-title"><i class="fas fa-arrow-circle-down"></i>Dernières missions</h4>
@@ -40,7 +40,7 @@
           <h3 class="charity-name"><%= project.charity.name %></h3>
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
           <button class="btn btn-primary btn-sm">
-          <%= link_to 'Plus de details', project_path(project)%>
+            <%= link_to 'Plus de détails', project_path(project) %>
           </button>
       </div>
     </div>
@@ -48,7 +48,8 @@
   </div>
 
   <div class="container-header-button">
-        <div class="btn-primary btn-lg">
-<%= link_to "Plus de missions", projects_path%>
-</div>
+    <div class="btn-primary btn-lg">
+      <%= link_to "Plus de missions", projects_path%>
+    </div>
   </div>
+</div>
