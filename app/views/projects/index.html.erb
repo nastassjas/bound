@@ -1,12 +1,14 @@
-<div style="display: flex;">
+<div style="margin: 20px" class="container-search-bar">
+    <%= form_tag(projects_path, method: "get") do %>
+      <div class ="search-bar-index">
+      <%= text_field_tag(:address,nil,class: "search-address") %>
+      <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
+      <%= submit_tag "Trouver", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+</div>
 
-  <%= form_tag(projects_path, method: "get") do %>
-        <%#= label_tag(:address, "Where") %>
-        <%= text_field_tag :address, placeholder: "Mon adresse"%>
-        <%= select_tag(:start_time, options_for_select(Mission::start_time)) %>
-        <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-        <%= submit_tag "Trouver", class: "card-btn-search"  %>
-      <% end %>
+<div style="display: flex;">
 
   <div
     style="margin: 20px"
