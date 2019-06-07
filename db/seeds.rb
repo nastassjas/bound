@@ -246,7 +246,7 @@
   agir_pour_la_prévention_des_déchets.remote_photo_url = "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/79/34/1/originale.jpg?itok=7nKKHVis"
   agir_pour_la_prévention_des_déchets.save!
 
-  #MISSIONS of PROJECT 5
+  #MISSIONS of PROJECT 4
   agir_pour_la_prévention_des_déchets_journey = Mission.new(
     title: "Tri, rangement et assortiment",
     start_time: "2019-06-17 09:00:00",
@@ -267,21 +267,41 @@
     )
   agir_pour_la_prévention_des_déchets_journey2.save
 
-  #CHARITY 6
-  nid_lyon =  Charity.new(
-    name: "Mouvement du Nid",
-    description: "Le Mouvement du Nid est une association reconnue d'utilite publique qui agit depuis 70 ans dans le domaine du droit des femmes auprès des personnes prostituees.
-    Ses activites sont : la rencontre  des personnes prostituees, leur accompagnement dans une demarche de reinsertion, la formation des acteurs sociaux, la prevention auprès des jeunes la sensibilisation du grand public et le plaidoyer politique afin de faire emerger une societe sans prostitution.
-    ",
-    phone_number: "06 33 40 94 98",
-    address: "70 rue Rachais 69007 LYON",
-    email: "rhonealpes-69@mouvementdunid.org",
-    status: "pending",
-    registration_nb: "031S0031003275"
+#CHARITY 5
+  wayne =  Charity.new(
+    name: "Wayne",
+    description: "Musique pour Tous accompagne les musiciens passionnés désireux de s’impliquer à l’échelle locale dans un projet de société concret : rencontrer et partager avec des jeunes leur passion pour la musique.",
+    phone_number: "09 53 40 25 79",
+    address: "121 Rue Caulaincourt, 75018 Paris",
+    email: "liam.yoyo@yahoo.fr",
+    status: "approved",
+    registration_nb: "9G2S9712008364"
     )
-  nid_lyon.save!
+  wayne.save!
 
-  #CHARITY 7
+#PROJECT 5
+  music_to_change = Project.new(
+    name: "What do you fear?",
+    description: "Être animateur Musique, c’est être convaincu que tout musicien est un acteur de changement en devenir",
+    address: "121 Rue Caulaincourt, 75018 Paris",
+    charity: music_for_your_soul,
+    category: "Arts & culture"
+    )
+  music_to_change.remote_photo_url = "(<%= image_path "headbanner.png
+  music_to_change.save!
+
+#MISSIONS of PROJECT 5
+  faire_la_musique_avec_les_enfants = Mission.new(
+    title: "Animateur.trices Musique",
+    start_time: "2019-06-17 09:00:00",
+    end_time: "2019-06-20 18:00:00",
+    volunteers_count: 5,
+    charity: wayne,
+    project: music_to_change
+    )
+  faire_la_musique_avec_les_enfants.save
+
+  #CHARITY 6
   asso3 =  Charity.new(
     name: "Asso3",
     description: "secours aux SDF",
