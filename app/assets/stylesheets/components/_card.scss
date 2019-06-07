@@ -13,6 +13,7 @@
     border-radius: 5px;
     align-items: center;
     position: relative;
+    min-height: 500px;
 }
 
 .card-img-project {
@@ -52,9 +53,12 @@
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .container-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.container-cards-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto 50px auto;
 }
+
+

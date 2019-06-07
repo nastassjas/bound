@@ -11,6 +11,7 @@
       </div>
       <div class="col-lg-5">
         <div class="card" id="mission-description">
+          <%= @project.photo%>
           <h3>La mission</h3>
           <p><%= @project.description%></p>
         </div>
@@ -23,16 +24,22 @@
             <div class ="pick-date">
               <div class="date-display">
             <i class="fas fa-calendar-week"></i> Du: <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
-            <p><%= (mission.volunteers_count - mission.bookings.count)%> places restantes</p>
+            <% if mission.volunteers_count - mission.bookings.count == 1 %>
+              <p>1 place restante</p>
+            <% elsif mission.volunteers_count - mission.bookings.count < 1 %>
+             <p></p>
+            <% else %>
+              <p><%= mission.volunteers_count - mission.bookings.count%> places restantes</p>
+            <% end %>
 
             <% if mission.volunteers_count - mission.bookings.count > 0 %>
               </div>
               <% if mission.bookings.where(user_id: current_user.id).any? %>
-                <p> Aucune place disponible</p>
+                <p style="color:rgba(5, 64, 66, 0.8)"> <i class="fas fa-check green"></i>   <strong>Vous êtes bien inscrit.e !</strong></p>
               <% else %>
                 <div class = "button-display">
-                  <%= link_to mission_bookings_path(mission), class: "cta", method: :post do %>
-                      <span>Participer</span>
+                  <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post do %>
+                      <span id="add-booking">Participer</span>
                       <svg width="13px" height="10px" viewBox="0 0 13 10">
                       <path d="M1,5 L11,5"></path>
                       <polyline points="8 1 12 5 8 9"></polyline>
