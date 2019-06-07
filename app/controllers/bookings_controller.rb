@@ -10,12 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
 
-    if @booking.save!
-      #flash[:notice] = 'Bravo...'
-      redirect_to project_path(@mission.project)
-    else
-      redirect_to mission_path(@mission)
-    end
+    @booking.save!
   end
 
   def index
