@@ -10,6 +10,16 @@ class ProjectsController < ApplicationController
     @projects = policy_scope(Project)
 
     @projects = Project.where.not(latitude: nil, longitude: nil)
+    if params[:category].present?
+      if params[:category] == "Toutes les catégories"
+        @projects = Project.where.not(latitude: nil, longitude: nil)
+      else
+        sql_query = "category ILIKE ?"
+        @projects = Project.where(sql_query, "%#{params[:category]}%")
+      end
+    end
+
+
 
     @markers = @projects.map do |project|
       {
