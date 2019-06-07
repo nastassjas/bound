@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  PROJECTCATEGORY = ['Toutes les catégories', 'Arts & culture', 'Environnement', 'Collecte & Distribution', 'Langues & éducation', 'Sport & loisirs', 'Handicap', 'Sénior.e.s', 'Enfants & adolescent.e.s', 'LGBTQI', 'Racism & Antisémitisme', 'Violences domestiques', 'Droits des femmes']
+  PROJECTCATEGORY = ['Toutes les catégories', 'Arts & Culture', 'Environnement', 'Collecte & Distribution', 'Langues & Education', 'Sport & Loisirs', 'Handicap', 'Sénior.e.s', 'Enfants & Adolescent.e.s', 'LGBTQI', 'Racisme & Antisémitisme', 'Violences domestiques', 'Droits des femmes']
   belongs_to :charity
   has_many :missions
 

@@ -1,18 +1,15 @@
 <div class="map-img" style="position: relative">
-  <%= cl_image_tag project.photo, :width => 200 %>
-<div class="caption"><%= project.charity.name %></div>
+  <%= cl_image_tag project.photo, :width => '100%' %>
+  <div class="caption"><%= project.charity.name %></div>
 </div>
 <br>
-<center>
 <div class="mapwindow-details">
-
   <h4><strong><%= project.name %></strong></h4>
-    <h4><strong><%= project.charity.name %></h4></strong>
-
 </div>
-</center>
 <br>
 <div class="mapwindow-link">
-  <%= link_to 'More details', project_path(project) %>
+  <button class="btn btn-primary btn-sm">
+    <%= link_to 'More details', project_path(project) %>
+  </button>
 </div>
 
