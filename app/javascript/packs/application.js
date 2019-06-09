@@ -11,6 +11,15 @@ initMapbox();
 
 import { categorySkill } from '../plugins/category_skill';
 
+import { mouse } from '../plugins/mouse';
+import { parallax } from '../plugins/parallax';
+import { parallaxWindow } from '../plugins/parallax_window';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 
 // sweet alert
 // import { initSweetalert } from '../plugins/init_sweetalert';
