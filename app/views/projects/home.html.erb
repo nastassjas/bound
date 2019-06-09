@@ -13,29 +13,36 @@
     <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 35%; left: 15%; width:60px">
 
     <h1> Don't watch, act!</h1>
-    <div class="btn btn-primary animated infinite pulse slow">
+    <p style="color:white; font-size: 16px"> Devenez rapidement bénévoles près de vous dans les associations qui vous tiennent à coeur !</p>
+    <div class="btn btn-custom animated infinite pulse slow">
       <%= link_to "Trouve ta mission !", projects_path %>
     </div>
+  </div>
+  <div class="hero__scroll aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
   </div>
 </div>
 
 <div class="container" style="margin: 600px auto 28px auto;">
-  <div class="row">
-    <div class="col-md-6 col-lg-4">
-      <h4 id="section-title"><i class="fas fa-arrow-circle-down"></i>Dernières missions</h4>
-    </div>
-    <div class="col-md-6 col-lg-8">
-      <div class="container-search-bar">
-        <%= form_tag(projects_path, method: "get") do %>
-          <div class ="search-bar-index">
-          <%= text_field_tag(:address,nil,class: "search-address") %>
-          <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-          <%= submit_tag "Trouver", class: "btn btn-primary" %>
-          </div>
-        <% end %>
-    </div>
+  <div class="row justify-content-flex-start">
+    <div class="col-lg-6 mt-5">
+      <h4 id="section-title"><i class="fas fa-arrow-circle-down"> </i>  Dernières missions</h4>
     </div>
   </div>
+      <div class="container-search-bar">
+        <%= form_tag(projects_path, method: "get") do %>
+          <div class="row justify-content-flex-end">
+          <div class ="search-bar-index col-lg-5">
+          <%= text_field_tag(:address,nil,class: "search-address") %>
+          </div>
+          <div class ="search-bar-index col-lg-4">
+          <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
+          </div>
+          <div class ="search-bar-index col-lg-3">
+          <%= submit_tag "Trouver", class: "btn btn-primary" %>
+          </div>
+          </div>
+        <% end %>
+      </div>
   <div class="cards">
     <% @projects.each do |project| %>
     <div class="card" data-aos="fade-up">

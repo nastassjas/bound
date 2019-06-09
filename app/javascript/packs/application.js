@@ -12,8 +12,9 @@ initMapbox();
 import { categorySkill } from '../plugins/category_skill';
 
 import { mouse } from '../plugins/mouse';
-import { parallax } from '../plugins/parallax';
-import { parallaxWindow } from '../plugins/parallax_window';
+
+import { paraxify } from '../plugins/paraxify';
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -33,3 +34,5 @@ if (homePage && navbar) {
     console.log(navbar.style)
   })
 }
+
+myParaxify = paraxify('.banner-custom');

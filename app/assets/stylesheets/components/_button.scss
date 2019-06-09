@@ -51,3 +51,18 @@
 .moove {
   position: absolute;
 }
+
+.btn-custom {
+  background-color: white;
+  border: 1px solid white;
+  color: #144C52;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-custom:hover {
+  background-color: #144C52;
+  border: 1px solid #144C52;
+  border-color: white;
+  font-size: 16px;
+}
