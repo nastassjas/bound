@@ -4,10 +4,10 @@
     <div class="dashboard-elements">
       <div class="row" id="dashboard-elements-width">
         <div class="col-lg-6">
-          <h4 class="bookings-title"><%= link_to "Mes inscriptions", user_path, class:"active" %></h4>
+          <h4 class="bookings-title"><a href="/users/show" class="active">Mes inscriptions</a><%#= link_to "Mes inscriptions", user_path, class:"active" %></h4>
         </div>
         <div class="col-lg-6">
-          <h4 class="profile-title"><%= link_to "Mon profil", user_path%></h4>
+          <h4 class="profile-title"><a href="/users/show">Mon profil</a><%#= link_to "Mon profil", user_path%></h4>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
       </div>
 
     </div>
-    <div class="dashboard-myprofile">
+    <div class="dashboard-mybookings">
     </div>
   </div>
 </div>
