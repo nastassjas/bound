@@ -1,0 +1,33 @@
+.search-panel {
+  padding: 0 20px;
+  flex: 1 0 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+
+.search-group {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.search-form form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.search-main {
+  flex: 0 0 calc(50% - 5px);
+  margin-right: 5px;
+}
+
+

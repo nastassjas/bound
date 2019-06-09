@@ -41,11 +41,17 @@ class BookingsController < ApplicationController
 #   def status_change
 #   end
 
-    def destroy
-      @booking = Booking.find(params[:id])
-      authorize @booking
-      @booking.destroy
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking_id = @booking.id
+    @booking.destroy
+
+    respond_to do |format|
+      format.html { render 'users/show' }
+      format.js
     end
+  end
 
   private
 

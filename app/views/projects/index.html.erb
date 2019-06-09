@@ -1,3 +1,18 @@
+<div class = "search-panel">
+  <div class = "search-form">
+      <%= form_tag(projects_path, method: "get") do %>
+        <div class ="search-group">
+          <div class ="search-main">
+            <label class="d-one d-sm-block" for="address">Localisation</label>
+          <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Paris') %>
+          </div>
+        <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
+        <%= submit_tag "Trouver", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+  </div>
+</div>
+
 <div style="margin: 20px" class="container-search-bar">
     <%= form_tag(projects_path, method: "get") do %>
       <div class ="search-bar-index">
