@@ -1,13 +1,21 @@
 .btn-primary {
   background-color: #144C52;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
+  color:white;
+  a {
+    color:white;
+  }
 }
 
 .btn-primary:hover {
   background-color: #B93A07;
   border-color: #B93A07;
-  font-size: 16px;
+  font-size: 14px;
+  color: white;
+  a {
+    color:white;
+  }
 }
 
 
@@ -27,13 +35,13 @@
 .btn-primary btn-sm {
   background-color: #144C52;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-primary btn-sm :hover {
   background-color: #B93A07;
   border-color: #B93A07;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-primary btn-lg btn-block {
@@ -65,4 +73,11 @@
   border: 1px solid #144C52;
   border-color: white;
   font-size: 16px;
+  a {
+    color:white;
+  }
+}
+
+.card-body button {
+  right: 0px;
 }
