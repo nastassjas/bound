@@ -61,20 +61,20 @@
 }
 
 .btn-custom {
-  background-color: white;
-  border: 1px solid white;
-  color: #144C52;
+  background-color: #F4E409;
+  border: 1px solid #F4E409;
+  color: white;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .btn-custom:hover {
-  background-color: #144C52;
-  border: 1px solid #144C52;
+  background-color: white;
+  border: 1px solid white;
   border-color: white;
   font-size: 16px;
   a {
-    color:white;
+    color:black;
   }
 }
 
