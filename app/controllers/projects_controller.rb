@@ -55,6 +55,11 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @markers = [{
+        lat: @project.latitude,
+        lng: @project.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { project: @project })
+      }]
   end
 
   private
