@@ -11,6 +11,18 @@ initMapbox();
 
 import { categorySkill } from '../plugins/category_skill';
 
+import { mouse } from '../plugins/mouse';
+
+import { paraxify } from '../plugins/paraxify';
+
+import { transition } from '../plugins/transition';
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 
 // sweet alert
 // import { initSweetalert } from '../plugins/init_sweetalert';
@@ -24,3 +36,5 @@ if (homePage && navbar) {
     console.log(navbar.style)
   })
 }
+
+myParaxify = paraxify('.banner-custom');

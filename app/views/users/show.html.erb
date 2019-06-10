@@ -2,20 +2,20 @@
 
   <div class="container-dashboard">
     <div class="dashboard-elements">
-      <div class="row">
+      <div class="row" id="dashboard-elements-width">
         <div class="col-lg-6">
-          <h4>Mes inscriptions</h4>
+          <h4 class="bookings-title"><a href="/users/show" class="active">Mes inscriptions</a><%#= link_to "Mes inscriptions", user_path, class:"active" %></h4>
         </div>
         <div class="col-lg-6">
-          <h4>Mon profil</h4>
+          <h4 class="profile-title"><a href="/users/show">Mon profil</a><%#= link_to "Mon profil", user_path%></h4>
         </div>
       </div>
     </div>
     <div class="dashboard-mybookings">
       <div class="cards-dashboard">
         <% @bookings.each do |booking| %>
-        <div class="card-img-txt">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
+        <div class="card-img-txt" id="booking-<%= booking.id %>">
+            <div class="card-category" style="background-image: url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
               <p style="font-size: 20px; text-align: center"><%= booking.mission.project.name%></p>
             </div>
             <div class="card-txt">
@@ -24,7 +24,7 @@
             <p><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h - <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
             <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
             <%= link_to 'Annuler', booking_path(booking),
-                    method: :delete, remote: true, data: { confirm: 'Êtes-vous sûr.e ?' } %>
+                    method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %>
             </div>
 
           </div>
@@ -32,7 +32,7 @@
       </div>
 
     </div>
-    <div class="dashboard-myprofile">
+    <div class="dashboard-mybookings">
     </div>
   </div>
 </div>

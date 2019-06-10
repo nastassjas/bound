@@ -1,41 +1,83 @@
 .btn-primary {
   background-color: #144C52;
   border-radius: 5px;
+  font-size: 14px;
+  color:white;
+  a {
+    color:white;
+  }
 }
 
 .btn-primary:hover {
   background-color: #B93A07;
   border-color: #B93A07;
+  font-size: 14px;
+  color: white;
+  a {
+    color:white;
+  }
 }
 
 
 .btn-primary btn-lg {
   background-color: #144C52;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .btn-primary btn-lg :hover {
   background-color: #B93A07;
   border-color: #B93A07;
+  font-size: 16px;
 }
 
 
 .btn-primary btn-sm {
   background-color: #144C52;
   border-radius: 5px;
+  font-size: 14px;
 }
 
 .btn-primary btn-sm :hover {
   background-color: #B93A07;
   border-color: #B93A07;
+  font-size: 14px;
 }
 
 .btn-primary btn-lg btn-block {
   background-color: #144C52;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .btn-primary btn-lg btn-block :hover {
   background-color: #B93A07;
   border-color: #B93A07;
+  font-size: 16px;
+}
+
+.moove {
+  position: absolute;
+}
+
+.btn-custom {
+  background-color: white;
+  border: 1px solid white;
+  color: #144C52;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-custom:hover {
+  background-color: #144C52;
+  border: 1px solid #144C52;
+  border-color: white;
+  font-size: 16px;
+  a {
+    color:white;
+  }
+}
+
+.card-body button {
+  right: 0px;
 }

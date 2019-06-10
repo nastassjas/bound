@@ -1,3 +1,20 @@
+.card-custom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    h3{
+    padding-bottom: 5px;
+    color: white;
+  }
+    p{
+  color: white;
+  font-weight: lighter;
+  font-size:14px;
+  }
+}
+
 .banner-show {
   background-size: cover;
   background-position: center;
@@ -18,17 +35,15 @@
   font-weight: bold;
 }
 
-.banner-show p {
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+#mission-new {
+  background-color: #042A2B;
+  margin: 10px 0px;
+  border: 0px;
+  min-height: 100px;
 }
 
-.card-custom {
-    display: flex;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 5px;
-    align-items: left;
-    position: relative;
+.banner-show p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .pick-date {
@@ -49,9 +64,10 @@
 
 #mission-description {
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 6px;
   margin-bottom: 20px;
+  min-height: 0px;
 }
 
 
@@ -66,46 +82,36 @@
 
 #mission-booking {
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 6px;
   margin-bottom: 20px;
+  min-height: 0px;
 }
 
 #mission-booking-btn {
   padding-top: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 6px;
   margin-bottom: 20px;
   padding-left: 0px;
+  min-height: 0px;
+
+  h4 {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 }
 
 
-#mission-more {
-  padding: 40px;
-  background-color: #042A2B;
-  margin: 10px 0px;
-  border: 0px;
-}
-
-
-#mission-more h3{
+#mission-new h3{
   padding-bottom: 5px;
   color: white;
 }
 
-#mission-more p{
+#mission-new p{
   color: white;
   font-weight: lighter;
   font-size:14px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  color:white;
 }
 
 .cta {
@@ -148,6 +154,7 @@ a:hover {
     transition: all .3s ease;
   }
   &:hover {
+    color: white;
     &:before{
       width: 100%;
       background: rgba($primary,1);
@@ -160,6 +167,7 @@ a:hover {
     transform: scale(.96);
   }
 }
+
 
 #more-info {
   background-color: #042A2B;

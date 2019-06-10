@@ -5,6 +5,7 @@ gem 'bootsnap', require: false
 gem 'devise'
 gem 'geocoder'
 gem 'jbuilder', '~> 2.0'
+gem 'jquery-rails'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'pundit'

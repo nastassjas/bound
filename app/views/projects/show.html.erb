@@ -1,7 +1,7 @@
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1421977870504-378093748ae6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
   <div id="show-project" class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3" data-aos="zoom-out-up">
         <div class="card" id="mission-booking">
         <p class="green"><strong><%= @project.category%></strong></p>
         <h3><%= @project.name%></h3>
@@ -9,8 +9,8 @@
         <p><i class="fas fa-map-marker-alt"></i> <%= @project.address%></p>
         </div>
       </div>
-      <div class="col-lg-5">
-        <div class="card" id="mission-description">
+      <div class="col-lg-5" data-aos="fade-up">
+        <div class="card " id="mission-description">
           <div
             style="
               background-image: url(<%= @project.photo %>);
@@ -18,13 +18,13 @@
               height: 206px;
               background-size: cover;
               background-position: center;
-              margin-bottom: 10px;">
+              margin-bottom: 20px;">
           </div>
           <h3>La mission</h3>
           <p><%= @project.description%></p>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" data-aos="fade-up">
           <div class="card" id="mission-booking-btn">
 
           <h4>Dates</h4>
@@ -33,7 +33,7 @@
               <div class="date-display">
                 <i class="fas fa-calendar-week"></i> Du: <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
                 <p id="volunteers-count-mission_<%= mission.id %>">
-                  <%= render 'bookings/volunteers_count', mission: mission %>
+                  <strong><%= render 'bookings/volunteers_count', mission: mission %></strong>
                 </p>
               </div>
 
@@ -67,12 +67,17 @@
 <div id="more-info">
   <div class="container">
     <div class="row">
-        <div class="col-lg-8">
-          <div class="card" id="mission-more">
-            <h3>Plus d'infos</h3>
-            <p><%= @project.charity.description%></p>
-          </div>
+      <div class="card-custom">
+        <div class="col-lg-3">
+          <h3>Plus d'infos</h3>
         </div>
+        <div class="col-lg-4" id="mission-new" data-aos="fade-up">
+          <p><strong><%= @project.charity.name%></strong></p>
+          <p><%= @project.charity.description%></p>
+        <div class="col-lg-5" id="mission-new" data-aos="fade-up">
+        </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
