@@ -423,10 +423,10 @@
     charity: ateliers_pluriculturels,
     category: "Arts & culture"
     )
-  atelier_tricot.remote_photo_url = "http://ecartsdarts.com/wp-content/uploads/2014/09/formation-ASG-Irst-animation-artistique-atelier-dessin.jpg"
+  atelier_tricot.remote_photo_url = "https://www.unidivers.fr/wp-content/uploads/2018/11/1505241_image_42617408_1133769363439842_5213805459407896576_n.jpg"
   atelier_tricot.save!
 
-#MISSIONS of PROJECT 8
+#MISSIONS of PROJECT 9
   animation_tricot = Mission.new(
     title: "Animateur.trices cours de tricot",
     start_time: "2019-06-15 09:00:00",
@@ -436,5 +436,41 @@
     project: atelier_tricot
     )
   animation_tricot.save
+
+#CHARITY 10
+  vivre_enesemble =  Charity.new(
+    name: "Kif kif vivre ensemble",
+    description: "Les Ateliers Pluriculturels organisent des animations culturelles en adéquation avec ses projets, visant à promouvoir ses actions, avec le soutien actuel de l'officiel. L'association travaille en lien avec un réseau associatif ayant pour but de découvrir la diversité des cultures et de la solidarité",
+    phone_number: "02 38 49 15 27",
+    address: "123 boulevard Voltaire, 75011 Paris",
+    email: "contact@vivreensemble.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  vivre_enesemble.save!
+
+#PROJECT 10
+    fête_de_quartier = Project.new(
+    name: "Fête de quartier ",
+    description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un(e) bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
+    address: "123 boulevard Voltaire, 75011 Paris",
+    charity: vivre_enesemble,
+    category: "Arts & culture"
+    )
+  fête_de_quartier.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560162325/26686950247_08aacd2cdd_b_gqy73p.jpg"
+  fête_de_quartier.save!
+
+#MISSIONS of PROJECT 10
+  regisseur_son = Mission.new(
+    title: "Régisseur son",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
+    volunteers_count: 1,
+    charity: vivre_enesemble,
+    project: fête_de_quartier
+    )
+  regisseur_son.save
+
+
 
   puts "Seeded 🦇"
