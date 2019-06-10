@@ -84,7 +84,7 @@
 }
 
 .banner-custom {
-  background-image: url('https://res.cloudinary.com/patti01/image/upload/v1560025672/govo/patterngradient-final2-01_phpend.svg');
+  background-image: url('https://res.cloudinary.com/patti01/image/upload/v1560156374/govo/patterngradient22_kq5zit.svg');
   background-size: cover;
   position: absolute;
   top: 0;
@@ -96,6 +96,7 @@
   justify-content: center;
   background-attachment: fixed;
   background-position: center center;
+  background-color: white;
 
 }
 
@@ -115,6 +116,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.banner-custom {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+svg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+svg mask rect {
+  fill: white;
+}
+
+svg > rect {
+  fill: white;
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+}
+
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 // Smallest device
