@@ -304,7 +304,7 @@
 #CHARITY 6
   les_dauphins =  Charity.new(
     name: "Les Dauphins du 15e",
-    description: "Depuis 25 ans, le club de natation adaptée "Les Dauphins du 15e", créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
+    description: "Depuis 25 ans, le club de natation adaptée Les Dauphins du 15e, créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
     phone_number: "02 38 49 15 27",
     address: "13 Rue du Général Guillaumat, 75015 PARIS",
     email: "contact@lesdauphins.fr",
@@ -389,7 +389,7 @@
     charity: la_maison_belleville,
     category: "Arts & culture"
     )
-  animation_pour_les_enfants.remote_photo_url = "http://ecartsdarts.com/wp-content/uploads/2014/09/formation-ASG-Irst-animation-artistique-atelier-dessin.jpg"
+  animation_pour_les_enfants.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560172219/kids-2985782_1280-1024x683_oafwh2.jpg"
   animation_pour_les_enfants.save!
 
 #MISSIONS of PROJECT 8
