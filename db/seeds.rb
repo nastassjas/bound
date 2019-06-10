@@ -293,24 +293,35 @@
 #MISSIONS of PROJECT 5
   faire_la_musique_avec_les_enfants = Mission.new(
     title: "Animateur.trices Musique",
-    start_time: "2019-06-17 09:00:00",
-    end_time: "2019-06-20 18:00:00",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
     volunteers_count: 5,
     charity: wayne,
     project: music_to_change
     )
   faire_la_musique_avec_les_enfants.save
 
-  #CHARITY 6
-  asso3 =  Charity.new(
-    name: "Asso3",
-    description: "secours aux SDF",
+#CHARITY 6
+  Les_Dauphins =  Charity.new(
+    name: "Les Dauphins du 15e",
+    description: "Depuis 25 ans, le club de natation adaptée "Les Dauphins du 15e", créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
     phone_number: "02 38 49 15 27",
-    address: "2 avenue du general Leclerc 44",
-    email: "contact@asso3.fr",
-    status: "declined",
+    address: "13 Rue du Général Guillaumat, 75015 PARIS",
+    email: "contact@lesdauphins.fr",
+    status: "approved",
     registration_nb: "?"
     )
   asso3.save!
+
+#PROJECT 6
+    apprentissage_de_la_natation = Project.new(
+    name: "What do you fear?",
+    description: "Être animateur Musique, c’est être convaincu que tout musicien est un acteur de changement en devenir",
+    address: "121 Rue Caulaincourt, 75018 Paris",
+    charity: music_for_your_soul,
+    category: "Arts & culture"
+    )
+  music_to_change.remote_photo_url = "(<%= image_path "headbanner.png
+  music_to_change.save!
 
   puts "Seeded 🦇"
