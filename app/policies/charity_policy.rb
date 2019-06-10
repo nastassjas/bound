@@ -9,6 +9,10 @@ class CharityPolicy < ApplicationPolicy
     true
   end
 
+  def roulette?
+    true
+  end
+
   def index?
     true
   end
@@ -16,4 +20,5 @@ class CharityPolicy < ApplicationPolicy
   def create?
     true
   end
+
 end
