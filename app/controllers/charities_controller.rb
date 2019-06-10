@@ -11,7 +11,9 @@ class CharitiesController < ApplicationController
   end
 
   def roulette
-    @charities = Charity.all
+    @projects = Project.all.map do |project|
+      { name: project.name, url: project_url(project) }
+    end
   end
 
   def new
