@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-gang">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/patti01/image/upload/v1559650607/govo/noun_hands_1178109_mpfct5.png", class: "logo" %>
+   <h1> <%= "bound." %> </h1>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
           <%end %>
 
        <% if user_signed_in? %>
-          Merci d'être là <strong><%= current_user.first_name %></strong> !!
+         <h4> Merci d'être là <strong><%= current_user.first_name %></strong> !! </h4>
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
 
