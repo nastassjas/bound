@@ -18,6 +18,8 @@ import { paraxify } from '../plugins/paraxify';
 
 import { addressSubmit } from '../components/search';
 
+import "../plugins/flatpickr"
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
