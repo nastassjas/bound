@@ -20,12 +20,7 @@
           Merci d'être là <strong><%= current_user.first_name %></strong> !!
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
-        <li class="nav-item active">
-        <a class="nav-link" href="#"><h4>À propos</h4></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><h4>Associations</h4></a>
-      </li>
+
         <div class="nav-button">
           <div class="container-button">
          <%= link_to "S'inscrire", new_user_registration_path, class: "btnsignsm"  %>
