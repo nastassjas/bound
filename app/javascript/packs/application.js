@@ -15,8 +15,6 @@ import { mouse } from '../plugins/mouse';
 
 import { paraxify } from '../plugins/paraxify';
 
-import { transition } from '../plugins/transition';
-
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
