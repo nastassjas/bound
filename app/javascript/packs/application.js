@@ -18,7 +18,9 @@ import { paraxify } from '../plugins/paraxify';
 
 import { addressSubmit } from '../components/search';
 
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
+
+import "../components/toggle_map";
 
 
 import AOS from 'aos';
