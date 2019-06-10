@@ -5,7 +5,7 @@ a {
   color:white;
 }
 a:hover{
- color: white;
+ color: yellow;
 }
 }
 
@@ -92,7 +92,7 @@ a:hover{
 }
 
 #mission-booking {
-  padding: 40px;
+  padding: 30px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 6px;
   margin-bottom: 20px;
@@ -106,6 +106,7 @@ a:hover{
   margin-bottom: 20px;
   padding-left: 0px;
   min-height: 0px;
+  padding-left: 10px;
 
   h4 {
     margin: 0 auto;

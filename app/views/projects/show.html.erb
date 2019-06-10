@@ -15,8 +15,17 @@
         <h3><%= @project.name%></h3>
         <p>Association: <strong><%= @project.charity.name%></strong></p>
         <p><i class="fas fa-map-marker-alt"></i> <%= @project.address%></p>
+        <div
+  id="map"
+  style="width: 200px;
+  height: 100px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+  </div>
         </div>
       </div>
+
       <div class="col-lg-5" data-aos="fade-up">
         <div class="card " id="mission-description">
           <div
