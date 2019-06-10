@@ -13,13 +13,17 @@ class ProjectsController < ApplicationController
     if params[:category].present?
       if params[:category] == "Toutes les catégories"
         @projects = Project.where.not(latitude: nil, longitude: nil)
+        if params[:address].present?
+          @projects = Project.where.not(latitude: nil, longitude: nil).near(params[:address], 1)
+        end
       else
         sql_query = "category ILIKE ?"
         @projects = Project.where(sql_query, "%#{params[:category]}%")
+        if params[:address].present?
+          @projects = Project.where(sql_query, params[:category]).near(params[:address], 1)
+        end
       end
     end
-
-
 
     @markers = @projects.map do |project|
       {
