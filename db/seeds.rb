@@ -304,7 +304,7 @@
 #CHARITY 6
   les_dauphins =  Charity.new(
     name: "Les Dauphins du 15e",
-    description: "Depuis 25 ans, le club de natation adaptée "Les Dauphins du 15e", créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
+    description: "Depuis 25 ans, le club de natation adaptée Les Dauphins du 15e, créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
     phone_number: "02 38 49 15 27",
     address: "13 Rue du Général Guillaumat, 75015 PARIS",
     email: "contact@lesdauphins.fr",
