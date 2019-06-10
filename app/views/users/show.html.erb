@@ -1,5 +1,9 @@
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://images.fastcompany.net/image/upload/w_1153,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/12/p-1-huffpost-editor-steps-down-to-launch-a-new-york-centric-nonprofit-news-project.jpg);">
 
+<div class="container-retour">
+  <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i> <%= link_to "Retour aux missions", projects_path %></h3>
+</div>
+
   <div class="container-dashboard">
     <div class="dashboard-elements">
       <div class="row" id="dashboard-elements-width">
@@ -15,18 +19,23 @@
       <div class="cards-dashboard">
         <% @bookings.each do |booking| %>
         <div class="card-img-txt" id="booking-<%= booking.id %>">
-            <div class="card-category" style="background-image: url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
-              <p style="font-size: 20px; text-align: center"><%= booking.mission.project.name%></p>
+            <div class="card-category"
+             style="background-image: url(<%= booking.mission.project.photo %>);
+              width: 100%;
+              height: 206px;
+              background-size: cover;
+              background-position: center;
+              margin-bottom: 20px;">
+              <p style="font-size: 25px; text-align: center"><%= booking.mission.project.name%></p>
             </div>
             <div class="card-txt">
-            <p><%= booking.mission.project.charity.name%></p>
+            <h5><%= booking.mission.project.charity.name%></h5>
+            <p><i class="fas fa-calendar-week"></i>  <strong><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong> <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
             <p><i class="fas fa-map-marker-alt"></i>  <%= booking.mission.project.address%></p>
-            <p><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h - <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
             <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
             <%= link_to 'Annuler', booking_path(booking),
                     method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %>
             </div>
-
           </div>
           <% end %>
       </div>

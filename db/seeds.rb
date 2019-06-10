@@ -89,7 +89,7 @@
 
   hop_hop_food =  Charity.new(
     name: "HopHopFood",
-    description: "Reduction du gaspillage alimentaire des particuliers par une plateforme digitale geolocalisee Par cette plateforme, creation de solidarite en luttant contre la precarite alimentaire de populations fragiles (etudiants, migrants, etc.)",
+    description: "Reduction du gaspillage alimentaire des particulier.e.s par une plateforme digitale geolocalisee Par cette plateforme, creation de solidarite en luttant contre la precarite alimentaire de populations fragiles (etudiant.e.s, migrant.e.s, etc.)",
     phone_number: "09 53 40 25 79",
     address: "281 Rue du Faubourg Saint-Antoine, 75011 Paris",
     email: "michel.montagu@yahoo.fr",
@@ -101,7 +101,7 @@
   # PROJECT 1
   garde_manger_solidaire = Project.new(
     name: "Garde-manger solidaire",
-    description: "Nous cherchons des benevoles pour être des anges-gardiens de ces GMS, c'estàdire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
+    description: "Nous cherchons des benevoles pour être des anges-gardien.ne.s de ces GMS, c'est à dire s'engager à passer regulièrement (quelques fois par semaine serait top) pour verifier que tout se passe bien (5 mn). Ce serait pratique que la.e benevole habite ou travaille tout près du GMS.",
     address: "281 Rue du Faubourg Saint-Antoine, 75011 Paris",
     charity: hop_hop_food,
     category: "Collecte & Distribution",
@@ -144,7 +144,7 @@
   #CHARITY 2
   agence_innovation_solidaire =  Charity.new(
     name: "Agence d'innovation solidaire",
-    description: "Groupe de reflexion sur la meilleur façon de repondre aux besoins des menages les plus demunis dans le domaine economique, l'accès aux differents dispositifs sociaux et culturels, la sante etc...debouchant sur la creation de concepts et de produits ou de services ouverts à tous.",
+    description: "Groupe de reflexion sur la meilleure façon de repondre aux besoins des menages les plus demunis dans le domaine economique, l'accès aux differents dispositifs sociaux et culturels, la sante etc...debouchant sur la creation de concepts et de produits ou de services ouverts à tou.te.s.",
     phone_number: "01 47 56 78 39",
     address: "187 Rue de Clignancourt, 75018 Paris",
     email: "lydia.vergerolle@gmail.com",
@@ -155,8 +155,8 @@
 
   # PROJECT 2
   formateur_benevole_alpha = Project.new(
-    name: "Formateur/trice benevole alpha/fle",
-    description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
+    name: "Formateur.trice benevole alpha/fle",
+    description: "A Livres Ouverts recrute des formateurs.trices benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux.elles benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
     address: "187 Rue de Clignancourt, 75018 Paris",
     charity: agence_innovation_solidaire,
     category: "Langues & éducation"
@@ -201,7 +201,7 @@
 
   #MISSIONS of PROJECT 3
   distribution_journey = Mission.new(
-    title: "Conducteur",
+    title: "Conducteur.trice",
     start_time: Date.parse("2019-08-17"),
     end_time: Date.parse("2019-08-30"),
     volunteers_count: 1,
@@ -224,9 +224,9 @@
   #CHARITY 4
   la_reserve_des_arts =  Charity.new(
     name: "LaReservedesArts",
-    description: "La Réserve des arts est une association qui récupère des rebuts et chutes de matériaux dans les entreprises, les valorise et les revend aux professionnel·le·s de la création.
+    description: "La Réserve des arts est une association qui récupère des rebuts et chutes de matériaux dans les entreprises, les valorise et les revend aux professionnel.le.s de la création.
     La Réserve des arts répond à une triple mission : réduire durablement les déchets, soutenir le secteur culturel et promouvoir le réemploi.
-    L’écologie est une révolution culturelle. Devenez, vous aussi, acteur·rice du changement.",
+    L’écologie est une révolution culturelle. Devenez, vous aussi, acteur.trice du changement.",
     phone_number: "02 38 49 15 27",
     address: "Rue Prévost Paradol, 75014 Paris",
     email: "contact@lareservedesarts.org",
@@ -238,7 +238,7 @@
   #PROJECT 4
   agir_pour_la_prévention_des_déchets = Project.new(
     name: "Acteurs.trices d’une révolution environnementale",
-    description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnels du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
+    description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnel.le.s du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
     address: "Rue Prévost Paradol, 75014 Paris",
     charity: la_reserve_des_arts,
     category: "Arts & culture"
@@ -270,7 +270,7 @@
 #CHARITY 5
   wayne =  Charity.new(
     name: "Wayne",
-    description: "Musique pour Tous accompagne les musiciens passionnés désireux de s’impliquer à l’échelle locale dans un projet de société concret : rencontrer et partager avec des jeunes leur passion pour la musique.",
+    description: "Accompagne les musicien.ne.s passionné.e.s désireux.ses de s’impliquer à l’échelle locale dans un projet de société concret : rencontrer et partager avec des jeunes leur passion pour la musique.",
     phone_number: "09 53 40 25 79",
     address: "121 Rue Caulaincourt, 75018 Paris",
     email: "liam.yoyo@yahoo.fr",
@@ -282,7 +282,7 @@
 #PROJECT 5
   music_to_change = Project.new(
     name: "What do you fear?",
-    description: "Être animateur Musique, c’est être convaincu que tout musicien est un acteur de changement en devenir",
+    description: "Être animateur.trice Musique, c’est être convaincu.e que tout.e musicien.ne est un.e acteur.trice de changement en devenir",
     address: "121 Rue Caulaincourt, 75018 Paris",
     charity: wayne,
     category: "Arts & culture"
@@ -316,7 +316,7 @@
 #PROJECT 6
     apprentissage_de_la_natation = Project.new(
     name: "Apprentissage de la natation",
-    description: "Participer à des jeux et des temps de détente pour les plus réticents à la nage et aider les dauphins débutants dans leurs premières nages",
+    description: "Participer à des jeux et des temps de détente pour les plus réticent.e.s à la nage et aider les dauphins débutant.e.s dans leurs premières nages",
     address: "13 Rue du Général Guillaumat, 75015 Paris",
     charity: les_dauphins,
     category: "Arts & culture"
@@ -326,7 +326,7 @@
 
 #MISSIONS of PROJECT 6
   prof_de_natation = Mission.new(
-    title: "Maître nageur/nageuse",
+    title: "Maître nageur / nageuse",
     start_time: Date.parse("2019-08-17"),
     end_time: Date.parse("2019-08-19"),
     volunteers_count: 5,
@@ -338,7 +338,7 @@
 #CHARITY 7
   vsart =  Charity.new(
     name: "Vsart",
-    description: "VSArt se propose d'apporter, au moyen de l'art et de la culture (conférences, concerts, ateliers d'arts plastiques, de chant, de la parole ou toute discipline selon la compétence des bénévoles et accompagnements) un soutien moral à toutes personnes en situation de difficulté : enfants hospitalisés, jeunes de quartiers défavorisés, malades, personnes âgées, détenus, personnes handicapées.",
+    description: "VSArt se propose d'apporter, au moyen de l'art et de la culture (conférences, concerts, ateliers d'arts plastiques, de chant, de la parole ou toute discipline selon la compétence des bénévoles et accompagnements) un soutien moral à toutes personnes en situation de difficulté : enfants hospitalisés, jeunes de quartiers défavorisés, malades, personnes âgées, détenu.e.s, personnes handicapées.",
     phone_number: "02 38 49 15 27",
     address: "36 rue du Fer à Moulin, 75005 Paris",
     email: "contact@vsart.fr",
@@ -372,7 +372,7 @@
 #CHARITY 8
   la_maison_belleville =  Charity.new(
     name: "La maison belleville",
-    description: "Le centre social et culturel, La maison du Bas Belleville, est ouvert pour toutes et pour tous. Si vous souhaitez devenir bénévoles sur l'une de nos activités: écrivains publics, ateliers linguistiques, modules linguistiques à visée professionnelle, accompagnement à la scolarité, permanences informatiques",
+    description: "Le centre social et culturel, La maison du Bas Belleville, est ouvert pour toutes et pour tous. Si vous souhaitez devenir bénévoles sur l'une de nos activités: écrivain.e.s public.que.s, ateliers linguistiques, modules linguistiques à visée professionnelle, accompagnement à la scolarité, permanences informatiques",
     phone_number: "02 38 49 15 27",
     address: "110 boulevard de Belleville, 75020 Paris",
     email: "contact@maisonbelleville.fr",
@@ -384,7 +384,7 @@
 #PROJECT 8
     animation_pour_les_enfants = Project.new(
     name: "Ateliers de découverte pour les enfants ",
-    description: "Envie de partager vos talents, savoir-faire et centres d’intérêts avec les nouvelles générations ? Alors devenez bénévole à la Maison du Bas-Belleville et proposez des séances de découverte aux primaires et collégiens inscrits à l’accompagnement à la scolarité (arts plastiques, travaux manuels, jardinage, écriture... ). ",
+    description: "Envie de partager vos talents, savoir-faire et centres d’intérêts avec les nouvelles générations ? Alors devenez bénévole à la Maison du Bas-Belleville et proposez des séances de découverte aux primaires et collégien.ne.s inscrit.e.s à l’accompagnement à la scolarité (arts plastiques, travaux manuels, jardinage, écriture... ). ",
     address: "110 boulevard de Belleville, 75020 Paris",
     charity: la_maison_belleville,
     category: "Arts & culture"
@@ -418,7 +418,7 @@
 #PROJECT 9
     atelier_tricot = Project.new(
     name: "Ateliers cours de tricot",
-    description: "Nous recherchons un(e) bénévole, ayant des compétences en tricot et désireuses de les transmettre pour animer un atelier hebdomadaire à destination des habitants du quartier.",
+    description: "Nous recherchons un.e bénévole, ayant des compétences en tricot et désireuses de les transmettre pour animer un atelier hebdomadaire à destination des habitant.e.s du quartier.",
     address: "53 Rue Nationale, 75013 Paris",
     charity: ateliers_pluriculturels,
     category: "Arts & culture"
@@ -452,7 +452,7 @@
 #PROJECT 10
     fête_de_quartier = Project.new(
     name: "Fête de quartier ",
-    description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un(e) bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
+    description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un.e bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
     address: "123 boulevard Voltaire, 75011 Paris",
     charity: vivre_enesemble,
     category: "Arts & culture"

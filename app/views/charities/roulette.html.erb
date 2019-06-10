@@ -10,7 +10,7 @@
       </div>
       <div class="spinner">
         <%= image_tag "spinner3.png", id:"spinner-img" %>
-          <h1 id="btn-spinner">
+          <h1 id="btn-spinner" data-project="<%= @projects.to_json %>">
 
         </h1>
       </div>
@@ -95,8 +95,14 @@
       };
 
       const bullName = () => {
-        const seedNoun = Math.floor(Math.random() * nouns.length);
-        return capitalize(nouns[seedNoun]);
+        // const seedNoun = Math.floor(Math.random() * nouns.length);
+        // return capitalize(nouns[seedNoun]);
+        // const charities = document.getElementById("btn-spinner").dataset.charity
+        // console.log(charities);
+        const result = JSON.parse(document.getElementById("btn-spinner").dataset.project)[Math.floor(Math.random() * 9) + 1  ];
+        const name = result.name
+        const url = result.url
+        return `<a href=${url}>${name}</a>`;
       };
 
     </script>
