@@ -160,7 +160,7 @@ video {
 }
 
 .wrap {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0px;
   text-align: center;
 }
@@ -171,6 +171,7 @@ video {
   left: 0;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .fullscreen-video-wrap video {
@@ -254,6 +255,8 @@ video {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+  .header-content h1{font-size: 40px;}
+  .header-content p{font-size: 1rem;}
 }
 
 // Large devices (desktops, 992px and up)
