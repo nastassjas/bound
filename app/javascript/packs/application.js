@@ -15,6 +15,8 @@ import { mouse } from '../plugins/mouse';
 
 import { paraxify } from '../plugins/paraxify';
 
+import { addressSubmit } from '../components/search';
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -35,4 +37,10 @@ if (homePage && navbar) {
   })
 }
 
-myParaxify = paraxify('.banner-custom');
+const bannerCustom = document.querySelector('.banner-custom');
+if (bannerCustom) {
+  myParaxify = paraxify('.banner-custom');
+}
+
+addressSubmit();
+

@@ -159,7 +159,7 @@
     description: "A Livres Ouverts recrute des formateurs benevoles ALPHA/FLE pour animer des cours de français (niveau Alpha, debutant et avance) pour des personnes vivant en habitat indigne et pour des personnes refugiees et apporter une petite formation aux nouveaux benevoles. Les cours auront lieu desormais dans notre antenne de Marseille (13)",
     address: "187 Rue de Clignancourt, 75018 Paris",
     charity: agence_innovation_solidaire,
-    category: "Langues & éducationn"
+    category: "Langues & éducation"
     )
   formateur_benevole_alpha.remote_photo_url = "https://static1.squarespace.com/static/540f698be4b05f0d2fb47512/59d76d744c326dcba5df2187/59d76d766f4ca3f9b42da1b1/1507290552799/IMG_2050.JPG?format=750w"
   formateur_benevole_alpha.save!

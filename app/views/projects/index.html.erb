@@ -1,11 +1,10 @@
 
 <div style="margin: 20px" class="container-search-bar">
-    <%= form_tag(projects_path, method: "get") do %>
+    <%= form_tag(projects_path, method: "get", class: 'address-form') do %>
       <div class ="search-bar-index">
-      <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Paris') %>
-      <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-      <%= submit_tag "Trouver", class: "btn btn-primary" %>
+      <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Paris', value: params[:address]) %>
       </div>
+      <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY, params[:category]), onchange: 'this.form.submit();') %>
     <% end %>
 </div>
 
