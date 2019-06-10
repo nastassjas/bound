@@ -4,17 +4,32 @@
       <div class ="search-bar-index">
       <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Où ?', value: params[:address]) %>
       </div>
-      <%= text_field :start_time, params[:start_time], id: "date-picker" %>
+      <div class="date-index">
+        <%= text_field_tag :start_time, params[:start_time], id: "date-picker" %>
         <%= submit_tag 'Appliquer' %>
-      <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY, params[:category]), onchange: 'this.form.submit();') %>
+      </div>
+      <div class="category-index">
+        <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY, params[:category]), onchange: 'this.form.submit();') %>
+      </div>
     <% end %>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active map-on">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> On
+      </label>
+      <label class="btn btn-secondary map-off">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Off
+      </label>
+    </div>
 </div>
 
-<div style="display: flex;">
+<div style="display: flex;" id="main-container">
 
   <div
     style="margin: 20px"
     class="container-cards-2">
+    <% if @projects.empty? %>
+      <p>Aucune mission ne correspond à votre recherche.</p>
+    <% end %>
     <% @projects.each do |project| %>
       <div class="card" style="position: relative;">
         <div class="card-img-project" style="background-image: url(<%= project.photo %>)">
@@ -23,6 +38,9 @@
           <h5 class="project-name"><strong><%= project.name %></strong></h5>
           <h3 class="charity-name"><%= project.charity.name %></h3>
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
+          <% if params[:address].present? && !params[:address].empty? %>
+            <p><%= project.distance %></p>
+          <% end %>
           <div style="position: absolute; bottom: 10px">
             <button class="btn btn-primary btn-sm">
               <%= link_to 'Plus de détails', project_path(project) %>
@@ -36,7 +54,6 @@
   <div
     id="map"
     style="
-      width: 40%;
       height: 600px;
       position: sticky;
       top: 0;

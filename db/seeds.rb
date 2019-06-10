@@ -112,8 +112,8 @@
   # MISSIONS of PROJECT 1
   distribution_nourriture = Mission.new(
     title: "Distribution nourriture",
-    start_time: "2019-08-17 09:00:00",
-    end_time: "2019-08-18 19:00:00",
+    start_time: Date.parse("2019-08-17"),
+    end_time: Date.parse("2019-08-18"),
     volunteers_count: 4,
     charity: hop_hop_food,
     project: garde_manger_solidaire
@@ -122,8 +122,8 @@
 
   preparation_repas = Mission.new(
     title: "Preparation repas",
-    start_time: "2019-08-17 09:00:00",
-    end_time: "2019-08-18 19:00:00",
+    start_time: Date.parse("2019-08-17"),
+    end_time: Date.parse("2019-08-18"),
     volunteers_count: 1,
     charity: hop_hop_food,
     project: garde_manger_solidaire,
@@ -133,8 +133,8 @@
 
   transport_de_nourriture = Mission.new(
     title: "Transport de nourriture",
-    start_time: "2019-08-17 09:00:00",
-    end_time: "2019-08-18 19:00:00",
+    start_time: Date.parse("2019-07-17"),
+    end_time: Date.parse("2019-07-18"),
     volunteers_count: 5,
     charity: hop_hop_food,
     project: garde_manger_solidaire
@@ -167,8 +167,8 @@
   # MISSIONS PROJECT 2
   formateur_journey = Mission.new(
     title: "Cours de français",
-    start_time: "2019-06-14 09:30:00",
-    end_time: "2019-06-24 17:30:00",
+    start_time: Date.parse("2019-06-17"),
+    end_time: Date.parse("2019-06-23"),
     volunteers_count: 10,
     charity: agence_innovation_solidaire,
     project: formateur_benevole_alpha,
@@ -202,8 +202,8 @@
   #MISSIONS of PROJECT 3
   distribution_journey = Mission.new(
     title: "Conducteur",
-    start_time: "2019-06-21 09:00:00",
-    end_time: "2019-06-21 18:00:00",
+    start_time: Date.parse("2019-08-17"),
+    end_time: Date.parse("2019-08-30"),
     volunteers_count: 1,
     charity: secours_populaire_31,
     project: distribution_flyers_chatbot
@@ -212,8 +212,8 @@
 
   distribution_journey = Mission.new(
     title: "Distribution flyers",
-    start_time: "2019-06-21 09:00:00",
-    end_time: "2019-06-21 18:00:00",
+    start_time: Date.parse("2019-09-17"),
+    end_time: Date.parse("2019-09-20"),
     volunteers_count: 15,
     charity: secours_populaire_31,
     project: distribution_flyers_chatbot
@@ -249,8 +249,8 @@
   #MISSIONS of PROJECT 4
   agir_pour_la_prévention_des_déchets_journey = Mission.new(
     title: "Tri, rangement et assortiment",
-    start_time: "2019-06-17 09:00:00",
-    end_time: "2019-06-20 18:00:00",
+    start_time: Date.parse("2019-12-17"),
+    end_time: Date.parse("2019-12-24"),
     volunteers_count: 5,
     charity: la_reserve_des_arts,
     project: agir_pour_la_prévention_des_déchets
@@ -259,8 +259,8 @@
 
   agir_pour_la_prévention_des_déchets_journey2 = Mission.new(
     title: "Décoration",
-    start_time: "2019-07-17 09:00:00",
-    end_time: "2019-07-17 18:00:00",
+    start_time: Date.parse("2019-12-17"),
+    end_time: Date.parse("2019-12-20"),
     volunteers_count: 1,
     charity: la_reserve_des_arts,
     project: agir_pour_la_prévention_des_déchets
@@ -293,8 +293,8 @@
 #MISSIONS of PROJECT 5
   music_to_change = Mission.new(
     title: "Animateur.trices Musique",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-17"),
+    end_time: Date.parse("2019-08-17"),
     volunteers_count: 5,
     charity: wayne,
     project: music_to_change
@@ -327,8 +327,8 @@
 #MISSIONS of PROJECT 6
   prof_de_natation = Mission.new(
     title: "Maître nageur/nageuse",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-17"),
+    end_time: Date.parse("2019-08-19"),
     volunteers_count: 5,
     charity: les_dauphins,
     project: apprentissage_de_la_natation
@@ -361,8 +361,8 @@
 #MISSIONS of PROJECT 7
   animation_artistiques = Mission.new(
     title: "Animateur.trices artistiques",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-22"),
+    end_time: Date.parse("2019-08-23"),
     volunteers_count: 3,
     charity: vsart,
     project: animation_ateliers_artistiques
@@ -395,8 +395,8 @@
 #MISSIONS of PROJECT 8
   animation_artistiques = Mission.new(
     title: "Animateur.trices artistiques",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-15"),
+    end_time: Date.parse("2019-08-15"),
     volunteers_count: 3,
     charity: la_maison_belleville,
     project: animation_pour_les_enfants
@@ -429,8 +429,8 @@
 #MISSIONS of PROJECT 9
   animation_tricot = Mission.new(
     title: "Animateur.trices cours de tricot",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-01"),
+    end_time: Date.parse("2019-08-09"),
     volunteers_count: 3,
     charity: ateliers_pluriculturels,
     project: atelier_tricot
@@ -463,8 +463,8 @@
 #MISSIONS of PROJECT 10
   regisseur_son = Mission.new(
     title: "Régisseur son",
-    start_time: "2019-06-15 09:00:00",
-    end_time: "2019-06-15 18:00:00",
+    start_time: Date.parse("2019-08-12"),
+    end_time: Date.parse("2019-08-13"),
     volunteers_count: 1,
     charity: vivre_enesemble,
     project: fête_de_quartier

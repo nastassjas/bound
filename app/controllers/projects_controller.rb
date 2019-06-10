@@ -7,30 +7,34 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = policy_scope(Project)
+    @projects = policy_scope(Project).where.not(latitude: nil, longitude: nil)
 
-    @projects = Project.where.not(latitude: nil, longitude: nil)
-    if params[:category].present?
-      if params[:category] == "Toutes les catégories"
-        @projects = Project.where.not(latitude: nil, longitude: nil)
-        if params[:address].present?
-          @projects = Project.where.not(latitude: nil, longitude: nil).near(params[:address], 1)
-        end
-      else
-        sql_query = "category ILIKE ?"
-        @projects = Project.where(sql_query, "%#{params[:category]}%")
-        if params[:address].present?
-          @projects = Project.where(sql_query, params[:category]).near(params[:address], 1)
-        end
+    sql_query = "category ILIKE ?"
+    @projects = @projects.where(sql_query, "%#{params[:category]}%") if params[:category].present? && params[:category] != "Toutes les catégories"
+
+    @projects = @projects.near(params[:address], 10) if params[:address].present? && !params[:address].empty?
+
+    if params[:start_time].present? && params[:start_time].first != ""
+      @missions = Mission.select do |mission|
+        (mission.start_time ... mission.end_time).cover?(Date.parse(params[:start_time]))
+      end
+
+      @project_in_time_range = @missions.map { |mission| mission.project }
+
+
+      @projects = @projects.select do |project|
+        @project_in_time_range.include?(project)
       end
     end
 
-    @markers = @projects.map do |project|
-      {
-        lat: project.latitude,
-        lng: project.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { project: project })
-      }
+    if @projects.present?
+      @markers = @projects.map do |project|
+        {
+          lat: project.latitude,
+          lng: project.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { project: project })
+        }
+      end
     end
   end
 
