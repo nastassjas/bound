@@ -5,7 +5,7 @@
   display: flex;
 }
 #bull-bar {
-  background-color: white;
+  background-color: transparent;
   border-radius: 52px;
   padding: 12px;
   font-size: 34px;
@@ -14,7 +14,7 @@
   max-width: 400px;
   height: 50%;
   margin: auto;
-  box-shadow: 0 0 10px black;
+  // box-shadow: 0 0 10px black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,8 +60,8 @@
   font-size: 27px;
   letter-spacing: 4px;
   font-family: 'Bungee', cursive;
-  background-color: white;
-  color: black;
+  background-color: none;
+  color: none;
   width: 148px;   /* alans design (will be overriden) */
   height: 148px;  /* alans design (will be overriden) */
   width: 38vw;    /* width as percentage of viewport WIDTH */

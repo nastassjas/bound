@@ -9,9 +9,9 @@
         </a>
       </div>
       <div class="spinner">
-        <%= image_tag "spinner.png", id:"spinner-img" %>
+        <%= image_tag "spinner3.png", id:"spinner-img" %>
           <h1 id="btn-spinner">
-          Spin
+
         </h1>
       </div>
     </div>
@@ -36,7 +36,7 @@
         console.log(degreeSpinSum);
         // reset
         bullbar.setAttribute("style", "border: none;");
-        spinner.innerHTML = "Spin";
+        spinner.innerHTML = "";
         bullbar.innerHTML = "- - - - -";
         // calculate spinner degrees and spin! (transformation)
         degreeSpinSum += normalize(minSpinDegrees + randomExtraSpins(3));
@@ -50,8 +50,8 @@
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd".split(" ").forEach((event) => {
         spinner.addEventListener(event, () => { // webkitTransitionEnd oTransitionEnd MSTransitionEnd"
           bullbar.innerHTML = `${bullName()}`;
-          bullbar.setAttribute("style", "border: 5px solid #ABF9F7; transition: ease 0.25s;");
-          button.innerHTML = "Pitch";
+          bullbar.setAttribute("style", "border: 5px solid ; transition: ease 0.25s;");
+          button.innerHTML = "";
         });
       })
 
@@ -83,81 +83,11 @@
     </script>
 
     <script>
-      const endings = [
-        // VERBS
-        "kick",
-        "stop",
-        "able",
-        // NOUNS
-        "hub",
-        "link",
-        "tube",
-        "risk",
-        "now",
-        "job",
-        "scam",
-        "run",
-        // WEBSITES
-        "ly",
-        "ify",
-        ".me",
-        ".io",
-        ".app",
-        ".it",
-        ".us",
-        ".coin"
-      ];
+
 
       const nouns = [
-        "shave",
-        "smoke",
-        "cat",
-        "letter",
-        "mom",
-        "pump",
-        "wash",
-        "soap",
-        "dream",
-        "plan",
-        "wish",
-        "sniff",
-        "fuck",
-        "hand",
-        "talk",
-        "sin",
-        "heart",
-        "day",
-        "slap",
-        "drugs",
-        "pony",
-        "lock",
-        "beer",
-        "pot",
-        "drive",
-        "Laugh",
-        "fool",
-        "trip",
-        "port",
-        "buzz",
-        "void",
-        "hole",
-        "plane",
-        "lip",
-        "shop",
-        "rebel",
-        "tooth",
-        "nail",
-        "snail",
-        "shit",
-        "die",
-        "tax",
-        "dog",
-        "dock",
-        "stalk",
-        "talk",
-        "touch",
-        "wire",
-        "sucker"
+        "THIS MISSION WOULD BE PERFECT",
+
       ];
 
       const capitalize = (string) => {
@@ -166,8 +96,7 @@
 
       const bullName = () => {
         const seedNoun = Math.floor(Math.random() * nouns.length);
-        const seedEnd = Math.floor(Math.random() * endings.length);
-        return capitalize(nouns[seedNoun]) + endings[seedEnd];
+        return capitalize(nouns[seedNoun]);
       };
 
     </script>
