@@ -110,7 +110,7 @@
   garde_manger_solidaire.save!
 
   # MISSIONS of PROJECT 1
-  journey1 = Mission.new(
+  distribution_nourriture = Mission.new(
     title: "Distribution nourriture",
     start_time: "2019-08-17 09:00:00",
     end_time: "2019-08-18 19:00:00",
@@ -118,9 +118,9 @@
     charity: hop_hop_food,
     project: garde_manger_solidaire
     )
-  journey1.save!
+  distribution_nourriture.save!
 
-  journey2 = Mission.new(
+  preparation_repas = Mission.new(
     title: "Preparation repas",
     start_time: "2019-08-17 09:00:00",
     end_time: "2019-08-18 19:00:00",
@@ -129,9 +129,9 @@
     project: garde_manger_solidaire,
     skill:skill_cooking
     )
-  journey2.save!
+  preparation_repas.save!
 
-  journey3 = Mission.new(
+  transport_de_nourriture = Mission.new(
     title: "Transport de nourriture",
     start_time: "2019-08-17 09:00:00",
     end_time: "2019-08-18 19:00:00",
@@ -139,7 +139,7 @@
     charity: hop_hop_food,
     project: garde_manger_solidaire
     )
-  journey3.save!
+  transport_de_nourriture.save!
 
   #CHARITY 2
   agence_innovation_solidaire =  Charity.new(
@@ -284,14 +284,14 @@
     name: "What do you fear?",
     description: "Être animateur Musique, c’est être convaincu que tout musicien est un acteur de changement en devenir",
     address: "121 Rue Caulaincourt, 75018 Paris",
-    charity: music_for_your_soul,
+    charity: wayne,
     category: "Arts & culture"
     )
-  music_to_change.remote_photo_url = "(<%= image_path "headbanner.png
+  music_to_change.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560159690/slack-imgs_d1saq7.jpg"
   music_to_change.save!
 
 #MISSIONS of PROJECT 5
-  faire_la_musique_avec_les_enfants = Mission.new(
+  music_to_change = Mission.new(
     title: "Animateur.trices Musique",
     start_time: "2019-06-15 09:00:00",
     end_time: "2019-06-15 18:00:00",
@@ -299,10 +299,10 @@
     charity: wayne,
     project: music_to_change
     )
-  faire_la_musique_avec_les_enfants.save
+  music_to_change.save
 
 #CHARITY 6
-  Les_Dauphins =  Charity.new(
+  les_dauphins =  Charity.new(
     name: "Les Dauphins du 15e",
     description: "Depuis 25 ans, le club de natation adaptée "Les Dauphins du 15e", créé par les Papillons Blancs de Paris, permet à une cinquantaine d'adultes en situation de handicap mental de profiter d'une heure par semaine à la piscine.",
     phone_number: "02 38 49 15 27",
@@ -311,17 +311,130 @@
     status: "approved",
     registration_nb: "?"
     )
-  asso3.save!
+  les_dauphins.save!
 
 #PROJECT 6
     apprentissage_de_la_natation = Project.new(
-    name: "What do you fear?",
-    description: "Être animateur Musique, c’est être convaincu que tout musicien est un acteur de changement en devenir",
-    address: "121 Rue Caulaincourt, 75018 Paris",
-    charity: music_for_your_soul,
+    name: "Apprentissage de la natation",
+    description: "Participer à des jeux et des temps de détente pour les plus réticents à la nage et aider les dauphins débutants dans leurs premières nages",
+    address: "13 Rue du Général Guillaumat, 75015 Paris",
+    charity: les_dauphins,
     category: "Arts & culture"
     )
-  music_to_change.remote_photo_url = "(<%= image_path "headbanner.png
-  music_to_change.save!
+  apprentissage_de_la_natation.remote_photo_url = "https://www.luxschool.com/wp-content/uploads/2019/02/Natation-adultes-800-532.jpg"
+  apprentissage_de_la_natation.save!
+
+#MISSIONS of PROJECT 6
+  prof_de_natation = Mission.new(
+    title: "Maître nageur/nageuse",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
+    volunteers_count: 5,
+    charity: les_dauphins,
+    project: apprentissage_de_la_natation
+    )
+  prof_de_natation.save
+
+#CHARITY 7
+  vsart =  Charity.new(
+    name: "Vsart",
+    description: "VSArt se propose d'apporter, au moyen de l'art et de la culture (conférences, concerts, ateliers d'arts plastiques, de chant, de la parole ou toute discipline selon la compétence des bénévoles et accompagnements) un soutien moral à toutes personnes en situation de difficulté : enfants hospitalisés, jeunes de quartiers défavorisés, malades, personnes âgées, détenus, personnes handicapées.",
+    phone_number: "02 38 49 15 27",
+    address: "36 rue du Fer à Moulin, 75005 Paris",
+    email: "contact@vsart.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  vsart.save!
+
+#PROJECT 7
+    animation_ateliers_artistiques = Project.new(
+    name: "Anim.d'ateliers artistiques ",
+    description: "Vous maîtrisez une technique artistique (dessin, peinture, modelage, art floral... ou simplement la parole ou le conte) et vous voulez en faire profiter des personnes âgées en maison de retraite ou hospitalisées.",
+    address: "36 rue du Fer à Moulin, 75005 Paris",
+    charity: vsart,
+    category: "Arts & culture"
+    )
+  animation_ateliers_artistiques.remote_photo_url = "http://ecartsdarts.com/wp-content/uploads/2014/09/formation-ASG-Irst-animation-artistique-atelier-dessin.jpg"
+  animation_ateliers_artistiques.save!
+
+#MISSIONS of PROJECT 7
+  animation_artistiques = Mission.new(
+    title: "Animateur.trices artistiques",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
+    volunteers_count: 3,
+    charity: vsart,
+    project: animation_ateliers_artistiques
+    )
+  animation_artistiques.save
+
+#CHARITY 8
+  la_maison_belleville =  Charity.new(
+    name: "La maison belleville",
+    description: "Le centre social et culturel, La maison du Bas Belleville, est ouvert pour toutes et pour tous. Si vous souhaitez devenir bénévoles sur l'une de nos activités: écrivains publics, ateliers linguistiques, modules linguistiques à visée professionnelle, accompagnement à la scolarité, permanences informatiques",
+    phone_number: "02 38 49 15 27",
+    address: "110 boulevard de Belleville, 75020 Paris",
+    email: "contact@maisonbelleville.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  la_maison_belleville.save!
+
+#PROJECT 8
+    animation_pour_les_enfants = Project.new(
+    name: "Ateliers de découverte pour les enfants ",
+    description: "Envie de partager vos talents, savoir-faire et centres d’intérêts avec les nouvelles générations ? Alors devenez bénévole à la Maison du Bas-Belleville et proposez des séances de découverte aux primaires et collégiens inscrits à l’accompagnement à la scolarité (arts plastiques, travaux manuels, jardinage, écriture... ). ",
+    address: "110 boulevard de Belleville, 75020 Paris",
+    charity: la_maison_belleville,
+    category: "Arts & culture"
+    )
+  animation_pour_les_enfants.remote_photo_url = "http://ecartsdarts.com/wp-content/uploads/2014/09/formation-ASG-Irst-animation-artistique-atelier-dessin.jpg"
+  animation_pour_les_enfants.save!
+
+#MISSIONS of PROJECT 8
+  animation_artistiques = Mission.new(
+    title: "Animateur.trices artistiques",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
+    volunteers_count: 3,
+    charity: la_maison_belleville,
+    project: animation_pour_les_enfants
+    )
+  animation_artistiques.save
+
+#CHARITY 9
+  ateliers_pluriculturels =  Charity.new(
+    name: "Ateliers pluriculturels",
+    description: "Les Ateliers Pluriculturels organisent des animations culturelles en adéquation avec ses projets, visant à promouvoir ses actions, avec le soutien actuel de l'officiel. L'association travaille en lien avec un réseau associatif ayant pour but de découvrir la diversité des cultures et de la solidarité",
+    phone_number: "02 38 49 15 27",
+    address: "53 Rue Nationale, 75013 Paris",
+    email: "contact@atelierspluriculturels.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  ateliers_pluriculturels.save!
+
+#PROJECT 9
+    atelier_tricot = Project.new(
+    name: "Ateliers cours de tricot",
+    description: "Nous recherchons un(e) bénévole, ayant des compétences en tricot et désireuses de les transmettre pour animer un atelier hebdomadaire à destination des habitants du quartier.",
+    address: "53 Rue Nationale, 75013 Paris",
+    charity: ateliers_pluriculturels,
+    category: "Arts & culture"
+    )
+  atelier_tricot.remote_photo_url = "http://ecartsdarts.com/wp-content/uploads/2014/09/formation-ASG-Irst-animation-artistique-atelier-dessin.jpg"
+  atelier_tricot.save!
+
+#MISSIONS of PROJECT 8
+  animation_tricot = Mission.new(
+    title: "Animateur.trices cours de tricot",
+    start_time: "2019-06-15 09:00:00",
+    end_time: "2019-06-15 18:00:00",
+    volunteers_count: 3,
+    charity: ateliers_pluriculturels,
+    project: atelier_tricot
+    )
+  animation_tricot.save
 
   puts "Seeded 🦇"
