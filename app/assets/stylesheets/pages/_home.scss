@@ -125,17 +125,17 @@
   box-sizing: border-box;
 }
 
-svg {
+#home-svg {
   width: 100%;
   height: 100vh;
   position: absolute;
 }
 
-svg mask rect {
+#home-svg mask rect {
   fill: white;
 }
 
-svg > rect {
+#home-svg > rect {
   fill: white;
   -webkit-mask: url(#mask);
   mask: url(#mask);
