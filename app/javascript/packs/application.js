@@ -15,6 +15,8 @@ import { mouse } from '../plugins/mouse';
 
 import { paraxify } from '../plugins/paraxify';
 
+// import { spin } from '../plugins/spin';
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -35,4 +37,4 @@ if (homePage && navbar) {
   })
 }
 
-myParaxify = paraxify('.banner-custom');
+// myParaxify = paraxify('.banner-custom');

@@ -1,0 +1,97 @@
+/*-------- BULLBAR --------*/
+.bull-bar-container {
+  height: 15%;              /* adjust percentage */
+  /*border: 5px solid blue;*/
+  display: flex;
+}
+#bull-bar {
+  background-color: white;
+  border-radius: 52px;
+  padding: 12px;
+  font-size: 34px;
+  text-align: center;
+  width: 70%;               /* adjust textfield length */
+  max-width: 400px;
+  height: 50%;
+  margin: auto;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bull-bar > p {
+  color: #151515;/*#2C2C2C;*/
+}
+
+
+/*-------- HEADER ---------*/
+.header {
+  /*border: 5px solid green;*/
+}
+.header > a {
+  /*border: 5px solid lightgreen;*/
+  height: 13%;              /* adjust percentage */
+  display: flex;
+  justify-content: center;
+}
+#logo-img {
+  width: 40%;               /* resize "BULL PITCH" font logo */
+  min-width: 150px;
+  margin-top: 23px;
+}
+
+
+/*-------- SPINNER --------*/
+.spinner {
+  /*border: 5px solid red;*/
+  height: 70%;              /* adjust percentage */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#spinner-img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  transition: transform 5s;
+}
+#btn-spinner {
+  font-size: 27px;
+  letter-spacing: 4px;
+  font-family: 'Bungee', cursive;
+  background-color: white;
+  color: black;
+  width: 148px;   /* alans design (will be overriden) */
+  height: 148px;  /* alans design (will be overriden) */
+  width: 38vw;    /* width as percentage of viewport WIDTH */
+  height: 38vw;   /* height as percentage of viewport WIDTH */
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,.6);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btn-spinner h1:active {
+  box-shadow: 0 0 0 rgba(0,0,0,.0);
+}
+
+/*
+@media (max-width: 900px) and (orientation:landscape) {
+  .spinner {
+  }
+  #spinner-img {
+    width: auto;
+    height: 100%;
+  }
+  #btn-spinner {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+*/

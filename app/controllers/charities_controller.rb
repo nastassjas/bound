@@ -1,11 +1,17 @@
 class CharitiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :all]
+  skip_before_action :authenticate_user!, only: [:index, :show, :roulette, :all]
+  skip_after_action :verify_authorized, only: [:roulette]
+
   def index
     @charities = Charity.all
   end
 
   def show
     @charity = Charity.find(params[:id])
+  end
+
+  def roulette
+    @charities = Charity.all
   end
 
   def new
