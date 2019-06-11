@@ -3,24 +3,32 @@
   height: 15%;              /* adjust percentage */
   /*border: 5px solid blue;*/
   display: flex;
+  color:white;
 }
 #bull-bar {
-  background-color: transparent;
+  background-color: #ffd35c;
   border-radius: 52px;
-  padding: 12px;
-  font-size: 34px;
+  padding: 8px;
+  font-family: Staatliches;
+  font-size: 26px;
   text-align: center;
-  width: 70%;               /* adjust textfield length */
+  width: 50%;               /* adjust textfield length */
   max-width: 400px;
-  height: 50%;
-  margin: auto;
+  height: 30%;
+  margin-left: auto;
+  margin-right:  auto;
+  margin-top:30px;
+  margin-bottom: auto;
   // box-shadow: 0 0 10px black;
   display: flex;
   justify-content: center;
   align-items: center;
+  a{
+    color:white;
+  }
 }
 #bull-bar > p {
-  color: #151515;/*#2C2C2C;*/
+  color: none;/*#2C2C2C;*/
 }
 
 
@@ -80,6 +88,13 @@
 #btn-spinner h1:active {
   box-shadow: 0 0 0 rgba(0,0,0,.0);
 }
+
+.main-container{
+  background-color:transparent;
+    margin: 0 auto;
+
+}
+
 
 /*
 @media (max-width: 900px) and (orientation:landscape) {
