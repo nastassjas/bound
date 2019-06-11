@@ -69,16 +69,18 @@ a{
 }
 .btnsignsm{
   margin-right:10px;
-  background-color:#144C52;
-  padding: 10px;
+  background-color:#3c4859;
+  padding: 7px;
   color: white;
-  border-radius: 4px;
-  width:100px;
+  border-radius: 28px;
+  min-width:150px;
   text-align:center;
+  font-size: 14px;
+  margin-left: 40px;
   &:hover{
-    background-color: #b93a07;
-    color: white;
-    border: 1px solid #b93a07;
+    background-color: white;
+    color: #3c4859;
+    border: 1px solid #3c4859;
     text-decoration: none;
   }
 }
