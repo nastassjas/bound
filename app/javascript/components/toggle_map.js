@@ -1,11 +1,13 @@
 const toggleMap = () => {
-  const mapOn = document.querySelector(".map-on");
-  const mapOff = document.querySelector(".map-off");
+  // const mapOn = document.querySelector(".map-on");
+  // const mapOff = document.querySelector(".map-off");
 
   const cardsGrid = document.querySelector(".container-cards-2");
   const mapContainer = document.getElementById("map");
 
   // console.log(mapContainer);
+
+  const switchButton = document.querySelector('#map-switch');
 
 
   const hideMap = () => {
@@ -22,14 +24,16 @@ const toggleMap = () => {
     cardsGrid.classList.remove('large');
   }
 
-
-
-  mapOn.addEventListener('click', (e) => {
-    showMap();
-  })
-
-  mapOff.addEventListener('click', (e) => {
+  if (!switchButton.checked) {
     hideMap();
+  }
+
+  switchButton.addEventListener('change', (e) => {
+    if (switchButton.checked) {
+      showMap();
+    } else {
+      hideMap();
+    }
   })
 }
 
