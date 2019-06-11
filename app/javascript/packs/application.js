@@ -13,6 +13,9 @@ import { categorySkill } from '../plugins/category_skill';
 
 import { mouse } from '../plugins/mouse';
 
+import { wave } from '../plugins/wave';
+
+
 import { paraxify } from '../plugins/paraxify';
 
 

@@ -1,4 +1,21 @@
 // Specific CSS for your home-pag
+#masked {
+  width: 100%;
+  height: 110vh;
+  background-color: #8cffa0;
+  -webkit-mask-image: url(https://res.cloudinary.com/patti01/image/upload/v1560156374/govo/patterngradient22_kq5zit.svg);
+  mask-image: url(https://res.cloudinary.com/patti01/image/upload/v1560156374/govo/patterngradient22_kq5zit.svg);
+}
+
+
+.color-custom {
+  background-color: #ffd35c;
+  height:500px;
+  color: black;
+  text-align:center;
+  position: relative;
+}
+
 .banner {
   background-position: center;
   background-repeat: no-repeat;
@@ -100,11 +117,6 @@
   background-color: white;
 }
 
-.banner-custom-svg {
-  margin: 0px;
-  padding: 0px;
-  background-color: #fff;
-}
 
 .banner {
   background-position: center;
@@ -124,43 +136,17 @@
   grid-gap: 16px;
 }
 
-.banner-custom {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-#home-svg {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-}
-
-#home-svg mask rect {
-  fill: white;
-}
-
-#home-svg > rect {
-  fill: white;
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-}
-
-video {
-  width: 100%;
-  height: 100%;
-}
 
 .video-header {
-  height: 100vh;
   display: flex;
   align-items: center;
   color: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
 }
 
 .wrap {
-  max-width: 2000px;
   margin: 0px;
   text-align: center;
 }
@@ -169,9 +155,9 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
+  z-index: -3;
 }
 
 .fullscreen-video-wrap video {
@@ -188,8 +174,9 @@ video {
   opacity: 0,80;
 }
 
+
 .header-content {
-  z-index: 2;
+  z-index: 3;
   margin-top: 20%;
   padding: 0 5rem;
 }
@@ -198,42 +185,6 @@ video {
   text-align: center;
 }
 
-#bg {
-  width: 1250px;
-  height: 700px;
-  margin: 0px;
-  padding: 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-#masked {
-  mask: url("#maskLayer")
-}
-
-#banner-home-custom {
-  height: 100vh;
-  margin: 0;
-  position: absolute;
-}
-
-#svg-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-#svg-banner > rect {
-  fill: white;
-  mask: url(#mask);
-}
-
-#svg-banner mask rect {
-  fill: white;
-}
 
 
 // Smallest device
