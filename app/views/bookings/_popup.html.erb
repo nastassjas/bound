@@ -8,18 +8,29 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">MERCI !</h5>
+        <h5 class="modal-title" id="exampleModalLabel">
+          MERCI <%= current_user.first_name.capitalize %>! <i class="fas fa-heart"></i></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <% if current_user %>
-          Merci <%= current_user.first_name.capitalize %> ! Rendez-vous le <%= mission.start_time.strftime("%d/%m/%Y")%> au  <%= @project.address%>
+
+          Rendez-vous le <strong><%= mission.start_time.strftime("%d/%m/%Y")%></strong>
+           <p><i class="fas fa-map-marker-alt"></i><%= @project.address%>
         <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button class="btn btn-primary btn-sm">
+          <%= link_to 'Mes inscriptions', user_path(current_user) %>
+        </button>
+        <button class="btn btn-primary btn-sm">
+          <%= link_to 'Retour aux missions', projects_path %>
+        </button>
+
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button> -->
+
       </div>
     </div>
   </div>
