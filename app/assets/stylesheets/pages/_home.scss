@@ -1,19 +1,24 @@
 // Specific CSS for your home-pag
+#navbar-home {
+  position: absolute;
+  width: 100%;
+}
+
 #masked {
   width: 100%;
-  height: 110vh;
-  background-color: #8cffa0;
+  height: 100vh;
+  background-color: white;
   -webkit-mask-image: url(https://res.cloudinary.com/patti01/image/upload/v1560156374/govo/patterngradient22_kq5zit.svg);
   mask-image: url(https://res.cloudinary.com/patti01/image/upload/v1560156374/govo/patterngradient22_kq5zit.svg);
+  mask-size: cover;
 }
 
 
 .color-custom {
   background-color: #ffd35c;
-  height:500px;
   color: black;
-  text-align:center;
-  position: relative;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .banner {
@@ -156,6 +161,7 @@
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
   overflow: hidden;
   z-index: -3;
 }
@@ -178,13 +184,52 @@
 .header-content {
   z-index: 3;
   margin-top: 20%;
-  padding: 0 5rem;
+  padding: 5rem 5rem;
 }
 
 .header-content p {
   text-align: center;
 }
 
+#asso-section {
+  text-align: left;
+  padding-top: 30px;
+  padding-right: 50px;
+}
+
+.ocean {
+  width:100%;
+  left:0;
+  background: white;
+}
+
+.wave {
+  background: url(https://res.cloudinary.com/patti01/image/upload/v1560246275/govo/wave_hbpl8x.svg) repeat-x;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
 
 
 // Smallest device

@@ -1,3 +1,56 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-gang" id="navbar-home">
+  <%= link_to root_path, class: "navbar-brand" do %>
+   <h1 style="color: white;"> <%= "bound." %> </h1>
+    <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto align-items-baseline">
+      <li class="nav-item">
+
+          <% if user_signed_in? %>
+          <%#= link_to "Add something", class: "btnsignsm" %>
+          <%end %>
+
+       <% if user_signed_in? %>
+         <h4> Merci d'être là <strong><%= current_user.first_name %></strong> !! </h4>
+<!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+ -->       <% else %>
+
+        <div class="nav-button">
+          <div class="container-button">
+         <%= link_to "S'inscrire", new_user_registration_path, class: "btnsignsm"  %>
+         <%= link_to "Connexion", new_user_session_path, class: "btnsignsm"  %>
+        </div>
+      </div>
+      <% end %>
+
+      </li>
+      <li class="nav-item dropdown">
+        <% if user_signed_in? %>
+          <%= image_tag "https://storage.gra3.cloud.ovh.net/v1/AUTH_ca60d77ddd5e42749d7c4c17f753540d/ugm-data/pictures/larabesque/896133-pochoir-de-batman-sigle-de-batman-logo-de-batman-ref-415-2-1_medium.webp?1551742798", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Mon profil", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Ajouter une association", new_charity_path, class: "dropdown-item" %>
+          <%#= link_to "My Profile", class: "dropdown-item" %>
+          <%= link_to "Me deconnecter", destroy_user_session_path,class: "dropdown-item", method: "delete" %>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
 <div class="video-header wrap" id="masked">
   <div class = "fullscreen-video-wrap">
     <video autoplay playsinline muted loop preload>
@@ -7,7 +60,7 @@
 
   <div class="header-overlay">
     <div class="header-content">
-      <h1 style="color:white; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Don't watch, act!</h1>
+      <h1 style="font-size: 7em; px; color:white; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Don't watch, act!</h1>
       <p style="color:white; font-size: 16px; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Devenez rapidement bénévoles près de vous dans les associations qui vous tiennent à coeur !</p>
         <div class="btn btn-custom animated infinite pulse slow">
         <%= link_to "Trouve ta mission !", projects_path %>
@@ -16,12 +69,23 @@
     </div>
 </div>
 
+
 <div class="color-custom">
+  <div class="ocean">
+  <div class="wave"></div>
+</div>
   <div class="container">
-    <div  class="row justify-content-center pt-5">
-      <div class="col-lg-6">
-        <h1>Hello</h1>
-        <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
+    <div  class="row justify-content-center pt-5 pl-5">
+      <div class="col-xs-12 col-sm-7" id="asso-section">
+        <h1 style="font-size: 4em; ">Vous êtes une association ? </h1><br>
+        <p style="font-size: 14px; max-width: 450px;">
+
+        <strong>Créer votre compte "Associations" pour gérer en vos besoins en bénévoles en toute simplicité et mobiliser davantage de personnes autour de vos problématiques.</strong>
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-5">
+        <p style="font-size: 14px; max-width: 450px;"><strong>Vous cherchez des bénévoles ? Vous avez besoin de personnes avec une compétence spécifique ? </strong></p>
+        <p style="max-width: 450px;"> Bound. s'occupe de vous mettre en relation avec toutes les personnes qui souhaitent s'investir activement.</p>
       </div>
     </div>
   </div>
