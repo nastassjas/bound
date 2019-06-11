@@ -24,6 +24,9 @@ import "../plugins/flatpickr";
 import { toggleMap } from "../components/toggle_map";
 
 
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
