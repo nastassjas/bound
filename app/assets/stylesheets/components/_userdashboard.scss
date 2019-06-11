@@ -1,9 +1,9 @@
 .container-dashboard {
-  background-color: white;
   border-radius: 4px;
   margin: 20px 100px;
   padding-top: 20px;
   padding-bottom: 30px;
+  background-color: white;
 }
 
 .dashboard-elements {
@@ -14,21 +14,38 @@
 
 .dashboard-mybookings {
   padding: 30px 60px;
-}
-
-.card-img-txt {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.card-txt {
-  text-align: center;
-  padding: 20px;
-  h5 {
-    font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  background-color: white;
+  .card-img-txt {
+    height: 230px;
+    margin: 10px;
+    flex: 1 1 30%;
+  }
+  .card-txt{
+    // height: 230px;
+    margin: 10px;
+    flex: 1 1 30%;
+    text-align: center;
   }
 }
+
+// .card-img-txt {
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   border-bottom-left-radius: 6px;
+//   border-bottom-right-radius: 6px;
+// }
+
+// .card-txt {
+//   text-align: center;
+//   padding: 20px;
+//   h5 {
+//     font-size: 30px;
+//   }
+
+// }
 
 .card-category {
   background-size: cover;
@@ -46,15 +63,11 @@
   border-top-right-radius: 6px;
 }
 
-.cards-dashboard {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
 
 #dashboard-elements-width {
   min-width: 350px;
 }
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards-dashboard {
