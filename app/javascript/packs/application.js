@@ -31,9 +31,6 @@ AOS.init();
 
 
 // sweet alert
-// import { initSweetalert } from '../plugins/init_sweetalert';
-
-// initSweetalert();
 
 const homePage = document.getElementById("home-page");
 const navbar = document.querySelector(".navbar");
@@ -50,7 +47,8 @@ if (bannerCustom) {
 
 addressSubmit();
 
-if (document.querySelector(".sitch")) {
+if (document.querySelector(".switch")) {
   toggleMap();
 }
+
 
