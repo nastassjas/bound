@@ -1,42 +1,10 @@
-#section-retour {
-margin-left: 100px;
-padding-bottom: 5px;
-color: white;
-a {
-  color:white;
-}
-a:hover{
- color: yellow;
-}
-}
-
-.card-custom {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 5px;
-    h3{
-    padding-bottom: 5px;
-    color: white;
-  }
-    p{
-  color: white;
-  font-weight: lighter;
-  font-size:14px;
-  }
-}
-
+//bannerinbackground
 .banner-show {
   background-size: cover;
   background-position: center;
   padding: 80px 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-
-#show-project {
-  padding-left:0px;
 }
 
 .banner-show h1 {
@@ -47,44 +15,63 @@ a:hover{
   font-weight: bold;
 }
 
-#mission-new {
-  background-color: #042A2B;
-  margin: 10px 0px;
-  border: 0px;
-  min-height: 100px;
-}
-
 .banner-show p {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.pick-date {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #000;
-  margin: 10px;
-  padding-bottom: 30px;
+// mainbox
+.onebox {
+ background-color: white;
+ border-radius: 6px;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+#show-project {
+  padding-left: 0px;
+}
+
+#section-retour {
+margin-left: 100px;
+padding-bottom: 5px;
+color: white;
+a {
+  color:white;
+}
+a:hover{
+ color: #ffd35c;
+}
+}
+
+// firstbox
+#mission-booking {
+  padding: 40px;
+  background-color: #ffd35c;
+  // border-radius: 6px;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 0px;
+  min-height: 0px;
+  align-items: stretch;
+  position: relative;
+  display: inline-block;
+  height:100%;
 
 }
 
-.button-display {
-  padding-top: 15px;
-  margin: 10px;
-}
-
+// secondbox
 #mission-description {
   padding: 40px;
-  background-color: rgba(255, 255, 255, 1);
+  // background-color: rgba(255, 255, 255, 1);
   border-radius: 6px;
   margin-bottom: 20px;
   min-height: 0px;
+  box-shadow: none;
+  border: none;
 }
 
-
 #mission-description h3{
-  border-bottom: 4px solid #000;
+  // border-bottom: 4px solid #000;
   padding-bottom: 5px;
 }
 
@@ -92,14 +79,7 @@ a:hover{
   font-weight: lighter;
 }
 
-#mission-booking {
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 6px;
-  margin-bottom: 20px;
-  min-height: 0px;
-}
-
+// thirdbox
 #mission-booking-btn {
   padding-top: 40px;
   background-color: rgba(255, 255, 255, 1);
@@ -108,6 +88,8 @@ a:hover{
   padding-left: 0px;
   min-height: 0px;
   padding-left: 10px;
+  box-shadow: none;
+  border: none;
 
   h4 {
     margin: 0 auto;
@@ -115,16 +97,26 @@ a:hover{
   }
 }
 
-
-#mission-new h3{
-  padding-bottom: 5px;
-  color: white;
+p .green {
+  color: #042A2B;
+  text-align:left;
 }
 
-#mission-new p{
-  color: white;
-  font-weight: lighter;
-  font-size:14px;
+.pick-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // border-bottom: 1px solid #000;
+  margin: 10px;
+  padding-bottom: 30px;
+
+}
+
+//specialbuttonbooking
+.button-display {
+  padding-top: 15px;
+  margin: 10px;
 }
 
 .cta {
@@ -139,7 +131,7 @@ a:hover{
     left: -2px;
     display: block;
     border-radius: 28px;
-    background: rgba($primary,.8);
+    background: rgba(#ffd35c,.8);
     width: 56px;
     height: 56px;
     transition: all .3s ease;
@@ -170,7 +162,7 @@ a:hover{
     color: white;
     &:before{
       width: 100%;
-      background: rgba($primary,1);
+      background: rgba(#ffd35c,1);
     }
     svg{
       transform: translateX(0);
@@ -182,13 +174,42 @@ a:hover{
 }
 
 
+// infos association
 #more-info {
   background-color: #042A2B;
 }
 
-p .green {
-  color: #042A2B;
-  text-align:left;
+#mission-new {
+  background-color: #042A2B;
+  margin: 10px 0px;
+  border: 0px;
+  min-height: 100px;
 }
 
+#mission-new h3{
+  padding-bottom: 5px;
+  color: white;
+}
 
+#mission-new p{
+  color: white;
+  font-weight: lighter;
+  font-size:14px;
+}
+
+// .card-custom {
+//     margin-top: 50px;
+//     margin-bottom: 50px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     border-radius: 5px;
+//     h3{
+//     padding-bottom: 5px;
+//     color: white;
+//   }
+//     p{
+//   color: white;
+//   font-weight: lighter;
+//   font-size:14px;
+//   }
+// }

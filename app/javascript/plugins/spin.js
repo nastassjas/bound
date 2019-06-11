@@ -30,7 +30,7 @@ button.addEventListener('click', (event) => {
 "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd".split(" ").forEach((event) => {
   spinner.addEventListener(event, () => { // webkitTransitionEnd oTransitionEnd MSTransitionEnd"
     bullbar.innerHTML = `${bullName()}`;
-    bullbar.setAttribute("style", "border: 5px solid #ABF9F7; transition: ease 0.25s;");
+    bullbar.setAttribute("style", "border: 1px solid #ABF9F7; transition: ease 0.25s;");
     button.innerHTML = "Pitch";
   });
 })
