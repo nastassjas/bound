@@ -21,7 +21,7 @@ import { addressSubmit } from '../components/search';
 
 import "../plugins/flatpickr";
 
-import "../components/toggle_map";
+import { toggleMap } from "../components/toggle_map";
 
 
 import AOS from 'aos';
@@ -49,4 +49,8 @@ if (bannerCustom) {
 }
 
 addressSubmit();
+
+if (document.querySelector(".sitch")) {
+  toggleMap();
+}
 

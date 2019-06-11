@@ -1,25 +1,30 @@
 
 <div style="margin: 20px" class="container-search-bar">
     <%= form_tag(projects_path, method: "get", class: 'address-form') do %>
-      <div class ="search-bar-index">
       <%= text_field_tag(:address,nil,class: "search-address", placeholder: 'Où ?', value: params[:address]) %>
-      </div>
-      <div class="date-index">
         <%= text_field_tag :start_time, params[:start_time], id: "date-picker" %>
         <%= submit_tag 'Appliquer' %>
-      </div>
-      <div class="category-index">
         <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY, params[:category]), onchange: 'this.form.submit();') %>
-      </div>
     <% end %>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-secondary active map-on">
+   <!--  <div class="btn-group btn-group-toggle" data-toggle="buttons"> -->
+<!--       <label class="btn btn-secondary active map-on">
         <input type="radio" name="options" id="option1" autocomplete="off" checked> On
       </label>
       <label class="btn btn-secondary map-off">
         <input type="radio" name="options" id="option2" autocomplete="off"> Off
+      </label> -->
+<!--       <label class="switch active map-on">
+        <input type="checkbox" name="options" id="option1" autocomplete="off" checked>
       </label>
-    </div>
+      <label class="btn btn-secondary map-off">
+        <input type="checkbox" name="options" id="option2" autocomplete="off">
+        <span class="slider round"></span>
+      </label> -->
+<!--     </div> -->
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
 </div>
 
 <div style="display: flex;" id="main-container">
