@@ -17,7 +17,7 @@ import { mouse } from '../plugins/mouse';
 import { paraxify } from '../plugins/paraxify';
 
 
-import { addressSubmit } from '../components/search';
+import { addressSubmit, categorySubmit } from '../components/search';
 
 import "../plugins/flatpickr";
 
@@ -47,6 +47,7 @@ if (bannerCustom) {
 }
 
 addressSubmit();
+categorySubmit();
 
 if (document.querySelector(".switch")) {
   toggleMap();
