@@ -21,7 +21,7 @@
     style="margin: 20px"
     class="container-cards-2">
     <% if @projects.empty? %>
-      <p>Aucune mission ne correspond à votre recherche.</p>
+      <div><p id="no-mission-found">Aucune mission ne correspond à votre recherche.</p></div>
     <% end %>
     <% @projects.each do |project| %>
     <div class="card" data-aos="fade-up" style="position: relative;">
@@ -33,7 +33,7 @@
           <h5 class="charity-name"><%= project.charity.name %></h5>
           <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
           <% if params[:address].present? && !params[:address].empty? %>
-            <p><%= project.distance %></p>
+            <p>A : <%= project.distance.round(1) %> km de vous</p>
           <% end %>
           <div style="position: absolute; bottom: 10px">
         <!--     <button class="btn btn-primary btn-sm">

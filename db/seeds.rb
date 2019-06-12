@@ -469,7 +469,7 @@
     charity: vivre_enesemble,
     project: fête_de_quartier
     )
-  regisseur_son.save
+  regisseur_son.save!
 
 
 
