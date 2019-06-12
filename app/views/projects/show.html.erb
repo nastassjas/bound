@@ -97,3 +97,7 @@
     </div>
   </div>
 </div>
+
+<% content_for :meta_title, "HEY ! Rejoins moi sur cette super mission #{@project.name}" %>
+<% content_for :meta_description, @project.description %>
+<% content_for :meta_image, cl_image_path(@project.photo) %>
