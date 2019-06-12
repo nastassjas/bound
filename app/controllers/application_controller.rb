@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
 
+  before_action :persist_last_visited_path, :authenticate_user!
+
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
@@ -29,4 +31,19 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { host: ENV["www.wearebound.fr"] || "localhost:3000" }
   end
+
+  def persist_last_visited_path
+    unless Rails.configuration.ignored_paths.include?(request.path) || request.xhr?
+      session[:last_visited_path] = request.path
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    if session[:last_visited_path].present?
+      session[:last_visited_path]
+    else
+      root_path
+    end
+  end
+
 end

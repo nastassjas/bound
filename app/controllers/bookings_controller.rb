@@ -1,4 +1,7 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
+
+
   def create
     @booking = Booking.new
     @mission = Mission.find(params[:mission_id])
