@@ -1,0 +1,87 @@
+// background-image
+
+.login-img {
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560334382/black-and-white-elderly-grayscale-1266005_hu0ysp.jpg);
+  background-size: cover !important;
+  height: 90vh;
+}
+
+// main-container
+.container-form {
+  display: flex;
+  justify-content:center;
+}
+
+.form-login {
+  width: 700px;
+  margin: 50px auto;
+  background: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+  }
+  input[type=text] {
+  width: 100%;
+  display: block;
+  }
+  input[type=number] {
+  width: 100%;
+  display: block;
+  }
+  input[type=tel] {
+  width: 100%;
+  display: block;
+  }
+  input[type=email] {
+  width: 100%;
+  display: block;
+  }
+
+  textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  }
+
+  input[type=password] {
+  width: 100%;
+  display: block;
+  }
+
+  .btn-form {
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ffd35c;
+    border-radius: 5px;
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+  }
+}
+
+
+.boolean,.controls {
+  float: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#user_remember_me {
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+
