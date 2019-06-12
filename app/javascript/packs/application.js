@@ -24,13 +24,14 @@ import "../plugins/flatpickr";
 import { toggleMap } from "../components/toggle_map";
 
 
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
-
-// sweet alert
 
 const homePage = document.getElementById("home-page");
 const navbar = document.querySelector(".navbar");

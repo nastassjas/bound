@@ -1,47 +1,41 @@
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://images.fastcompany.net/image/upload/w_1153,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/12/p-1-huffpost-editor-steps-down-to-launch-a-new-york-centric-nonprofit-news-project.jpg);">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560255826/adult-african-afro-1083619_ngo8gi.jpg);">
 
-<div class="container-retour">
-  <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i> <%= link_to "Retour aux missions", projects_path %></h3>
-</div>
+  <div class="container-retour">
+    <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i> <%= link_to "Retour aux missions", projects_path %></h3>
+  </div>
 
   <div class="container-dashboard">
-    <div class="dashboard-elements">
-      <div class="row" id="dashboard-elements-width">
-        <div class="col-lg-6">
-          <h4 class="bookings-title"><a href="/users/show" class="active">Mes inscriptions</a><%#= link_to "Mes inscriptions", user_path, class:"active" %></h4>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="profile-title"><a href="/users/show">Mon profil</a><%#= link_to "Mon profil", user_path%></h4>
-        </div>
-      </div>
+    <div class="row" id="dashboard-elements">
+      <h4 class="bookings-title">Mes inscriptions</h4>
     </div>
-    <div class="dashboard-mybookings">
-      <div class="cards-dashboard">
-        <% @bookings.each do |booking| %>
-        <div class="card-img-txt" id="booking-<%= booking.id %>">
-            <div class="card-category"
-             style="background-image: url(<%= booking.mission.project.photo %>);
-              width: 100%;
-              height: 206px;
-              background-size: cover;
-              background-position: center;
-              margin-bottom: 20px;">
-              <p style="font-size: 25px; text-align: center"><%= booking.mission.project.name%></p>
+
+    <div class="cards" id="cardsbooking">
+      <% @bookings.each do |booking| %>
+          <div class="card" data-aos="fade-up" data-booking-id='<%= booking.id %>'>
+            <div class="card-img-project" style="background-image: url(<%= booking.mission.project.photo %>)">
             </div>
-            <div class="card-txt">
-            <h5><%= booking.mission.project.charity.name%></h5>
-            <p><i class="fas fa-calendar-week"></i>  <strong><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong> <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</p>
-            <p><i class="fas fa-map-marker-alt"></i>  <%= booking.mission.project.address%></p>
-            <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
-            <%= link_to 'Annuler', booking_path(booking),
-                    method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %>
+            <div id="yellow">
+              <h5 class="project-name"><strong><%= booking.mission.project.charity.name%></strong></h5>
+                <h3 class="charity-name"><%= booking.mission.project.name%></h3>
+              </div>
+            <div class="card-body" id="cardtextbooking">
+                  <p><i class="fas fa-calendar-week"></i>  <strong><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong> <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</strong></p>
+                  <p><i class="fas fa-map-marker-alt"></i>  <%= booking.mission.project.address%></p>
+                  <!-- <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px> -->
+              <strong>
+                <%= link_to booking_path(booking),
+                method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' } do %>
+                  <i class="far fa-times-circle"></i>
+                  Annuler
+                <% end %>
+
+              </strong>
             </div>
           </div>
-          <% end %>
-      </div>
-
-    </div>
-    <div class="dashboard-mybookings">
+      <%end%>
     </div>
   </div>
 </div>
+
+
+
