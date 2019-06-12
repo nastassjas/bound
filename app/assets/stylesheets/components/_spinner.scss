@@ -7,7 +7,7 @@
 }
 #bull-bar {
   background-color: #ffd35c;
-  border-radius: 52px;
+  border-radius: 30px;
   padding: 8px;
   font-family: Staatliches;
   font-size: 26px;
@@ -78,15 +78,13 @@
   max-height: 200px;
   margin: 0 auto;
   text-align: center;
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0,0,0,.6);
+  border-radius: 20%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #btn-spinner h1:active {
-  box-shadow: 0 0 0 rgba(0,0,0,.0);
 }
 
 .main-container{
