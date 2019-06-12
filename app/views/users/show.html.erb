@@ -5,12 +5,8 @@
   </div>
 
   <div class="container-dashboard">
-    <div class="dashboard-elements">
-      <div class="row" id="dashboard-elements-width">
-        <div class="col-lg-6">
-          <h4 class="bookings-title"><a href="/users/show" class="active">Mes inscriptions</a></h4>
-        </div>
-      </div>
+    <div class="row" id="dashboard-elements">
+      <h4 class="bookings-title">Mes inscriptions</h4>
     </div>
 
     <div class="cards" id="cardsbooking">
@@ -18,14 +14,17 @@
           <div class="card" data-aos="fade-up">
             <div class="card-img-project" style="background-image: url(<%= booking.mission.project.photo %>)">
             </div>
-            <div class="card-body">
+            <div id="yellow">
               <h5 class="project-name"><strong><%= booking.mission.project.charity.name%></strong></h5>
                 <h3 class="charity-name"><%= booking.mission.project.name%></h3>
+              </div>
+            <div class="card-body" id="cardtextbooking">
                   <p><i class="fas fa-calendar-week"></i>  <strong><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong> <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</strong></p>
                   <p><i class="fas fa-map-marker-alt"></i>  <%= booking.mission.project.address%></p>
-                  <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px>
-              <%= link_to 'Annuler', booking_path(booking),
-                method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %>
+                  <i class="far fa-times-circle"></i>
+                  <!-- <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px> -->
+              <strong><%= link_to 'Annuler', booking_path(booking),
+                method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %></strong>
             </div>
           </div>
       <%end%>
