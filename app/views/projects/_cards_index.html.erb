@@ -1,22 +1,43 @@
-<% if projects.empty? %>
-  <div><p id="no-mission-found">Aucune mission ne correspond à votre recherche.</p></div>
-<% end %>
-<% projects.each do |project| %>
-<div class="card" data-aos="fade-up" style="position: relative;">
-  <%= link_to project_path(project) do%>
-    <div class="card-img-project" style="background-image: url(<%= project.photo %>)">
-    </div>
-    <div class="card-body">
-      <h3 class="project-name"><strong><%= project.name %></strong></h3>
-      <h5 class="charity-name"><%= project.charity.name %></h5>
-      <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
-      <% if params[:address].present? && !params[:address].empty? %>
-        <p>A : <%= project.distance.round(1) %> km de vous</p>
-      <% end %>
-      <div style="position: absolute; bottom: 10px">
-
+<div
+  style="margin: 20px"
+  class="container-cards-2">
+  <% if projects.empty? %>
+    <div><p id="no-mission-found">Aucune mission ne correspond à votre recherche.</p></div>
+  <% end %>
+  <% projects.each do |project| %>
+  <div class="card" data-aos="fade-up" style="position: relative;">
+    <%= link_to project_path(project) do%>
+      <div class="card-img-project" style="background-image: url(<%= project.photo %>)">
       </div>
+      <div class="card-body">
+        <h3 class="project-name"><strong><%= project.name %></strong></h3>
+        <h5 class="charity-name"><%= project.charity.name %></h5>
+        <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
+        <% if params[:address].present? && !params[:address].empty? %>
+          <p>A : <%= project.distance.round(1) %> km de vous</p>
+        <% end %>
+        <div style="position: absolute; bottom: 10px">
+
+        </div>
+      </div>
+    <%end%>
     </div>
   <%end%>
-  </div>
-<%end%>
+
+</div>
+
+<% if projects.empty? %>
+  <div style="height: 600px;"></div>
+<% else %>
+  <div
+    id="map"
+    style="
+      height: 600px;
+      position: sticky;
+      top: 0;
+      margin-top: 20px;
+    "
+    data-markers="<%= markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+<% end %>

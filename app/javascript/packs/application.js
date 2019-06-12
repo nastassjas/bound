@@ -9,6 +9,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
+window.MyLib = {} // Security warning
+MyLib.mapbox = initMapbox
+
 import { categorySkill } from '../plugins/category_skill';
 
 import { mouse } from '../plugins/mouse';
