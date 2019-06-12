@@ -33,8 +33,6 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
 
-// sweet alert
-
 const homePage = document.getElementById("home-page");
 const navbar = document.querySelector(".navbar");
 if (homePage && navbar) {
