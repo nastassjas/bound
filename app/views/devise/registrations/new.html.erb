@@ -1,9 +1,9 @@
-<div class="login-sign">
+<div class="login-img-2">
   <div class="container-form">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-          <div class="form-login">
+          <div class="form-login" id="registration">
             <h2>Créer mon compte</h2>
 
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -71,10 +71,10 @@
                 <div class="form-group">
                   <label class="control-label check_boxes optional">Mes compétences:</label>
                   <input type="hidden" name="skill[category_ids][]" value="">
-                  <div class="category-skills">
+                  <div class="category-skills-form">
                     <% Skill.all.each do |skill| %>
                       <input type="checkbox" class="hidden" value="<%= skill.id %>" name="skill[category_ids][]" id="skill_category_ids_<%= skill.id %>">
-                      <label class="category-skill" for="skill_category_ids_<%= skill.id %>">
+                      <label class="category-skill-form" for="skill_category_ids_<%= skill.id %>">
                         <%= skill.name %>
                       </label>
                     <% end %>
@@ -82,7 +82,7 @@
                 </div>
 
               <div class="form-actions">
-                <%= f.button :submit, "S'inscrire'", class: "btn-form btn-primary" %>
+                <%= f.button :submit, "S'inscrire", class: "btn-form btn-primary" %>
               </div>
             <%= render "devise/shared/links" %>
             <% end %>
