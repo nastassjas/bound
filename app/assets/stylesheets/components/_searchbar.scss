@@ -114,12 +114,52 @@ input:checked + .slider:before {
   align-items: center;
   width: 50%;
   justify-content: flex-end;
-  margin-right: 40px;
+  margin-right: 3px;
 }
 
 #toggle-button-group p {
   font-size: 16px;
   color: #757575
+}
+
+
+// Responsive Searchbar
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  #toggle-button-group {
+    display: none;
+  }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  #toggle-button-group {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #toggle-button-group {
+    display: inline-flex;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #toggle-button-group {
+    display: inline-flex;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  #toggle-button-group {
+    display: inline-flex;
+  }
 }
 
 
