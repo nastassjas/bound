@@ -20,6 +20,9 @@
           Rendez-vous le <strong><%= mission.start_time.strftime("%d/%m/%Y")%></strong>
            <p><i class="fas fa-map-marker-alt"></i><%= @project.address%>
         <% end %>
+<center><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.wearebound.fr/projects/<%= @project.id %>" target="_blank" rel="noopener">
+    <img class="btn-fb" src="https://png2.kisspng.com/sh/0adc35b4514039ba8fc6e8cf8f27164c/L0KzQYi4UsE3N2U8TpGAYUO4RYOBhfE1O2I5TJCBM0O7QIi7UsE2OWQ5TKUEOEK5R4O8TwBvbz==/5a35528ea43144.6338074215134439826725.png" width="52px" height="52px" alt="">
+</a></center>
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary btn-sm">
@@ -30,7 +33,6 @@
         </button>
 
         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button> -->
-
       </div>
     </div>
   </div>
