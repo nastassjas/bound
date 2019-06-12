@@ -17,11 +17,30 @@
   display: block;
   font-size: 40px;
   text-align: center;
-  padding: 2rem;
 }
 
 .modal-footer {
   display: flex;
   justify-content: center;
   background-color: white;
+}
+.btnpopup {
+  padding-top: 3px;
+  width: 50%;
+  height: 38px;
+  background-color: #ffd35c;
+  border-color:#ffd35c;
+  font-size: 16px;
+  color: black;
+  border-radius: 27px;
+  border: transparent;
+  }
+
+.btnpopup:hover {
+  background-color: #3c4859;
+  border-color: #3c4859;
+  color: white;
+  a {
+    color:white;
+  }
 }
