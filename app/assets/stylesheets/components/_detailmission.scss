@@ -31,17 +31,18 @@
   padding-left: 0px;
 }
 
-#section-retour {
+a #section-retour {
 margin-left: 100px;
 padding-bottom: 5px;
 color: white;
 a {
   color:white;
 }
-a:hover{
+&:hover{
  color: #ffd35c;
 }
 }
+
 
 // firstbox
 #mission-booking {
@@ -163,7 +164,7 @@ p .green {
     transition: all .3s ease;
   }
   &:hover {
-    color: white;
+    color: #3c4859;
     &:before{
       width: 100%;
       background: rgba(#ffd35c,1);
