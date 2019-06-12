@@ -55,19 +55,32 @@
                   <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
                     <%= render 'bookings/confirmation' %>
                   <% else %>
-                    <div class = "button-display">
-                      <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
-                          <span id="add-booking">Participer</span>
-                          <svg width="13px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                          </svg>
-                      <% end %>
-                    </div>
+                    <% if user_signed_in? %>
+                      <div class = "button-display">
+                        <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                      </div>
+                    <% else %>
+                      <div class = "button-display">
+                        <%= link_to new_user_session_path, class: "cta add-booking" do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                    <% end %>
                   <% end %>
                 <% end %>
               </div>
-              <%= render 'bookings/popup', mission: mission %>
+              <% if current_user %>
+                <%= render 'bookings/popup', mission: mission %>
+              <% end %>
 
             </div>
           <% end %>
@@ -77,20 +90,4 @@
   </div>
 </div>
 
-<!-- <div id="more-info">
-  <div class="container">
-    <div class="row">
-      <div class="card-custom">
-        <div class="col-lg-3">
-          <h3>Plus d'infos</h3>
-        </div>
-        <div class="col-lg-4" id="mission-new" data-aos="fade-up">
-          <p><strong><%= @project.charity.name%></strong></p>
-          <p><%= @project.charity.description%></p>
-        <div class="col-lg-5" id="mission-new" data-aos="fade-up">
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+
