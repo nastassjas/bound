@@ -8,6 +8,7 @@
 
 
 #bull-bar {
+  z-index: 15;
   background-color: #ffd35c;
   border-radius: 30px;
   padding: 8px;
@@ -41,7 +42,8 @@
   margin-left: 120px;
 }
 .shake-slow {
-    position: absolute;
+  position: absolute;
+  z-index: -1;
   margin-top: 20px;
   margin-left: 90px;
   display: inherit;
@@ -228,7 +230,6 @@
 }
 
 .spinner{
-
     -webkit-animation-name: spin;
     -webkit-animation-duration: 4000ms;
     -webkit-animation-iteration-count: infinite;

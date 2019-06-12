@@ -8,17 +8,16 @@
 
     <div class="main-container">
       <div class="header">
-
-
         <center><h1> Tourne la roue pour trouver une mission ! </h1></center>
       </div>
-      <div class="shake-slow">
-      <img src="http://clipartmag.com/images/volunteer-clipart-black-and-white-6.jpg" width="30%"alt="">
-      </div>
 
-          <div class="mega">
-      <img src="https://res.cloudinary.com/wayne75/image/upload/v1560356882/megaphone_dqhwpk.png" width="90%"alt="">
-      </div>
+        <div class="shake-slow">
+        <img src="http://clipartmag.com/images/volunteer-clipart-black-and-white-6.jpg" width="30%"alt="">
+        </div>
+
+        <div class="mega">
+        <img src="https://res.cloudinary.com/wayne75/image/upload/v1560356882/megaphone_dqhwpk.png" width="90%"alt="">
+        </div>
 
       <div class="bull-bar-container">
         <a id="bull-bar">
@@ -26,21 +25,17 @@
         </a>
       </div>
       <br><br>
+
       <div class="spinner">
-        <%= image_tag "https://res.cloudinary.com/wayne75/image/upload/v1560268491/bike_ygixlt.png", id:"spinner-img" %>
-          <h1 id="btn-spinner" data-project="<%= @projects.to_json %>">
-
-        </h1>
-
+      <%= image_tag "https://res.cloudinary.com/wayne75/image/upload/v1560268491/bike_ygixlt.png", id:"spinner-img" %>
+      <h1 id="btn-spinner" data-project="<%= @projects.to_json %>">
+      </h1>
       </div>
+
 <!--     </div> -->
     <br>
     <br>
-</div>
-
-
-
-
+    </div>
 
     <!-- SPIN SCRIPT -->
     <script>
