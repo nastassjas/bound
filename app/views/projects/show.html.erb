@@ -1,11 +1,12 @@
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560255826/adult-african-afro-1083619_ngo8gi.jpg);">
-  <div class="container-retour">
+
+  <div class="container-retour" data-aos="fade-up">
     <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i> <%= link_to "Retour aux missions", projects_path %></h3>
   </div>
 
   <div id="show-project" class="container onebox">
     <div class="row">
-      <div class="col-lg-3" data-aos="zoom-out-up">
+      <div class="col-lg-3">
         <div class="card" id="mission-booking">
         <p class="green"><strong><%= @project.category%></strong></p>
         <h3><%= @project.name%></h3>
@@ -21,8 +22,8 @@
         </div>
       </div>
 
-      <div class="col-lg-5" data-aos="fade-up">
-        <div class="card " id="mission-description">
+      <div class="col-lg-5">
+        <div class="card" id="mission-description">
           <div
             style="
               background-image: url(<%= @project.photo %>);
@@ -33,10 +34,13 @@
               margin-bottom: 20px;">
           </div>
           <h3>La mission</h3>
-          <p><%= @project.description%></p>
+          <p><%= @project.description%></p><br>
+          <a class="btn btnsignsm" data-toggle="collapse" href="#collapseAsso" role="button" aria-expanded="false" aria-controls="collapseAsso">
+          Plus d'infos
+          </a>
         </div>
       </div>
-      <div class="col-lg-4" data-aos="fade-up">
+      <div class="col-lg-4">
           <div class="card" id="mission-booking-btn">
 
           <h4>Dates</h4>
@@ -44,7 +48,7 @@
             <div class ="pick-date">
               <div class="date-display">
                 <i class="fas fa-calendar-week"></i>  <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
-                <p id="volunteers-count-mission_<%= mission.id %>">
+                <p id="volunteers-count-mission_<%= mission.id %>" style="text-align: center;">
                   <strong><%= render 'bookings/volunteers_count', mission: mission %></strong>
                 </p>
               </div>
@@ -75,20 +79,21 @@
   </div>
 </div>
 
-<!-- <div id="more-info">
+
+<div class ="collapse color-custom" id="collapseAsso">
   <div class="container">
     <div class="row">
       <div class="card-custom">
         <div class="col-lg-3">
           <h3>Plus d'infos</h3>
         </div>
-        <div class="col-lg-4" id="mission-new" data-aos="fade-up">
+        <div class="col-lg-4" id="mission-new">
           <p><strong><%= @project.charity.name%></strong></p>
           <p><%= @project.charity.description%></p>
-        <div class="col-lg-5" id="mission-new" data-aos="fade-up">
+        <div class="col-lg-5" id="mission-new">
         </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>

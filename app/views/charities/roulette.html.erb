@@ -1,4 +1,11 @@
 
+<div class="video-header wrap">
+  <div class = "fullscreen-video-wrap">
+    <video autoplay playsinline muted loop preload>
+      <source src="https://res.cloudinary.com/patti01/video/upload/v1560159084/crowd_dniwdh.mp4">
+    </video>
+  </div>
+
     <div class="main-container">
       <div class="header">
         <h1>  </h1>
@@ -15,6 +22,13 @@
         </h1>
       </div>
     </div>
+
+</div>
+
+
+
+
+
 
     <!-- SPIN SCRIPT -->
     <script>
@@ -50,7 +64,7 @@
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd".split(" ").forEach((event) => {
         spinner.addEventListener(event, () => { // webkitTransitionEnd oTransitionEnd MSTransitionEnd"
           bullbar.innerHTML = `${bullName()}`;
-          bullbar.setAttribute("style", "border: 5px solid ; transition: ease 0.25s;");
+          bullbar.setAttribute("style", "border: 0px solid ; transition: ease 0.25s;");
           button.innerHTML = "";
         });
       })
