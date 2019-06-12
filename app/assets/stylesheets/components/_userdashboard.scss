@@ -12,40 +12,16 @@
   flex-wrap: wrap;
 }
 
-.dashboard-mybookings {
-  padding: 30px 60px;
-  display: flex;
+.cardsbooking {
+  height: 600px;
   justify-content: center;
-  align-items:center;
-  flex-wrap: wrap;
-  background-color: white;
-  .card-img-txt {
-    height: 230px;
-    margin: 10px;
-    flex: 1 1 30%;
-  }
-  .card-txt{
-    // height: 230px;
-    margin: 10px;
-    flex: 1 1 30%;
-    text-align: center;
-  }
+  align-items: center;
+  border-radius: 6px;
 }
 
-// .card-img-txt {
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   border-bottom-left-radius: 6px;
-//   border-bottom-right-radius: 6px;
-// }
+.delete_booking {
 
-// .card-txt {
-//   text-align: center;
-//   padding: 20px;
-//   h5 {
-//     font-size: 30px;
-//   }
-
-// }
+}
 
 .card-category {
   background-size: cover;
@@ -63,10 +39,6 @@
   border-top-right-radius: 6px;
 }
 
-
-#dashboard-elements-width {
-  min-width: 350px;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
