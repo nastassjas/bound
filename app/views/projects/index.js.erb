@@ -1,3 +1,2 @@
-console.log('je suis dans le index.js.erb')
-console.log(@params)
-// document.querySelector('#navbarDropdown').remove()
+const containerCards = document.querySelector(".container-cards-2");
+containerCards.innerHTML = '<%= j render "projects/cards_index", projects: @projects %>'
