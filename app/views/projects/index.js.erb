@@ -1,2 +1,6 @@
-const containerCards = document.querySelector(".container-cards-2");
-containerCards.innerHTML = '<%= j render "projects/cards_index", projects: @projects %>'
+function refreshCards(){
+  const containerCards = document.querySelector(".container-cards-2");
+  containerCards.innerHTML = '<%= j render "projects/cards_index", projects: @projects %>';
+}
+
+refreshCards();
