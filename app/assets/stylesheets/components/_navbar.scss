@@ -73,7 +73,7 @@ a{
   padding: 7px;
   color: white;
   border-radius: 28px;
-  min-width:150px;
+  width:150px;
   text-align:center;
   font-size: 14px;
   margin-left: 40px;
@@ -82,6 +82,34 @@ a{
     color: #3c4859;
     border: 1px solid #3c4859;
     text-decoration: none;
+  }
+  a {
+    color: white;
+  }
+}
+
+.btnsignsm-asso {
+  background-color:#3c4859;
+  border-color: #3c4859;
+  border: transparent;
+  padding: 7px;
+  border-radius: 4px;
+  width: 100%;
+  text-align:center;
+  font-size: 14px;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btnsignsm-asso:hover {
+  background-color: white;
+  color: #3c4859;
+  border-color: #3c4859;
+  a {
+    color: #3c4859;
   }
 }
 
@@ -93,3 +121,23 @@ a{
 .navbar {
   z-index: 100;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .navbar-toggler {
+    background-color: white;
+  }
+  .container-button {
+    align-items: center;
+  .btnsignsm{
+    width: 100px;
+  }}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .navbar-toggler {
+    background-color: white;
+  }
+}
+

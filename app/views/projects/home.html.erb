@@ -17,7 +17,7 @@
           <%end %>
 
        <% if user_signed_in? %>
-         <h4> Merci d'être là <strong><%= current_user.first_name %></strong> !! </h4>
+         <h5> Merci d'être là <strong><%= current_user.first_name %></strong> !! </h5>
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
 
@@ -55,7 +55,7 @@
 
   <div class="header-overlay">
     <div class="header-content">
-      <h1 style="font-size: 166px; color:white; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Don't watch, act!</h1>
+      <h1> Don't watch, act!</h1><br>
         <div class="btn btn-custom animated infinite pulse slow">
         <%= link_to "Trouve ta mission !", projects_path %>
       </div>
@@ -63,11 +63,12 @@
     </div>
 </div>
 
+
 <div class="section-white" data-aos="fade-up" data-aos-duration="2000" style="padding-top:20px;">
   <div class="container">
     <div  class="row justify-content-center pt-5 pr-3">
       <div class="col-xs-12 col-sm-6">
-        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test456_wpr0hw.png" alt="">
+        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test456_wpr0hw.png" alt="Créer votre compte" width="100%">
         </p>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -87,30 +88,31 @@
 <div class="section-white" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
     <div  class="row justify-content-center pt-2 pr-3">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-6 order-md-2 order-sm-2">
+        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test13_x3pj0q.png" alt="Sans engagement" width="100%">
+      </div>
+      <div class="col-xs-12 col-sm-6 order-md-1 order-sm-1">
         <div class ="category-type">
            <left> <h1 style="color:#3c4859"><strong><span id="typed"></span></strong></h1></left>
         </div>
-        <div class="shape-content">
+         <div class="shape-content">
           <div class="shaping"><h1 style="font-family: 'Kanit'; font-size: 50px;">2</h1>
           </div>
           <div class="content-home">
-          <p><strong>Choissisez les causes qui vous tiennent à coeur, que vous soyez à Paris, Lille, Lyon, Marseille ou Bordeaux.</strong><br><br>Bound. vous met en relation avec les associations que vous souhaitez soutenir <mark><strong>selon vos disponibilités</strong></mark>. Pas d'engagement, que du partage ! Aidez où vous voulez, quand vous voulez !</p>
+          <p><strong>Choissisez les causes qui vous tiennent à coeur, que vous soyez à Paris, Lille, Lyon, Marseille ou Bordeaux.</strong><br><br><div style="padding-left:20px;"><h4 style="display:inline;">Bound.</h4> vous met en relation avec les associations que vous souhaitez soutenir <mark><strong>selon vos disponibilités</strong></mark>. Pas d'engagement, que du partage ! Aidez où vous voulez, quand vous voulez !</p></div>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test13_x3pj0q.png" alt="">
       </div>
     </div>
   </div>
 </div>
 
+
 <div class="section-white" data-aos="fade-up" data-aos-duration="2000">
   <div class="container">
-    <div  class="row justify-content-center pt-2 pb-5 pr-3">
+    <div  class="row justify-content-center pt-2 pb-5 pr-3" id="reverse">
       <div class="col-xs-12 col-sm-6">
-        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test500_rktta5.png" alt="" width="100%">
+        <img src="https://res.cloudinary.com/patti01/image/upload/v1560346314/test500_rktta5.png" alt="Invitez vos amis" width="100%">
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="shape-content">
@@ -140,99 +142,15 @@
         </p>
       </div>
       <div class="col-xs-12 col-sm-5">
-        <p style="font-size: 14px; max-width: 450px;"><strong>Vous cherchez des bénévoles ? Vous avez besoin de personnes avec une compétence spécifique ? </strong></p>
-        <p style="max-width: 450px;"> Bound. s'occupe de vous mettre en relation avec toutes les personnes qui souhaitent s'investir activement.</p>
+        <p style="font-size: 14px; max-width: 450px; padding-top: 30px;"><strong>Vous cherchez des bénévoles ? Vous avez besoin de personnes avec une compétence spécifique ? </strong></p>
+        <p style="max-width: 450px;"> <h5 style="display:inline">Bound.</h5> s'occupe de vous mettre en relation avec toutes les personnes qui souhaitent s'investir activement.<br><br></p>
+        <button class="btnsignsm-asso">
+        <%= link_to "Créer votre compte association", new_charity_path %>
+      </button>
       </div>
     </div>
   </div>
 </div>
 
 
-<!--<div
-  class="banner-custom">
-  <div class="container-bannertop">
-    <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 30%; left: 30%; width:60px">
-    <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 65%; left: 60%; width:60px">
-    <!--<img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 40%; left: 70%; width:60px">-->
-    <!--<img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 25%; left: 55%; width:60px">-->
-    <!--<img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 20%; left: 70%; width:60px">
-    <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 65%; left: 40%; width:60px">
-    <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 25%; left: 40%; width:60px">-->
-    <!--<img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 50%; left: 25%; width:60px">
-    <img src="https://res.cloudinary.com/patti01/image/upload/v1560030656/govo/arrow-final_q62hf1.svg" class="moove" style="top: 35%; left: 15%; width:60px">-->
-
-    <!--<h1 style="color:white; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Don't watch, act!</h1>
-    <p style="color:white; font-size: 16px; max-width:400px; text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);"> Devenez rapidement bénévoles près de vous dans les associations qui vous tiennent à coeur !</p>
-    <div class="btn btn-custom animated infinite pulse slow">
-      <%= link_to "Trouve ta mission !", projects_path %>
-    </div>
-  </div>
-</div>-->
-
-<!--<div class="container" style="margin: 600px auto 28px auto;">
-</div>-->
-
-<!--<div class="container" style="margin: 600px auto 28px auto;">
-  <div class="row justify-content-flex-start">
-    <div class="col-lg-6 mt-5">
-      <h4 id="section-title"><i class="fas fa-arrow-circle-down"> </i>  Dernières missions</h4>
-    </div>
-  </div>
-      <div class="container-search-bar">
-        <%= form_tag(projects_path, method: "get") do %>
-          <div class="row justify-content-flex-end">
-          <div class ="search-bar-index col-lg-5">
-          <%= text_field_tag(:address,nil,class: "search-address") %>
-          </div>
-          <div class ="search-bar-index col-lg-4" style="font-size: 14px;">
-          <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY)) %>
-          </div>
-          <div class ="search-bar-index col-lg-3">
-          <%= submit_tag "Trouver", class: "btn btn-primary" %>
-          </div>
-          </div>
-        <% end %>
-      </div>
-  <div class="cards">
-    <% @projects.each do |project| %>
-    <div class="card" data-aos="fade-up">
-      <%= link_to project_path(project) do%>
-      <div class="card-img-project" style="background-image: url(<%=cl_image_path(project.photo)%>)">
-      </div>
-      <div class="card-body">
-        <h5 class="project-name"><strong><%= project.name %></strong></h5>
-          <h3 class="charity-name"><%= project.charity.name %></h3>
-          <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
-          <button class="btn btn-primary btn-sm">
-            <%= link_to 'Plus de détails', project_path(project) %>
-          </button>
-      </div>
-      <%end%>
-    </div>
-    <%end%>
-    </div>
-    <div class ="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="container-header-button">
-          <div class="btn-primary btn-lg" data-aos="fade-up">
-          <%= link_to "Plus de missions", projects_path%>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>-->
-
-<!--<div
-  class="banner"
-  style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(<%= image_path "headbanner.png", height: "450px"%>);
-    position: absolute;
-    top: 0;
-  ">
-  <div class="container-bannertop">
-    <h1> Don't watch, act!</h1>
-    <div class="btn btn-primary">
-      <%= link_to "Trouve ta mission !", projects_path%>
-    </div>
-  </div>
-</div>-->
 

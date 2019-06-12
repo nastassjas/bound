@@ -160,6 +160,10 @@
   margin-top: 10%;
   padding: 5rem 5rem;
   text-align: center;
+  h1{
+    color:white;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);
+  }
 }
 
 .header-content p {
@@ -271,6 +275,12 @@ mark {
   .cards {
     grid-template-columns: 1fr;
   }
+  .header-content h1 {
+    font-size: 4em;
+  }
+  #reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -285,7 +295,7 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
-  .header-content h1{font-size: 40px;}
+  .header-content h1{font-size: 7em;}
   .header-content p{font-size: 1rem;}
 }
 
@@ -294,6 +304,7 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .header-content h1{font-size: 7em;}
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -301,6 +312,8 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .header-content h1{font-size: 7em;}
 }
+
 
 
