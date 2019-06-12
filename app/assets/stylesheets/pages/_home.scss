@@ -58,19 +58,6 @@
   margin-top: 30px;
 }
 
-//#category {
-  // justify-content: center;
-  // background-color: #054042;
-  // margin: 20px 10px;
-  // width: 196px;
-  // color: white;
-  // border: 1px solid #144C52;
-  // padding: 3px;
-  // display: inline-block;
-  // border-radius : 5px;
-  // height: 40px;
-}
-
 .algolia-places {
  width: 350px;
  margin-left: 20px;
@@ -179,10 +166,19 @@
   text-align: center;
 }
 
-#asso-section {
-  text-align: left;
-  padding-right: 50px;
+.shape-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 20px;
 }
+
+.content-home p {
+  padding-left: 20px;
+  max-width: 450px;
+  font-size: 16px;
+}
+
 
 .ocean {
   width:100%;
@@ -197,6 +193,17 @@
   height: 198px;
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
+}
+
+mark {
+  padding: 0.1em;
+  background-color: #ffd35ccc;
+}
+
+
+#asso-section {
+  text-align: left;
+  padding-right: 50px;
 }
 
 #navbar-home {
