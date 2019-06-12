@@ -1,60 +1,57 @@
 .container-dashboard {
-  background-color: white;
   border-radius: 4px;
   margin: 20px 100px;
   padding-top: 20px;
   padding-bottom: 30px;
+  background-color: white;
+  padding-right: 20px;
+  padding-left:20px;
+  background-color: white;
 }
 
-.dashboard-elements {
-  display: flex;
-  padding: 30px 60px;
-  flex-wrap: wrap;
-}
-
-.dashboard-mybookings {
+.dashboard-elements{
   padding: 30px 60px;
 }
 
-.card-img-txt {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.card-txt {
-  text-align: center;
-  padding: 20px;
-  h5 {
-    font-size: 30px;
-  }
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  display: flex;
+.cardsbooking {
+  height: 600px;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-radius: 6px;
 }
 
-.cards-dashboard {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+.cardtextbooking {
+  padding: 10px;
 }
 
-#dashboard-elements-width {
-  min-width: 350px;
+
+.far fa-times-circle {
+  display: right;
+  font-size: 25px;
 }
+
+.delete_booking {
+  font-size: 18px;
+  float: right;
+}
+
+.bookings-title {
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+#yellow {
+  background-color: #ffd35c;
+  padding-left: 0px;
+  padding-top:0px;
+  padding-right: 0px;
+  text-align: center;
+  padding-top: 15px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards-dashboard {
