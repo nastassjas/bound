@@ -1,12 +1,14 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
   skip_after_action :verify_authorized, only: [:home, :index, :show]
+  protect_from_forgery except: :index
 
   def home
     @projects = policy_scope(Project)
   end
 
   def index
+    # binding.pry
     @projects = policy_scope(Project).where.not(latitude: nil, longitude: nil)
 
     sql_query = "category ILIKE ?"
@@ -35,6 +37,15 @@ class ProjectsController < ApplicationController
           infoWindow: render_to_string(partial: "infowindow", locals: { project: project })
         }
       end
+    end
+
+
+    @params = params
+    # head :no_content
+    # render 'index.js.erb'
+    respond_to do |format|
+      format.js
+      format.html
     end
   end
 

@@ -1,7 +1,9 @@
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560255826/adult-african-afro-1083619_ngo8gi.jpg);">
 
   <div class="container-retour" data-aos="fade-up">
-    <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i> <%= link_to "Retour aux missions", projects_path %></h3>
+    <%= link_to projects_path do %>
+    <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i>Retour aux missions</h3>
+    <% end %>
   </div>
 
   <div id="show-project" class="container onebox">
@@ -58,19 +60,32 @@
                   <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
                     <%= render 'bookings/confirmation' %>
                   <% else %>
-                    <div class = "button-display">
-                      <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
-                          <span id="add-booking">Participer</span>
-                          <svg width="13px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                          </svg>
-                      <% end %>
-                    </div>
+                    <% if user_signed_in? %>
+                      <div class = "button-display">
+                        <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                      </div>
+                    <% else %>
+                      <div class = "button-display">
+                        <%= link_to new_user_session_path, class: "cta add-booking" do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                    <% end %>
                   <% end %>
                 <% end %>
               </div>
-              <%= render 'bookings/popup', mission: mission %>
+              <% if current_user %>
+                <%= render 'bookings/popup', mission: mission %>
+              <% end %>
             </div>
           <% end %>
         </div>
@@ -78,7 +93,6 @@
     </div>
   </div>
 </div>
-
 
 <div class ="collapse color-custom" id="collapseAsso">
   <div class="container">

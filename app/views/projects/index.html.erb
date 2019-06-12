@@ -1,18 +1,19 @@
 
 <div style="margin: 20px" class="container-search-bar">
-  <%= form_tag(projects_path, method: "get", class: 'address-form') do %>
+  <%= form_tag(projects_path, method: "get", remote: true, class: 'address-form') do %>
     <%= text_field_tag(:address,nil,class: "search-input", placeholder: 'Où ?', value: params[:address]) %>
     <%= text_field_tag :start_time, params[:start_time], id: "date-picker", class: " search-input pl-3 mx-1", placeholder: 'Quand ?' %>
     <%= select_tag(:category, options_for_select(Project::PROJECTCATEGORY, params[:category]), onchange: 'this.form.submit();', class: "search-input pl-2") %>
   <% end %>
-  <div id=toggle-button-group>
-    <p class="m-0 p-0 mr-1">Afficher la carte</p>
-    <label class="switch m-0 p-0">
-      <input type="checkbox" id="map-switch">
-      <span class="slider round"></span>
-    </label>
-  </div>
-
+  <% if @projects.present? %>
+    <div id=toggle-button-group>
+      <p class="m-0 p-0 mr-1">Afficher la carte</p>
+      <label class="switch m-0 p-0">
+        <input type="checkbox" id="map-switch">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  <% end %>
 </div>
 
 <div style="display: flex;" id="main-container">
@@ -36,9 +37,7 @@
             <p>A : <%= project.distance.round(1) %> km de vous</p>
           <% end %>
           <div style="position: absolute; bottom: 10px">
-        <!--     <button class="btn btn-primary btn-sm">
-              <%= link_to 'Plus de détails', project_path(project) %>
-            </button> -->
+
           </div>
         </div>
         <%end%>
@@ -46,17 +45,21 @@
     <%end%>
   </div>
 
-  <div
-    id="map"
-    style="
-      height: 600px;
-      position: sticky;
-      top: 0;
-      margin-top: 20px;
-    "
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
+  <% if @projects.empty? %>
+    <div style="height: 600px;"></div>
+  <% else %>
+    <div
+      id="map"
+      style="
+        height: 600px;
+        position: sticky;
+        top: 0;
+        margin-top: 20px;
+      "
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  <% end %>
 </div>
 
 
