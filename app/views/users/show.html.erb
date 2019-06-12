@@ -11,7 +11,7 @@
 
     <div class="cards" id="cardsbooking">
       <% @bookings.each do |booking| %>
-          <div class="card" data-aos="fade-up">
+          <div class="card" data-aos="fade-up" data-booking-id='<%= booking.id %>'>
             <div class="card-img-project" style="background-image: url(<%= booking.mission.project.photo %>)">
             </div>
             <div id="yellow">
@@ -21,10 +21,15 @@
             <div class="card-body" id="cardtextbooking">
                   <p><i class="fas fa-calendar-week"></i>  <strong><%= booking.mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong> <%= booking.mission.end_time.strftime("%m/%d/%Y %k") %>h</strong></p>
                   <p><i class="fas fa-map-marker-alt"></i>  <%= booking.mission.project.address%></p>
-                  <i class="far fa-times-circle"></i>
                   <!-- <img src="https://res.cloudinary.com/patti01/image/upload/v1559763641/govo/cancel_iodrwh.png" alt="cancel" width=32px> -->
-              <strong><%= link_to 'Annuler', booking_path(booking),
-                method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' }  %></strong>
+              <strong>
+                <%= link_to booking_path(booking),
+                method: :delete, remote: true, class: 'delete_booking', data: { confirm: 'Êtes-vous sûr.e ?' } do %>
+                  <i class="far fa-times-circle"></i>
+                  Annuler
+                <% end %>
+
+              </strong>
             </div>
           </div>
       <%end%>
