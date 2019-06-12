@@ -54,6 +54,7 @@ categorySubmit();
 
 if (document.querySelector(".switch")) {
   toggleMap();
+  MyLib.toggle = toggleMap
 }
 
 
