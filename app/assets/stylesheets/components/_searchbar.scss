@@ -87,11 +87,11 @@ select#category {
 }
 
 input:checked + .slider {
-  background-color: #144C52;
+  background-color: #3c4859;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #144C52;
+  box-shadow: 0 0 1px #3c4859;
 }
 
 input:checked + .slider:before {
