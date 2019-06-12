@@ -9,6 +9,9 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
+window.MyLib = {} // Security warning
+MyLib.mapbox = initMapbox
+
 import { categorySkill } from '../plugins/category_skill';
 
 import { mouse } from '../plugins/mouse';
@@ -17,7 +20,7 @@ import { mouse } from '../plugins/mouse';
 import { paraxify } from '../plugins/paraxify';
 
 
-import { addressSubmit } from '../components/search';
+import { addressSubmit, categorySubmit } from '../components/search';
 
 import "../plugins/flatpickr";
 
@@ -47,9 +50,11 @@ if (bannerCustom) {
 }
 
 addressSubmit();
+categorySubmit();
 
 if (document.querySelector(".switch")) {
   toggleMap();
+  MyLib.toggle = toggleMap
 }
 
 
