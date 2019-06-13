@@ -619,5 +619,39 @@ la_sauge_la_prairie_du_canal.save!
     )
   bricolage2.save!
 
+#CHARITY 15
+basiliade =  Charity.new(
+    name: "Basiliade",
+    description: "Accueil et accompagnement de personnes vivant en précarité et touchées par le par le VIH/SIDA, dans un objectif de retour durable à l’autonomie : des actions menées par une une équipe salariés et des lieux d’accueil animés par des bénévoles (repas le soir et activités artistiques en semaine).",
+    phone_number: "01 43 18 15 32",
+    address: "16 Rue du Général Brunet, 75019 Paris",
+    email: "nicolas.bonlieu@gmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+basiliade.save!
+
+#PROJECT 15
+atelier_artistique = Project.new(
+    name: "Accueil/écoute dans un atelier artistique",
+    description: "Intégrer une équipe d'une quinzaine de bénévoles qui animent un atelier artistique (peinture, aquarelle, sculpture, modelage, poterie...) accueillant des personnes vivant en précarité et touchées par le VIH SIDA. L'Atelier est ouvert tous les jours de la semaine de 14 h à 18 h. Tous les bénévoles sont formés et accompagnés : capacité d'écoute et capacité à faire respecter un cadre sont requises.",
+    address: "16 Rue du Général Brunet, 75019 Paris",
+    charity: basiliade,
+    category: "Arts & culture"
+    )
+atelier_artistique.remote_photo_url = "http://lucilebolot.com/wp-content/uploads/2018/01/geste-2-1024x681.jpg"
+atelier_artistique.save!
+
+#MISSIONS of PROJECT 15
+accueil_ecoute  = Mission.new(
+    title: "Accueil/écoute dans un atelier artistique",
+    start_time: Date.parse("2019-06-15"),
+    end_time: Date.parse("2019-06-30"),
+    volunteers_count: 10,
+    charity: basiliade,
+    project: atelier_artistique
+    )
+accueil_ecoute.save!
+
 
   puts "Seeded 🦇"
