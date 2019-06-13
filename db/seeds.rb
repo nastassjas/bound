@@ -293,8 +293,8 @@
 #MISSIONS of PROJECT 5
   music_to_change = Mission.new(
     title: "Animateur.trices Musique",
-    start_time: Date.parse("2019-08-17"),
-    end_time: Date.parse("2019-08-17"),
+    start_time: Date.parse("2019-06-15"),
+    end_time: Date.parse("2019-06-15"),
     volunteers_count: 5,
     charity: wayne,
     project: music_to_change
@@ -553,7 +553,7 @@
 
 #PROJECT 13
   evenementiel_paris = Project.new(
-    name: "Evénementiel à Paris",
+    name: "Photographe Evénementiel",
     description: "Dans le cadre de son développement, Black and White production recherche des bénévoles pour compléter son équipe. Plusieurs postes sont à pourvoir: -Photographe -Caméraman -direction artistique -Booking -Développement externe Black and White production est une association culturelle, organisatrice de concerts à Paris. Nous proposons diverses formations et permettons à chacun de développer de nouvelles compétences.",
     address: "8 Rue Oberkampf, 75011 Paris",
     charity: black_and_white_production,
@@ -567,7 +567,7 @@
     title: "Photographe événementiel",
     start_time: Date.parse("2019-06-21"),
     end_time: Date.parse("2019-07-30"),
-    volunteers_count: 10,
+    volunteers_count: 1,
     charity: black_and_white_production,
     project: evenementiel_paris
     )
