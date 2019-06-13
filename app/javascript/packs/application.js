@@ -14,8 +14,6 @@ MyLib.mapbox = initMapbox
 
 import { categorySkill } from '../plugins/category_skill';
 
-import { mouse } from '../plugins/mouse';
-
 
 import { paraxify } from '../plugins/paraxify';
 

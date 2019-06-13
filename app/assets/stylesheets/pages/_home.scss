@@ -34,7 +34,7 @@
 }
 
 .section-white {
-  padding: 20px 0px;
+  margin: 0 auto;
 }
 
 // .container-search-bar {
@@ -183,6 +183,10 @@
   font-size: 16px;
 }
 
+.section-white .container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
 .ocean {
   width:100%;
@@ -201,6 +205,12 @@
 
 .fixes {
   overflow: hidden;
+}
+
+.btn-group-home {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 mark {
@@ -276,8 +286,13 @@ mark {
     grid-template-columns: 1fr;
   }
   .header-content h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
+
+  .header-content .btn {
+    margin-top: 10px;
+  }
+
   #reverse {
     flex-direction: row-reverse;
   }
@@ -288,6 +303,10 @@ mark {
   .cards {
     grid-template-columns: 1fr;
   }
+  #btn-home {
+    margin-left: 20px;
+  }
+
 }
 
 // Medium devices (tablets, 768px and up)
@@ -297,6 +316,10 @@ mark {
   }
   .header-content h1{font-size: 7em;}
   .header-content p{font-size: 1rem;}
+  #btn-home {
+    margin-left: 20px;
+  }
+
 }
 
 // Large devices (desktops, 992px and up)
@@ -305,6 +328,10 @@ mark {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .header-content h1{font-size: 7em;}
+  #btn-home {
+    margin-left: 20px;
+  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -313,6 +340,10 @@ mark {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .header-content h1{font-size: 7em;}
+  #btn-home {
+    margin-left: 20px;
+  }
+
 }
 
 
