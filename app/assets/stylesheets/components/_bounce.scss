@@ -1,0 +1,9 @@
+#bouncing{
+  animation: bounce 2s ease infinite;
+  animation-delay: 3s;
+}
+
+@keyframes bouncing{
+     from {transform: translateY(0);}
+     to   {transform: translateY(-3px);}
+}
