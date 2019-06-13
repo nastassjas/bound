@@ -63,7 +63,8 @@
                 <% else %>
                   <% if user_signed_in? %>
                     <div class = "button-display">
-                      <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>                            <span id="add-booking">Participer</span>
+                      <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
+                          <span id="add-booking">Participer</span>
                           <svg width="13px" height="10px" viewBox="0 0 13 10">
                           <path d="M1,5 L11,5"></path>
                           <polyline points="8 1 12 5 8 9"></polyline>
@@ -78,7 +79,7 @@
                           <path d="M1,5 L11,5"></path>
                           <polyline points="8 1 12 5 8 9"></polyline>
                           </svg>
-                    </div>
+
                   <% end %>
                 <% end %>
               <% end %>
