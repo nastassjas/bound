@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-gang" id="navbar-home">
   <%= link_to root_path, class: "navbar-brand" do %>
-   <h1 class="animated pulse delay-2s" style="color:white; letter-spacing: 0.09rem; display:inline">b<div class="animated pulse delay-2s" style="display:inline"><h1 style="display:inline; color:white;">o</h1></div><h1 style="display:inline;color:white; letter-spacing: 0.09rem">und.</h1>
+  <div id="logo-slogan">
+   <h1 style="color:white; letter-spacing: 0.09rem;">bound.
+ </h1>
+ </div>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,10 +63,10 @@
       <strong><p>Envie de t'engager ? <br>Participe facilement à des missions de bénévolat avec des associations près de toi !<br></p></strong></div>
         <div class="btn-group-home">
           <div class="btn btn-custom animated infinite pulse slow">
-          <%= link_to "Trouve ta mission !", projects_path %>
+          <%= link_to "Toutes les missions", projects_path %>
         </div>
-        <div class="btn btn-custom animated infinite pulse slow" id="btn-home">
-          <%= link_to "On t'aide !", rollwithit_path %>
+        <div class="btn btn-custom" id="btn-home">
+          <%= link_to "On t'aide", rollwithit_path %>
         </div>
         </div>
       </div>
