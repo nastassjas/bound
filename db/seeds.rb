@@ -319,7 +319,7 @@
     description: "Participer à des jeux et des temps de détente pour les plus réticent.e.s à la nage et aider les dauphins débutant.e.s dans leurs premières nages",
     address: "13 Rue du Général Guillaumat, 75015 Paris",
     charity: les_dauphins,
-    category: "Arts & culture"
+    category: "Sport & Loisirs"
     )
   apprentissage_de_la_natation.remote_photo_url = "https://www.luxschool.com/wp-content/uploads/2019/02/Natation-adultes-800-532.jpg"
   apprentissage_de_la_natation.save!
