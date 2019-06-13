@@ -210,16 +210,6 @@
     )
   distribution_journey.save!
 
-  transport = Mission.new(
-    title: "Transport de nourriture",
-    start_time: Date.parse("2019-07-17"),
-    end_time: Date.parse("2019-07-18"),
-    volunteers_count: 5,
-    charity: secours_populaire_31,
-    project: distribution_flyers_chatbot
-    )
-  transport.save!
-
   #CHARITY 4
   la_reserve_des_arts =  Charity.new(
     name: "LaReservedesArts",
