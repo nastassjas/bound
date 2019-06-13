@@ -293,8 +293,8 @@
 #MISSIONS of PROJECT 5
   music_to_change = Mission.new(
     title: "Animateur.trices Musique",
-    start_time: Date.parse("2019-08-17"),
-    end_time: Date.parse("2019-08-17"),
+    start_time: Date.parse("2019-06-15"),
+    end_time: Date.parse("2019-06-15"),
     volunteers_count: 5,
     charity: wayne,
     project: music_to_change
@@ -428,7 +428,7 @@
 
 #MISSIONS of PROJECT 9
   animation_tricot = Mission.new(
-    title: "Animateur.trices cours de tricot",
+    title: "Animateur.trice.s cours de tricot",
     start_time: Date.parse("2019-08-01"),
     end_time: Date.parse("2019-08-09"),
     volunteers_count: 3,
@@ -451,7 +451,7 @@
 
 #PROJECT 10
   fête_de_quartier = Project.new(
-    name: "Régisseur son ",
+    name: "Régisseur.euse son ",
     description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un.e bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
     address: "123 boulevard Voltaire, 75011 Paris",
     charity: vivre_ensemble,
@@ -462,7 +462,7 @@
 
 #MISSIONS of PROJECT 10
   regisseur_son = Mission.new(
-    title: "Régisseur son",
+    title: "Régisseur.euse son",
     start_time: Date.parse("2019-08-12"),
     end_time: Date.parse("2019-08-13"),
     volunteers_count: 1,
@@ -486,7 +486,7 @@
 #PROJECT 11
     jardinez = Project.new(
     name: "Jardinez à la ferme urbaine",
-    description: "Présente dans de nombreuses écoles et sur plusieurs toits, l'association s'est installée depuis octobre 2014 dans l'enceinte du Collège Pierre Mendès France. Avec les 4800m2 en pleine terre qui lui ont été confiées, l'association a besoin de soutien pour développer ce beau projet. C'est là que vous intervenez, avec, quand ils sont présents, des collégiens qui souhaitent embellir leur collège et apprendre à jardiner !",
+    description: "Présente dans de nombreuses écoles et sur plusieurs toits, l'association s'est installée depuis octobre 2014 dans l'enceinte du Collège Pierre Mendès France. Avec les 4800m2 en pleine terre qui lui ont été confiées, l'association a besoin de soutien pour développer ce beau projet. C'est là que vous intervenez, avec, quand ils.elles sont présent.e.s, des collégien.ne.s qui souhaitent embellir leur collège et apprendre à jardiner !",
     address: "24 Rue le vau, 75020 Paris",
     charity: jardin_ensemble,
     category: "Environnement"
@@ -520,7 +520,7 @@
 #PROJECT 12
   organisation_sorties = Project.new(
     name: "Culture & loisirs - organisateur.trice de sorties - 13e",
-    description: "Le groupe local Paris 13e/14e de Habitat et Humanisme recherche un.e bénévole pour l'aider à imaginer et organiser quelques sorties simples et sympas avec les familles et les enfants relogés par notre association dans le quartier.",
+    description: "Le groupe local Paris 13e/14e de Habitat et Humanisme recherche un.e bénévole pour l'aider à imaginer et organiser quelques sorties simples et sympas avec les familles et les enfants relogé.e.s par notre association dans le quartier.",
     address: "À effectuer sur le lieu de son choix.",
     charity: habitat_humanisme,
     category: "Arts & culture"
@@ -542,7 +542,7 @@
 #CHARITY 13
   black_and_white_production =  Charity.new(
     name: "Black and White production",
-    description: "Black and White production a pour but de favoriser la diversité musicale grâce à l’organisation de concerts, sous forme de plateaux d’artistes, mélangeant différents styles musicaux. A la fois dénicheurs de talents et producteurs de concerts, nous œuvrons à travers des salles et pubs pour révéler les artistes émergents des futurs scènes parisiennes.",
+    description: "Black and White production a pour but de favoriser la diversité musicale grâce à l’organisation de concerts, sous forme de plateaux d’artistes, mélangeant différents styles musicaux. A la fois dénicheurs de talents et producteurs de concerts, nous œuvrons à travers des salles et pubs pour révéler les artistes émergent.e.s des futurs scènes parisiennes.",
     phone_number: "01 43 33 20 12",
     address: "8 Rue Oberkampf, 75011 Paris",
     email: "yohangregoire@gmail.com",
@@ -553,8 +553,8 @@
 
 #PROJECT 13
   evenementiel_paris = Project.new(
-    name: "Evénementiel à Paris",
-    description: "Dans le cadre de son développement, Black and White production recherche des bénévoles pour compléter son équipe. Plusieurs postes sont à pourvoir: -Photographe -Caméraman -direction artistique -Booking -Développement externe Black and White production est une association culturelle, organisatrice de concerts à Paris. Nous proposons diverses formations et permettons à chacun de développer de nouvelles compétences.",
+    name: "Photographe Evénementiel",
+    description: "Dans le cadre de son développement, Black and White production recherche des bénévoles pour compléter son équipe. Plusieurs postes sont à pourvoir: -Photographe -Caméraman.woman -direction artistique -Booking -Développement externe Black and White production est une association culturelle, organisatrice de concerts à Paris. Nous proposons diverses formations et permettons à chacun.e de développer de nouvelles compétences.",
     address: "8 Rue Oberkampf, 75011 Paris",
     charity: black_and_white_production,
     category: "Arts & culture"
@@ -567,7 +567,7 @@
     title: "Photographe événementiel",
     start_time: Date.parse("2019-06-21"),
     end_time: Date.parse("2019-07-30"),
-    volunteers_count: 10,
+    volunteers_count: 1,
     charity: black_and_white_production,
     project: evenementiel_paris
     )
@@ -622,7 +622,7 @@ la_sauge_la_prairie_du_canal.save!
 #CHARITY 15
 basiliade =  Charity.new(
     name: "Basiliade",
-    description: "Accueil et accompagnement de personnes vivant en précarité et touchées par le par le VIH/SIDA, dans un objectif de retour durable à l’autonomie : des actions menées par une une équipe salariés et des lieux d’accueil animés par des bénévoles (repas le soir et activités artistiques en semaine).",
+    description: "Accueil et accompagnement de personnes vivant en précarité et touchées par le par le VIH/SIDA, dans un objectif de retour durable à l’autonomie : des actions menées par une équipe salariée et des lieux d’accueil animés par des bénévoles (repas le soir et activités artistiques en semaine).",
     phone_number: "01 43 18 15 32",
     address: "16 Rue du Général Brunet, 75019 Paris",
     email: "nicolas.bonlieu@gmail.com",
@@ -634,7 +634,7 @@ basiliade.save!
 #PROJECT 15
 atelier_artistique = Project.new(
     name: "Accueil/écoute dans un atelier artistique",
-    description: "Intégrer une équipe d'une quinzaine de bénévoles qui animent un atelier artistique (peinture, aquarelle, sculpture, modelage, poterie...) accueillant des personnes vivant en précarité et touchées par le VIH SIDA. L'Atelier est ouvert tous les jours de la semaine de 14 h à 18 h. Tous les bénévoles sont formés et accompagnés : capacité d'écoute et capacité à faire respecter un cadre sont requises.",
+    description: "Intégrer une équipe d'une quinzaine de bénévoles qui animent un atelier artistique (peinture, aquarelle, sculpture, modelage, poterie...) accueillant des personnes vivant en précarité et touchées par le VIH SIDA. L'Atelier est ouvert tous les jours de la semaine de 14 h à 18 h. Tou.te.s les bénévoles sont formé.es et accompagné.e.s : capacité d'écoute et capacité à faire respecter un cadre sont requises.",
     address: "16 Rue du Général Brunet, 75019 Paris",
     charity: basiliade,
     category: "Arts & culture"

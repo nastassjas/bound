@@ -23,6 +23,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="col-5 no-gutter">
         <div class="card-mission-project card-two">
           <div
@@ -47,7 +49,7 @@
           <% @project.missions.each do |mission| %>
             <div class ="pick-date">
               <div class="date-display">
-                <i class="fas fa-calendar-week"></i>  <strong><%= mission.start_time.strftime("%m/%d/%Y %k") %>h</strong> au: <strong><%= mission.end_time.strftime("%m/%d/%Y %k") %>h</strong>
+                <i class="fas fa-calendar-week"></i>  <strong><%= mission.start_time.strftime("%d/%m/%Y") %></strong> au: <strong><%= mission.end_time.strftime("%d/%m/%Y") %></strong>
                 <p id="volunteers-count-mission_<%= mission.id %>" style="text-align: center;">
                   <strong><%= render 'bookings/volunteers_count', mission: mission %></strong>
                 </p>

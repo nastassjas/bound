@@ -20,20 +20,28 @@
   border-radius: 6px;
 }
 
-.cardtextbooking {
-  padding: 10px;
+#cardtextbooking  {
+  padding-top: 25px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 
-.far fa-times-circle {
-  display: right;
-  font-size: 25px;
+.delete_booking i {
+  color: white;
+}
+
+.delete_booking:hover i {
+  color: red;
 }
 
 .delete_booking {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   font-size: 18px;
-  float: right;
 }
+
 
 .bookings-title {
   font-size: 30px;
