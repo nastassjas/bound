@@ -18,6 +18,18 @@
   justify-content: center;
 }
 
+.text-home {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.text-home p {
+  font-size:1.1rem;
+  color: #FFFFFF;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,1);
+}
+
 .banner h1{
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -161,13 +173,8 @@
   padding: 5rem 5rem;
   text-align: center;
   h1{
-    color:white;
-    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 2px rgba(206,89,55,0);
-  }
-}
-
-.header-content p {
-  text-align: center;
+    color: #FFFFFF;
+    text-shadow: 3px 5px 2px black;  }
 }
 
 .shape-content {
@@ -218,6 +225,10 @@ mark {
   background-color: #ffd35ccc;
 }
 
+#slogan mark {
+  padding: 0.1em;
+  background-color: rgba(255, 211, 92, 0.4);
+}
 
 #asso-section {
   text-align: left;
@@ -293,8 +304,20 @@ mark {
     margin-top: 10px;
   }
 
+  .text-home {
+    margin-bottom: 20px;
+  }
+
+
+  .text-home p{font-size: 1rem;}
+
+
   #reverse {
     flex-direction: row-reverse;
+  }
+
+  .btn-custom {
+    font-size: 0.9rem;
   }
 }
 
@@ -307,6 +330,12 @@ mark {
     margin-left: 20px;
   }
 
+  .text-home p{font-size: 1rem;}
+
+  .btn-custom {
+    font-size: 1rem;
+  }
+
 }
 
 // Medium devices (tablets, 768px and up)
@@ -314,8 +343,8 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
-  .header-content h1{font-size: 7em;}
-  .header-content p{font-size: 1rem;}
+  .header-content h1{font-size: 6em;}
+  .text-home p{font-size: 1.1rem;}
   #btn-home {
     margin-left: 20px;
   }
@@ -327,7 +356,10 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+    .header-content {
+    padding: 2rem 2rem;}
   .header-content h1{font-size: 7em;}
+  .text-home p{font-size: 1.1rem;}
   #btn-home {
     margin-left: 20px;
   }
@@ -339,7 +371,10 @@ mark {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .header-content {
+    padding: 5rem 5rem;}
   .header-content h1{font-size: 7em;}
+  .text-home p{font-size: 1.1rem;}
   #btn-home {
     margin-left: 20px;
   }
