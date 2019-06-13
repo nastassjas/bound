@@ -492,7 +492,7 @@
     charity: jardin_ensemble,
     category: "Environnement"
     )
-  jardinez.remote_photo_url = "https://www.consoglobe.com/wp-content/uploads/2014/09/Potagers-urbains-1.jpg"
+  jardinez.remote_photo_url = "https://www.rustica.fr/assets/media/image/upload/images/Puzzle%20BEAUtanique%2005.jpg"
   jardinez.save!
 
 #MISSIONS of PROJECT 11
