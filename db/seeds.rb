@@ -10,8 +10,8 @@
     first_name: "Van",
     last_name: "Wayne",
     username: "VanWayne",
-    password: "111111",
-    email: "userTestO@gmail.com",
+    password: "123456",
+    email: "van@wayne.com",
     description: "William John Paul Gallagher, dit Liam Gallagher est un chanteur et musicien anglais d'origine irlandaise, ne le 21 septembre 1972 dans la banlieue de Manchester (Angleterre). Il fut le chanteur principal du groupe de rock Oasis, desormais separe. Figure de proue du mouvement Britpop dans les annees 1990, Liam Gallagher est connu pour son style de chant particulier, ainsi que pour son attitude erratique, parfois provocatrice. Il demeure une figure reconnue de la musique moderne britannique.",
     mobile_phone: "06.66.66.66.66",
     birth_year: 1987,
@@ -178,7 +178,7 @@
 
   #CHARITY 3
   secours_populaire_31 =  Charity.new(
-    name: "Secours Populaire 31",
+    name: "Secours Populaire",
     description: "Ne en 1945, le Secours populaire est une association à but non lucratif, reconnue d’utilite publique et declaree Grande cause nationale. Celle-ci est habilitee à recevoir des dons, des legs et des donations. L’association s'est donnee pour mission d’agir contre la pauvrete et l'exclusion en France et dans le monde et de promouvoir la solidarite et ses valeurs. Elle rassemble des personnes de toutes opinions, conditions et origines qui souhaitent faire vivre la solidarite.",
     phone_number: "05 61 27 84 84",
     address: "34 Rue Amelot, 75011 Paris",
@@ -237,7 +237,7 @@
 
   #PROJECT 4
   agir_pour_la_prévention_des_déchets = Project.new(
-    name: "Acteurs.trices d’une révolution environnementale",
+    name: "Acteurs.trices environnemental.es",
     description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnel.le.s du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
     address: "Rue Prévost Paradol, 75014 Paris",
     charity: la_reserve_des_arts,
@@ -293,8 +293,8 @@
 #MISSIONS of PROJECT 5
   music_to_change = Mission.new(
     title: "Animateur.trices Musique",
-    start_time: Date.parse("2019-08-17"),
-    end_time: Date.parse("2019-08-17"),
+    start_time: Date.parse("2019-06-15"),
+    end_time: Date.parse("2019-06-15"),
     volunteers_count: 5,
     charity: wayne,
     project: music_to_change
@@ -319,7 +319,7 @@
     description: "Participer à des jeux et des temps de détente pour les plus réticent.e.s à la nage et aider les dauphins débutant.e.s dans leurs premières nages",
     address: "13 Rue du Général Guillaumat, 75015 Paris",
     charity: les_dauphins,
-    category: "Arts & culture"
+    category: "Sport & Loisirs"
     )
   apprentissage_de_la_natation.remote_photo_url = "https://www.luxschool.com/wp-content/uploads/2019/02/Natation-adultes-800-532.jpg"
   apprentissage_de_la_natation.save!
@@ -383,7 +383,7 @@
 
 #PROJECT 8
     animation_pour_les_enfants = Project.new(
-    name: "Ateliers de découverte pour les enfants ",
+    name: "Ateliers pour les enfants ",
     description: "Envie de partager vos talents, savoir-faire et centres d’intérêts avec les nouvelles générations ? Alors devenez bénévole à la Maison du Bas-Belleville et proposez des séances de découverte aux primaires et collégien.ne.s inscrit.e.s à l’accompagnement à la scolarité (arts plastiques, travaux manuels, jardinage, écriture... ). ",
     address: "110 boulevard de Belleville, 75020 Paris",
     charity: la_maison_belleville,
@@ -438,7 +438,7 @@
   animation_tricot.save
 
 #CHARITY 10
-  vivre_enesemble =  Charity.new(
+  vivre_ensemble =  Charity.new(
     name: "Kif kif vivre ensemble",
     description: "Les Ateliers Pluriculturels organisent des animations culturelles en adéquation avec ses projets, visant à promouvoir ses actions, avec le soutien actuel de l'officiel. L'association travaille en lien avec un réseau associatif ayant pour but de découvrir la diversité des cultures et de la solidarité",
     phone_number: "02 38 49 15 27",
@@ -447,14 +447,14 @@
     status: "approved",
     registration_nb: "?"
     )
-  vivre_enesemble.save!
+  vivre_ensemble.save!
 
 #PROJECT 10
-    fête_de_quartier = Project.new(
-    name: "Fête de quartier ",
+  fête_de_quartier = Project.new(
+    name: "Régisseur son ",
     description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un.e bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
     address: "123 boulevard Voltaire, 75011 Paris",
-    charity: vivre_enesemble,
+    charity: vivre_ensemble,
     category: "Arts & culture"
     )
   fête_de_quartier.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560162325/26686950247_08aacd2cdd_b_gqy73p.jpg"
@@ -466,11 +466,192 @@
     start_time: Date.parse("2019-08-12"),
     end_time: Date.parse("2019-08-13"),
     volunteers_count: 1,
-    charity: vivre_enesemble,
+    charity: vivre_ensemble,
     project: fête_de_quartier
     )
   regisseur_son.save!
 
+#CHARITY 11
+  jardin_ensemble =  Charity.new(
+    name: "Veni Verdi",
+    description: "L'association Veni Verdi a pour objectif de créer des jardins en milieu urbain, notamment au sein des écoles, pour agir sur notre environnement, notre société et notre économie. Elle souhaite produire une alimentation saine, accessible au plus grand nombre.",
+    phone_number: "02 44 88 15 07",
+    address: "24 Rue le vau, 75020 Paris",
+    email: "contact@veniverdi.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  jardin_ensemble.save!
+
+#PROJECT 11
+    jardinez = Project.new(
+    name: "Jardinez à la ferme urbaine",
+    description: "Présente dans de nombreuses écoles et sur plusieurs toits, l'association s'est installée depuis octobre 2014 dans l'enceinte du Collège Pierre Mendès France. Avec les 4800m2 en pleine terre qui lui ont été confiées, l'association a besoin de soutien pour développer ce beau projet. C'est là que vous intervenez, avec, quand ils sont présents, des collégiens qui souhaitent embellir leur collège et apprendre à jardiner !",
+    address: "24 Rue le vau, 75020 Paris",
+    charity: jardin_ensemble,
+    category: "Environnement"
+    )
+  jardinez.remote_photo_url = "https://www.rustica.fr/assets/media/image/upload/images/Puzzle%20BEAUtanique%2005.jpg"
+  jardinez.save!
+
+#MISSIONS of PROJECT 11
+    mission_jardin = Mission.new(
+    title: "réalisation de ce projet d'agriculture",
+    start_time: Date.parse("2019-06-28"),
+    end_time: Date.parse("2019-06-28"),
+    volunteers_count: 5,
+    charity: jardin_ensemble,
+    project: jardinez
+    )
+  mission_jardin.save!
+
+#CHARITY 12
+  habitat_humanisme =  Charity.new(
+    name: "Habitat et Humanisme IDF",
+    description: "Habitat-Humanisme a vocation à accueillir et accompagner des personnes mal logées et fragiles. En leur offrant un logement décent, dans un quartier équilibré, l’association favorise ainsi leur autonomie et la consolidation de leur situation afin d'avoir accès rapidement à un logement pérenne.",
+    phone_number: "09 63 19 27 15",
+    address: "32 boulevard Auguste Blanqui, 75013 Paris",
+    email: "valerie.phaisavath@hotmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+  habitat_humanisme.save!
+
+#PROJECT 12
+  organisation_sorties = Project.new(
+    name: "Culture & loisirs - organisateur.trice de sorties - 13e",
+    description: "Le groupe local Paris 13e/14e de Habitat et Humanisme recherche un.e bénévole pour l'aider à imaginer et organiser quelques sorties simples et sympas avec les familles et les enfants relogés par notre association dans le quartier.",
+    address: "À effectuer sur le lieu de son choix.",
+    charity: habitat_humanisme,
+    category: "Arts & culture"
+  )
+  organisation_sorties.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560414966/af682916e2_btqshc.jpg"
+  organisation_sorties.save!
+
+#MISSIONS of PROJECT 12
+  organisateur_sorties = Mission.new(
+    title: "Organisateur.trice de sorties - 13e",
+    start_time: Date.parse("2019-12-12"),
+    end_time: Date.parse("2019-12-20"),
+    volunteers_count: 1,
+    charity: habitat_humanisme,
+    project: organisation_sorties
+    )
+  organisateur_sorties.save!
+
+#CHARITY 13
+  black_and_white_production =  Charity.new(
+    name: "Black and White production",
+    description: "Black and White production a pour but de favoriser la diversité musicale grâce à l’organisation de concerts, sous forme de plateaux d’artistes, mélangeant différents styles musicaux. A la fois dénicheurs de talents et producteurs de concerts, nous œuvrons à travers des salles et pubs pour révéler les artistes émergents des futurs scènes parisiennes.",
+    phone_number: "01 43 33 20 12",
+    address: "8 Rue Oberkampf, 75011 Paris",
+    email: "yohangregoire@gmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+  black_and_white_production.save!
+
+#PROJECT 13
+  evenementiel_paris = Project.new(
+    name: "Photographe Evénementiel",
+    description: "Dans le cadre de son développement, Black and White production recherche des bénévoles pour compléter son équipe. Plusieurs postes sont à pourvoir: -Photographe -Caméraman -direction artistique -Booking -Développement externe Black and White production est une association culturelle, organisatrice de concerts à Paris. Nous proposons diverses formations et permettons à chacun de développer de nouvelles compétences.",
+    address: "8 Rue Oberkampf, 75011 Paris",
+    charity: black_and_white_production,
+    category: "Arts & culture"
+    )
+  evenementiel_paris.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560416166/camera-dslr-camera-equipment-1615824_acwjcj.jpg"
+  evenementiel_paris.save!
+
+#MISSIONS of PROJECT 13
+  photographe1 = Mission.new(
+    title: "Photographe événementiel",
+    start_time: Date.parse("2019-06-21"),
+    end_time: Date.parse("2019-07-30"),
+    volunteers_count: 1,
+    charity: black_and_white_production,
+    project: evenementiel_paris
+    )
+  photographe1.save!
+
+#CHARITY 14
+
+la_sauge_la_prairie_du_canal =  Charity.new(
+    name: "La Sauge - La Prairie du Canal",
+    description: "La SAUGE (Société d’Agriculture Urbaine Généreuse et Engagée) a pour objectif de favoriser la pratique d’une activité agricole pour le plus grand nombre. Elle crée des potagers urbains et organise des évènements fédérateurs et communicatifs sur l’Agriculture Urbaine.",
+    phone_number: "02 38 49 15 27",
+    address: "3 rue Dampierre, 75019 Paris",
+    email: "contact@lasauge.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+la_sauge_la_prairie_du_canal.save!
+
+#PROJECT 14
+  bricolage = Project.new(
+    name: "Bricolage à La Prairie du Canal",
+    description: "Scier, poncer, fabriquer des structures en bois. Amenager, ranger l'espace de vie. Découvrir une équipe et un projet innovant, en apprendre plus sur l'agriculture urbaine !",
+    address: "55 rue de Paris, 93000 Bobigny",
+    charity: la_sauge_la_prairie_du_canal,
+    category: "Arts & culture"
+    )
+  bricolage.remote_photo_url = "https://alternatiba.eu/toulouse/wp-content/uploads/sites/13/2019/03/rafistolerie-photo.jpg"
+  bricolage.save!
+
+#MISSIONS of PROJECT 14
+  bricolage1 = Mission.new(
+    title: "Bricolage à La Prairie du Canal",
+    start_time: Date.parse("2019-06-20"),
+    end_time: Date.parse("2019-06-20"),
+    volunteers_count: 3,
+    charity: la_sauge_la_prairie_du_canal,
+    project: bricolage
+    )
+  bricolage1.save!
+
+#MISSIONS of PROJECT 14
+  bricolage2 = Mission.new(
+    title: "Bricolage à La Prairie du Canal",
+    start_time: Date.parse("2019-06-27"),
+    end_time: Date.parse("2019-06-27"),
+    volunteers_count: 3,
+    charity: la_sauge_la_prairie_du_canal,
+    project: bricolage
+    )
+  bricolage2.save!
+
+#CHARITY 15
+basiliade =  Charity.new(
+    name: "Basiliade",
+    description: "Accueil et accompagnement de personnes vivant en précarité et touchées par le par le VIH/SIDA, dans un objectif de retour durable à l’autonomie : des actions menées par une une équipe salariés et des lieux d’accueil animés par des bénévoles (repas le soir et activités artistiques en semaine).",
+    phone_number: "01 43 18 15 32",
+    address: "16 Rue du Général Brunet, 75019 Paris",
+    email: "nicolas.bonlieu@gmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+basiliade.save!
+
+#PROJECT 15
+atelier_artistique = Project.new(
+    name: "Accueil/écoute dans un atelier artistique",
+    description: "Intégrer une équipe d'une quinzaine de bénévoles qui animent un atelier artistique (peinture, aquarelle, sculpture, modelage, poterie...) accueillant des personnes vivant en précarité et touchées par le VIH SIDA. L'Atelier est ouvert tous les jours de la semaine de 14 h à 18 h. Tous les bénévoles sont formés et accompagnés : capacité d'écoute et capacité à faire respecter un cadre sont requises.",
+    address: "16 Rue du Général Brunet, 75019 Paris",
+    charity: basiliade,
+    category: "Arts & culture"
+    )
+atelier_artistique.remote_photo_url = "http://lucilebolot.com/wp-content/uploads/2018/01/geste-2-1024x681.jpg"
+atelier_artistique.save!
+
+#MISSIONS of PROJECT 15
+accueil_ecoute  = Mission.new(
+    title: "Accueil/écoute dans un atelier artistique",
+    start_time: Date.parse("2019-06-15"),
+    end_time: Date.parse("2019-06-30"),
+    volunteers_count: 10,
+    charity: basiliade,
+    project: atelier_artistique
+    )
+accueil_ecoute.save!
 
 
   puts "Seeded 🦇"

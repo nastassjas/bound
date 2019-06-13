@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-gang" id="navbar-home">
   <%= link_to root_path, class: "navbar-brand" do %>
-   <h1 style="color:white"> <%= "bound." %> </h1>
+  <div id="logo-slogan">
+   <h1 style="color:white; letter-spacing: 0.09rem;">bound.
+ </h1>
+ </div>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +26,7 @@
 
         <div class="nav-button">
           <div class="container-button">
-         <%= link_to "S'inscrire", new_user_registration_path, class: "btnsignsm"  %>
+         <%= link_to "Deviens bénévole", new_user_registration_path, class: "btnsignsm"  %>
          <%= link_to "Connexion", new_user_session_path, class: "btnsignsm"  %>
         </div>
       </div>
@@ -34,10 +37,10 @@
         <% if user_signed_in? %>
           <%= image_tag "https://storage.gra3.cloud.ovh.net/v1/AUTH_ca60d77ddd5e42749d7c4c17f753540d/ugm-data/pictures/larabesque/896133-pochoir-de-batman-sigle-de-batman-logo-de-batman-ref-415-2-1_medium.webp?1551742798", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Mon profil", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Mes inscriptions", user_path(current_user), class: "dropdown-item" %>
           <%= link_to "Ajouter une association", new_charity_path, class: "dropdown-item" %>
           <%#= link_to "My Profile", class: "dropdown-item" %>
-          <%= link_to "Me deconnecter", destroy_user_session_path,class: "dropdown-item", method: "delete" %>
+          <%= link_to "Me déconnecter", destroy_user_session_path,class: "dropdown-item", method: "delete" %>
           </div>
         <% end %>
       </li>
@@ -56,12 +59,15 @@
   <div class="header-overlay">
     <div class="header-content">
       <h1> Don't watch, act!</h1><br>
+      <div class="text-home">
+      <strong><p>Envie de t'engager ? <br>Participe facilement à des missions de bénévolat avec des associations près de toi !<br></p></strong></div>
         <div class="btn-group-home">
           <div class="btn btn-custom animated infinite pulse slow">
-          <%= link_to "Trouve ta mission !", projects_path %>
+          <%= link_to "Toutes les missions", projects_path %>
         </div>
-        <div class="btn btn-custom animated infinite pulse slow" id="btn-home">
-          <%= link_to "Une mission random ?", rollwithit_path %>
+
+        <div class="btn btn-custom" id="btn-home">
+          <%= link_to "On t'aide", rollwithit_path %>
         </div>
         </div>
       </div>
@@ -78,11 +84,11 @@
       </div>
       <div class="col-xs-12 col-sm-6 pr-2 pb-4">
         <h1>Comment ça marche ?</h1><br>
-        <p style="font-size: 16px; max-width: 450px;"><strong>Vous souhaitez vous investir ponctuellement dans des missions bénévoles ? <br></strong></p>
+        <p style="font-size: 16px; max-width: 450px;"><strong>Tu souhaites t'investir ponctuellement dans des missions bénévoles ? <br></strong></p>
         <div class="shape-content">
           <div class="shaping"><h1 style="font-family: 'Kanit'; font-size: 50px;">1</h1></div>
           <div class="content-home">
-          <p><strong>Vous souhaitez partager votre temps ? </strong><br>Créez votre compte en quelques clics et accédez à toutes les missions de bénévolat <mark><strong>près de vous facilement.</strong></mark><br><br>N'hésitez pas à renseigner vos compétences et talents particuliers afin de trouver ! </p>
+          <p><strong>Tu souhaites partager ton temps ? </strong><br>Crée ton compte en quelques clics et accède à toutes les missions de bénévolat <mark><strong>près de toi facilement.</strong></mark><br><br>N'hésite pas à renseigner tes compétences et talents particuliers ! </p>
           </div>
         </div>
       </div>
@@ -104,7 +110,7 @@
           <div class="shaping"><h1 style="font-family: 'Kanit'; font-size: 50px;">2</h1>
           </div>
           <div class="content-home">
-          <p><strong>Choissisez les causes qui vous tiennent à coeur, que vous soyez à Paris, Lille, Lyon, Marseille ou Bordeaux.</strong><br><br><div style="padding-left:20px;"><h4 style="display:inline;">Bound.</h4> vous met en relation avec les associations que vous souhaitez soutenir <mark><strong>selon vos disponibilités</strong></mark>. Pas d'engagement, que du partage ! Aidez où vous voulez, quand vous voulez !</p></div>
+          <p><strong>Choisis les causes qui te tiennent à coeur, que tu sois à Paris, Lille, Lyon, Marseille ou Bordeaux.</strong><br><br><div style="padding-left:20px;"><h4 style="display:inline;">Bound.</h4> te met en relation avec les associations que tu souhaites soutenir <mark><strong>selon tes disponibilités</strong></mark>. Pas d'engagement, que du partage ! Aide où tu veux, quand tu veux !</p></div>
           </div>
         </div>
       </div>
@@ -124,7 +130,7 @@
           <div class="shaping"><h1 style="font-family: 'Kanit'; font-size: 50px;">3</h1>
           </div>
           <div class="content-home">
-          <p><strong>Invitez vos amis<br></strong><br>N'hésitez pas à partager votre activité sur vos réseaux sociaux et <mark><strong>donner de la visibilité aux causes</strong></mark> que vous défendez.</p>
+          <p><strong>Invite tes amis<br></strong><br>N'hésite pas à partager ton activité sur tes réseaux sociaux et <mark><strong>donner de la visibilité aux causes</strong></mark> que tu défends.</p>
           </div>
         </div>
       </div>

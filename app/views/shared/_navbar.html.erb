@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-gang">
   <%= link_to root_path, class: "navbar-brand" do %>
-   <h1> <%= "bound." %> </h1>
+   <div id="logo-slogan">
+   <h1 style="letter-spacing: 0.09rem; display: inline-block">b<div style="display: inline-block">o</div>und.
+ </h1>
+ </div>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +26,7 @@
 
         <div class="nav-button">
           <div class="container-button">
-         <%= link_to "S'inscrire", new_user_registration_path, class: "btnsignsm"  %>
+         <%= link_to "Deviens bénévole", new_user_registration_path, class: "btnsignsm"  %>
          <%= link_to "Connexion", new_user_session_path, class: "btnsignsm"  %>
         </div>
       </div>

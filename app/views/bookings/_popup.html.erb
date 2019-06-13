@@ -1,3 +1,22 @@
+
+<!-- AddEvent script -->
+<script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+<!-- AddEvent Settings -->
+<script type="text/javascript">
+window.addeventasync = function(){
+    addeventatc.settings({
+        appleical  : {show:true, text:"Apple Calendar"},
+        google     : {show:true, text:"Google <em>(online)</em>"},
+        outlook    : {show:true, text:"Outlook"},
+        outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
+        yahoo      : {show:true, text:"Yahoo <em>(online)</em>"}
+    });
+};
+</script>
+
+
+
 <!-- Button trigger modal -->
 <button type="button" class="d-none" data-toggle="modal" data-target="#exampleModal"  id="booking-popup-button-mission_<%= mission.id %>">
   Launch demo modal
@@ -20,9 +39,28 @@
           Rendez-vous le <strong><%= mission.start_time.strftime("%d/%m/%Y")%></strong>
            <p><i class="fas fa-map-marker-alt"></i><%= @project.address%>
         <% end %>
-<center><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.wearebound.fr/projects/<%= @project.id %>" target="_blank" rel="noopener">
-    <img class="btn-fb" src="https://png2.kisspng.com/sh/0adc35b4514039ba8fc6e8cf8f27164c/L0KzQYi4UsE3N2U8TpGAYUO4RYOBhfE1O2I5TJCBM0O7QIi7UsE2OWQ5TKUEOEK5R4O8TwBvbz==/5a35528ea43144.6338074215134439826725.png" width="52px" height="52px" alt="">
-</a></center>
+        <!-- Button code -->
+        <div title="Add to Calendar" class="addeventatc">
+            Add to Calendar
+            <span class="start"><%= mission.start_time%></span>
+            <span class="end"><%= mission.end_time%></span>
+            <span class="title"><%= mission.project.charity.name%></span>
+            <span class="description"><%= @project.description%></span>
+            <span class="location"><%= @project.address%></span>
+        </div>
+        <div>
+        <center>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.wearebound.fr/projects/<%= @project.id %>" target="_blank" rel="noopener">
+            <img class="btn-fb" src="https://img.icons8.com/ios/50/000000/facebook-new-filled.png" width="30px" height="30px" alt="">
+          </a>
+           <a href="http://www.twitter.com/share?url=https://www.wearebound.fr/projects/<%= @project.id %>" target="_blank" rel="noopener">
+            <img class="btn-twitter" src="https://img.icons8.com/ios/50/000000/twitter-filled.png"width="30px" height="30px" alt="">
+          </a>
+           <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.wearebound.fr/projects/<%= @project.id %>" target="_blank" rel="noopener">
+            <img class="btn-insta" src="https://img.icons8.com/ios/50/000000/whatsapp-filled.png" width="30px" height="30px" alt="">
+          </a>
+      </center>
+        </div>
       </div>
       <div class="modal-footer">
         <button class="btnpopup">
@@ -31,6 +69,7 @@
         <button class="btnpopup">
           <%= link_to 'Retour aux missions', projects_path %>
         </button>
+
       </div>
     </div>
   </div>
