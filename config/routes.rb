@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   root to: 'projects#home'
-  devise_for :users
-
+  devise_for :users, controllers: { registrations: "registrations" }
 
   resources :users, only: [:show, :edit]
-  resources :charities, only:[:index, :show, :new, :create]do
-
+  resources :charities, only:[:index, :show, :new, :create] do
     resources :projects, only: [:create, :new]
   end
   get '/rollwithit', to: 'charities#roulette'
