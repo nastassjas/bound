@@ -1,6 +1,6 @@
 <div
   style="margin: 20px"
-  class="container-cards-2">
+  class="container-cards-2 large">
   <% if projects.empty? %>
     <div id="no-mission-found">
       <p>Aucune mission ne correspond à ta recherche.</p>
@@ -36,6 +36,7 @@
 <% else %>
   <div
     id="map"
+    class= "hidemap"
     style="
       height: 600px;
       position: sticky;
