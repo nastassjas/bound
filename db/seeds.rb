@@ -131,16 +131,6 @@
     )
   preparation_repas.save!
 
-  transport_de_nourriture = Mission.new(
-    title: "Transport de nourriture",
-    start_time: Date.parse("2019-07-17"),
-    end_time: Date.parse("2019-07-18"),
-    volunteers_count: 5,
-    charity: hop_hop_food,
-    project: garde_manger_solidaire
-    )
-  transport_de_nourriture.save!
-
   #CHARITY 2
   agence_innovation_solidaire =  Charity.new(
     name: "Agence d'innovation solidaire",
@@ -220,6 +210,15 @@
     )
   distribution_journey.save!
 
+  transport = Mission.new(
+    title: "Transport de nourriture",
+    start_time: Date.parse("2019-07-17"),
+    end_time: Date.parse("2019-07-18"),
+    volunteers_count: 5,
+    charity: secours_populaire_31,
+    project: distribution_flyers_chatbot
+    )
+  transport.save!
 
   #CHARITY 4
   la_reserve_des_arts =  Charity.new(
