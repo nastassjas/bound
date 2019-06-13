@@ -7,16 +7,16 @@
   </div> -->
 
     <div class="main-container">
-      <div class="header">
-        <center><h1> Tourne la roue pour trouver une mission ! </h1></center>
+      <div class="header1">
+       <br> <center><h1>ROLL WITH IT 😎</h1></center>
       </div>
 
         <div class="shake-slow">
-        <img src="http://clipartmag.com/images/volunteer-clipart-black-and-white-6.jpg" width="30%"alt="">
+        <img src="http://clipartmag.com/images/volunteer-clipart-black-and-white-6.jpg" width="25%"alt="">
         </div>
 
         <div class="mega">
-        <img src="https://res.cloudinary.com/wayne75/image/upload/v1560356882/megaphone_dqhwpk.png" width="90%"alt="">
+        <img src="https://res.cloudinary.com/wayne75/image/upload/v1560413610/megaphone_1_jvnbih.png" width="70%"alt="">
         </div>
 
       <div class="bull-bar-container">
@@ -36,7 +36,30 @@
     <br>
     <br>
     </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="d-none" data-toggle="modal" data-target="#exampleModal">
+      Launch demo modal
+    </button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <a class="link" href="">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content1">
+          <div class="modal-body1">
+            ...
+          </div>
+        </div>
+        <div class="modal-footer1" height="50px">
+          VOIR LA MISSION
+        </div>
+      </div>
+    </a>
+           <center> <button type="button" class="btn btn-secondary" data-dismiss="modal"></button> </center>
+           <div class="boutonfermer">
+             <center> <button type="button" class="btn btn-default" style="background-color:white; font-size: 10px;" data-dismiss="modal">FERMER</button></center>
+             </div>
+    </div>
     <!-- SPIN SCRIPT -->
     <script>
       // random degree function (n = number of spins)
@@ -68,11 +91,16 @@
       });
 
       // ADD EVENTLISTENERS FOR "transitioned" event! (loop over all types of transitioned)
+
+
+      const modal = document.querySelector(".modal-body1");
+
       "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd".split(" ").forEach((event) => {
         spinner.addEventListener(event, () => { // webkitTransitionEnd oTransitionEnd MSTransitionEnd"
-          bullbar.innerHTML = `${bullName()}`;
-          bullbar.setAttribute("style", "border: 0px solid ; transition: ease 0.25s;");
+          modal.innerHTML = `${bullName()}`;
+          modal.setAttribute("style", "border: 0px solid ; transition: ease 0.25s;");
           button.innerHTML = "";
+        document.querySelector('button[data-target="#exampleModal"]').click()
         });
       })
 
@@ -121,8 +149,9 @@
         // const charities = document.getElementById("btn-spinner").dataset.charity
         // console.log(charities);
         const result = JSON.parse(document.getElementById("btn-spinner").dataset.project)[Math.floor(Math.random() * 9) + 1  ];
-        const name = result.name
+        const name = result.name.toUpperCase()
         const url = result.url
+        document.querySelector('.link').href = url
         return `<a href=${url}>${name}</a>`;
       };
 

@@ -1,4 +1,43 @@
 /*-------- BULLBAR --------*/
+
+.modal-body1{
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  background-color: white;
+  padding: 5%;
+  a{
+    font-weight: bold;
+    font-family: "Staatliches", sans-serif;
+  }
+}
+
+.header1{
+h1{
+  font-size:80px;
+}
+}
+.boutonfermer{
+  font-size: 20px;
+margin-top: -40px;
+}
+
+.modal-content1 {
+  margin-top: 30%;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+}
+
+.modal-footer1 {
+  display: flex;
+  justify-content: center;
+  background-color: #FFD35C;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+}
+
 .bull-bar-container {
   height: 15%;              /* adjust percentage */
   /*border: 5px solid blue;*/
@@ -9,11 +48,11 @@
 
 #bull-bar {
   z-index: 15;
-  background-color: #ffd35c;
+  background-color: transparent;
   border-radius: 30px;
   padding: 8px;
   font-family: Staatliches;
-  font-size: 26px;
+  font-size: 46px;
   text-align: center;
   width: 50%;               /* adjust textfield length */
   max-width: 400px;
@@ -27,7 +66,7 @@
   justify-content: center;
   align-items: center;
   a{
-    color:white;
+    color:black;
   }
 }
 #bull-bar > p {
@@ -38,8 +77,8 @@
 
 .mega {
   position: absolute;
-  margin-top: 400px;
-  margin-left: 120px;
+  margin-top: 280px;
+  margin-left: 1020px;
 }
 .shake-slow {
   position: absolute;
@@ -47,17 +86,13 @@
   margin-top: 20px;
   margin-left: 90px;
   display: inherit;
-  transform-origin: center center; }
+  transform-origin: center center;
+  animation-name: shake-slow;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+ }
 
-.shake-freeze,
-.shake-constant.shake-constant--hover:hover,
-.shake-trigger:hover .shake-constant.shake-constant--hover {
-  animation-play-state: paused; }
-
-.shake-freeze:hover,
-.shake-trigger:hover .shake-freeze, .shake-slow:hover,
-.shake-trigger:hover .shake-slow {
-  animation-play-state: running; }
 
 @keyframes shake-slow {
   2% {
@@ -161,12 +196,6 @@
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
 
-.shake-slow:hover,
-.shake-trigger:hover .shake-slow, .shake-slow.shake-freeze, .shake-slow.shake-constant {
-  animation-name: shake-slow;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; }
 
 /*-------- HEADER ---------*/
 .header {
@@ -192,7 +221,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 400px;
   overflow: hidden;
+  margin: 0 auto;
+  margin-top: -80px;
 }
 #spinner-img {
   width: 100%;
