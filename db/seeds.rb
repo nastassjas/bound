@@ -438,7 +438,7 @@
   animation_tricot.save
 
 #CHARITY 10
-  vivre_enesemble =  Charity.new(
+  vivre_ensemble =  Charity.new(
     name: "Kif kif vivre ensemble",
     description: "Les Ateliers Pluriculturels organisent des animations culturelles en adéquation avec ses projets, visant à promouvoir ses actions, avec le soutien actuel de l'officiel. L'association travaille en lien avec un réseau associatif ayant pour but de découvrir la diversité des cultures et de la solidarité",
     phone_number: "02 38 49 15 27",
@@ -447,14 +447,14 @@
     status: "approved",
     registration_nb: "?"
     )
-  vivre_enesemble.save!
+  vivre_ensemble.save!
 
 #PROJECT 10
-    fête_de_quartier = Project.new(
+  fête_de_quartier = Project.new(
     name: "Fête de quartier ",
     description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un.e bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
     address: "123 boulevard Voltaire, 75011 Paris",
-    charity: vivre_enesemble,
+    charity: vivre_ensemble,
     category: "Arts & culture"
     )
   fête_de_quartier.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560162325/26686950247_08aacd2cdd_b_gqy73p.jpg"
@@ -466,11 +466,124 @@
     start_time: Date.parse("2019-08-12"),
     end_time: Date.parse("2019-08-13"),
     volunteers_count: 1,
-    charity: vivre_enesemble,
+    charity: vivre_ensemble,
     project: fête_de_quartier
     )
   regisseur_son.save!
 
 
+#CHARITY 12
+  habitat_humanisme =  Charity.new(
+    name: "Habitat et Humanisme IDF",
+    description: "Habitat-Humanisme a vocation à accueillir et accompagner des personnes mal logées et fragiles. En leur offrant un logement décent, dans un quartier équilibré, l’association favorise ainsi leur autonomie et la consolidation de leur situation afin d'avoir accès rapidement à un logement pérenne.",
+    phone_number: "09 63 19 27 15",
+    address: "32 boulevard Auguste Blanqui, 75013 Paris",
+    email: "valerie.phaisavath@hotmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+  habitat_humanisme.save!
+
+#PROJECT 12
+  organisation_sorties = Project.new(
+    name: "Culture & loisirs - organisateur.trice de sorties - 13e",
+    description: "Le groupe local Paris 13e/14e de Habitat et Humanisme recherche un.e bénévole pour l'aider à imaginer et organiser quelques sorties simples et sympas avec les familles et les enfants relogés par notre association dans le quartier.",
+    address: "À effectuer sur le lieu de son choix.",
+    charity: habitat_humanisme,
+    category: "Arts & culture"
+  )
+  organisation_sorties.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560414966/af682916e2_btqshc.jpg"
+  organisation_sorties.save!
+
+#MISSIONS of PROJECT 12
+  organisateur_sorties = Mission.new(
+    title: "Organisateur.trice de sorties - 13e",
+    start_time: Date.parse("2019-12-12"),
+    end_time: Date.parse("2019-12-20"),
+    volunteers_count: 1,
+    charity: habitat_humanisme,
+    project: organisation_sorties
+    )
+  organisateur_sorties.save!
+
+#CHARITY 13
+  black_and_white_production =  Charity.new(
+    name: "Black and White production",
+    description: "Black and White production a pour but de favoriser la diversité musicale grâce à l’organisation de concerts, sous forme de plateaux d’artistes, mélangeant différents styles musicaux. A la fois dénicheurs de talents et producteurs de concerts, nous œuvrons à travers des salles et pubs pour révéler les artistes émergents des futurs scènes parisiennes.",
+    phone_number: "01 43 33 20 12",
+    address: "8 Rue Oberkampf, 75011 Paris",
+    email: "yohangregoire@gmail.com",
+    status: "approved",
+    registration_nb: "?"
+    )
+  black_and_white_production.save!
+
+#PROJECT 13
+  evenementiel_paris = Project.new(
+    name: "Evénementiel à Paris",
+    description: "Dans le cadre de son développement, Black and White production recherche des bénévoles pour compléter son équipe. Plusieurs postes sont à pourvoir: -Photographe -Caméraman -direction artistique -Booking -Développement externe Black and White production est une association culturelle, organisatrice de concerts à Paris. Nous proposons diverses formations et permettons à chacun de développer de nouvelles compétences.",
+    address: "8 Rue Oberkampf, 75011 Paris",
+    charity: black_and_white_production,
+    category: "Arts & culture"
+    )
+  evenementiel_paris.remote_photo_url = "https://res.cloudinary.com/dqi7etmsi/image/upload/v1560416166/camera-dslr-camera-equipment-1615824_acwjcj.jpg"
+  evenementiel_paris.save!
+
+#MISSIONS of PROJECT 13
+  photographe1 = Mission.new(
+    title: "Photographe événementiel",
+    start_time: Date.parse("2019-06-21"),
+    end_time: Date.parse("2019-07-30"),
+    volunteers_count: 10,
+    charity: black_and_white_production,
+    project: evenementiel_paris
+    )
+  photographe1.save!
+
+#CHARITY 14
+
+la_sauge_la_prairie_du_canal =  Charity.new(
+    name: "La Sauge - La Prairie du Canal",
+    description: "La SAUGE (Société d’Agriculture Urbaine Généreuse et Engagée) a pour objectif de favoriser la pratique d’une activité agricole pour le plus grand nombre. Elle crée des potagers urbains et organise des évènements fédérateurs et communicatifs sur l’Agriculture Urbaine.",
+    phone_number: "02 38 49 15 27",
+    address: "3 rue Dampierre, 75019 Paris",
+    email: "contact@lasauge.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+la_sauge_la_prairie_du_canal.save!
+
+#PROJECT 14
+  bricolage = Project.new(
+    name: "Bricolage à La Prairie du Canal",
+    description: "Scier, poncer, fabriquer des structures en bois. Amenager, ranger l'espace de vie. Découvrir une équipe et un projet innovant, en apprendre plus sur l'agriculture urbaine !",
+    address: "55 rue de Paris, 93000 Bobigny",
+    charity: la_sauge_la_prairie_du_canal,
+    category: "Arts & culture"
+    )
+  bricolage.remote_photo_url = "https://alternatiba.eu/toulouse/wp-content/uploads/sites/13/2019/03/rafistolerie-photo.jpg"
+  bricolage.save!
+
+#MISSIONS of PROJECT 14
+  bricolage1 = Mission.new(
+    title: "Bricolage à La Prairie du Canal",
+    start_time: Date.parse("2019-06-20"),
+    end_time: Date.parse("2019-06-20"),
+    volunteers_count: 3,
+    charity: la_sauge_la_prairie_du_canal,
+    project: bricolage
+    )
+  bricolage1.save!
+
+#MISSIONS of PROJECT 14
+  bricolage2 = Mission.new(
+    title: "Bricolage à La Prairie du Canal",
+    start_time: Date.parse("2019-06-27"),
+    end_time: Date.parse("2019-06-27"),
+    volunteers_count: 3,
+    charity: la_sauge_la_prairie_du_canal,
+    project: bricolage
+    )
+  bricolage2.save!
 
   puts "Seeded 🦇"
