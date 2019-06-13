@@ -2,7 +2,12 @@
   style="margin: 20px"
   class="container-cards-2">
   <% if projects.empty? %>
-    <div><p id="no-mission-found">Aucune mission ne correspond à ta recherche.</p></div>
+    <div id="no-mission-found">
+      <p>Aucune mission ne correspond à ta recherche.</p>
+      <%= link_to rollwithit_path do %>
+        <p><strong>No worries, tente notre roue de la chance!</strong></p>
+      <% end %>
+    </div>
   <% end %>
   <% projects.each do |project| %>
   <div class="card" data-aos="fade-up" style="position: relative;">
