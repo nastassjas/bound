@@ -10,8 +10,8 @@
     first_name: "Van",
     last_name: "Wayne",
     username: "VanWayne",
-    password: "111111",
-    email: "userTestO@gmail.com",
+    password: "123456",
+    email: "van@wayne.com",
     description: "William John Paul Gallagher, dit Liam Gallagher est un chanteur et musicien anglais d'origine irlandaise, ne le 21 septembre 1972 dans la banlieue de Manchester (Angleterre). Il fut le chanteur principal du groupe de rock Oasis, desormais separe. Figure de proue du mouvement Britpop dans les annees 1990, Liam Gallagher est connu pour son style de chant particulier, ainsi que pour son attitude erratique, parfois provocatrice. Il demeure une figure reconnue de la musique moderne britannique.",
     mobile_phone: "06.66.66.66.66",
     birth_year: 1987,
@@ -178,7 +178,7 @@
 
   #CHARITY 3
   secours_populaire_31 =  Charity.new(
-    name: "Secours Populaire 31",
+    name: "Secours Populaire",
     description: "Ne en 1945, le Secours populaire est une association à but non lucratif, reconnue d’utilite publique et declaree Grande cause nationale. Celle-ci est habilitee à recevoir des dons, des legs et des donations. L’association s'est donnee pour mission d’agir contre la pauvrete et l'exclusion en France et dans le monde et de promouvoir la solidarite et ses valeurs. Elle rassemble des personnes de toutes opinions, conditions et origines qui souhaitent faire vivre la solidarite.",
     phone_number: "05 61 27 84 84",
     address: "34 Rue Amelot, 75011 Paris",
@@ -237,7 +237,7 @@
 
   #PROJECT 4
   agir_pour_la_prévention_des_déchets = Project.new(
-    name: "Acteurs.trices d’une révolution environnementale",
+    name: "Acteurs.trices environnemental.es",
     description: "Tri, rangement et assortiment des matériaux,présentation et décoration,faire de belles rencontres avec des professionnel.le.s du secteur culturel et bien d'autres choses pour devenir acteur de la Réserve des Arts ",
     address: "Rue Prévost Paradol, 75014 Paris",
     charity: la_reserve_des_arts,
@@ -319,7 +319,7 @@
     description: "Participer à des jeux et des temps de détente pour les plus réticent.e.s à la nage et aider les dauphins débutant.e.s dans leurs premières nages",
     address: "13 Rue du Général Guillaumat, 75015 Paris",
     charity: les_dauphins,
-    category: "Arts & culture"
+    category: "Sport & Loisirs"
     )
   apprentissage_de_la_natation.remote_photo_url = "https://www.luxschool.com/wp-content/uploads/2019/02/Natation-adultes-800-532.jpg"
   apprentissage_de_la_natation.save!
@@ -383,7 +383,7 @@
 
 #PROJECT 8
     animation_pour_les_enfants = Project.new(
-    name: "Ateliers de découverte pour les enfants ",
+    name: "Ateliers pour les enfants ",
     description: "Envie de partager vos talents, savoir-faire et centres d’intérêts avec les nouvelles générations ? Alors devenez bénévole à la Maison du Bas-Belleville et proposez des séances de découverte aux primaires et collégien.ne.s inscrit.e.s à l’accompagnement à la scolarité (arts plastiques, travaux manuels, jardinage, écriture... ). ",
     address: "110 boulevard de Belleville, 75020 Paris",
     charity: la_maison_belleville,
@@ -451,7 +451,7 @@
 
 #PROJECT 10
   fête_de_quartier = Project.new(
-    name: "Fête de quartier ",
+    name: "Régisseur son ",
     description: "Pour une grande fête de quartier annuelle, notre collectif d'associations recherche un.e bénévole de choc. Sa mission : fournir un son de qualité aux artistes et au public !",
     address: "123 boulevard Voltaire, 75011 Paris",
     charity: vivre_ensemble,
@@ -471,6 +471,39 @@
     )
   regisseur_son.save!
 
+#CHARITY 11
+  jardin_ensemble =  Charity.new(
+    name: "Veni Verdi",
+    description: "L'association Veni Verdi a pour objectif de créer des jardins en milieu urbain, notamment au sein des écoles, pour agir sur notre environnement, notre société et notre économie. Elle souhaite produire une alimentation saine, accessible au plus grand nombre.",
+    phone_number: "02 44 88 15 07",
+    address: "24 Rue le vau, 75020 Paris",
+    email: "contact@veniverdi.fr",
+    status: "approved",
+    registration_nb: "?"
+    )
+  jardin_ensemble.save!
+
+#PROJECT 11
+    jardinez = Project.new(
+    name: "Jardinez à la ferme urbaine",
+    description: "Présente dans de nombreuses écoles et sur plusieurs toits, l'association s'est installée depuis octobre 2014 dans l'enceinte du Collège Pierre Mendès France. Avec les 4800m2 en pleine terre qui lui ont été confiées, l'association a besoin de soutien pour développer ce beau projet. C'est là que vous intervenez, avec, quand ils sont présents, des collégiens qui souhaitent embellir leur collège et apprendre à jardiner !",
+    address: "24 Rue le vau, 75020 Paris",
+    charity: jardin_ensemble,
+    category: "Environnement"
+    )
+  jardinez.remote_photo_url = "https://www.rustica.fr/assets/media/image/upload/images/Puzzle%20BEAUtanique%2005.jpg"
+  jardinez.save!
+
+#MISSIONS of PROJECT 11
+    mission_jardin = Mission.new(
+    title: "réalisation de ce projet d'agriculture",
+    start_time: Date.parse("2019-06-28"),
+    end_time: Date.parse("2019-06-28"),
+    volunteers_count: 5,
+    charity: jardin_ensemble,
+    project: jardinez
+    )
+  mission_jardin.save!
 
 #CHARITY 12
   habitat_humanisme =  Charity.new(
@@ -585,5 +618,6 @@ la_sauge_la_prairie_du_canal.save!
     project: bricolage
     )
   bricolage2.save!
+
 
   puts "Seeded 🦇"
