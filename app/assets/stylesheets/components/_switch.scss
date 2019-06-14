@@ -1,23 +1,22 @@
-.hidemap {
-  width: 0% !important;
-  transition: 1s ease;
-}
-
-.large {
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  transition: 1s ease;
-}
+// .hidemap {
+//   width: 0% !important;
+//   transition: 1s ease;
+// }
 
 #map {
-  width: 40%;
-}
-
-.showmap {
-  width: 40%;
-  transition: 1s ease;
-}
-
-.container-cards-2 {
   flex-grow: 1;
+  width: 0%;
+  height: 600px;
+  position: sticky;
+  top: 0;
+  margin-top: 20px;
 }
+
+// .showmap {
+//   width: 40%;
+//   transition: 1s ease;
+// }
+
+// .container-cards-2 {
+//   flex-grow: 1;
+// }

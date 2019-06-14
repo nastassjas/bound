@@ -1,4 +1,4 @@
-<div style="padding: 20px" class="container-search-bar">
+<div class="container-search-bar">
   <div class="row" style="width: 100%;">
     <div class="col-lg-8 col-m-6">
       <%= form_tag(projects_path, method: "get", remote: true, class: 'address-form') do %>
@@ -34,6 +34,6 @@
   </div>
 </div>
 
-<div style="display: flex;" id="main-container">
+<div id="main-container">
   <%= render "cards_index", projects: @projects, markers: @markers %>
 </div>
