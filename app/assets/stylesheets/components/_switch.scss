@@ -4,8 +4,8 @@
 // }
 
 #map {
-  flex-grow: 1;
-  width: 0%;
+  display: none;
+  flex: 1 0 40%;
   height: 600px;
   position: sticky;
   top: 0;
