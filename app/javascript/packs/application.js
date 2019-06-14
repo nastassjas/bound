@@ -7,7 +7,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { initMapbox } from '../plugins/init_mapbox';
 
-initMapbox();
+// initMapbox();
 
 window.MyLib = {} // Security warning
 MyLib.mapbox = initMapbox

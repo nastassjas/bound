@@ -1,3 +1,5 @@
+import { initMapbox } from '../plugins/init_mapbox';
+
 const toggleMap = () => {
   // const mapOn = document.querySelector(".map-on");
   // const mapOff = document.querySelector(".map-off");
@@ -11,22 +13,19 @@ const toggleMap = () => {
 
 
   const hideMap = () => {
-    mapContainer.classList.add('hidemap');
-    mapContainer.classList.remove('showmap');
-
+    mapContainer.style.width = '0%';
     cardsGrid.classList.add('large');
   }
 
   const showMap = () => {
-    mapContainer.classList.remove('hidemap');
-    mapContainer.classList.add('showmap');
-
+    mapContainer.style.width = '40%';
     cardsGrid.classList.remove('large');
+    initMapbox();
   }
 
-  if (!switchButton.checked) {
-    hideMap();
-  }
+  // if (!switchButton.checked) {
+  //   hideMap();
+  // }
 
   switchButton.addEventListener('change', (e) => {
     if (switchButton.checked) {
