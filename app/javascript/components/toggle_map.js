@@ -23,9 +23,11 @@ const toggleMap = () => {
     initMapbox();
   }
 
-  // if (!switchButton.checked) {
-  //   hideMap();
-  // }
+  if (!switchButton.checked) {
+    hideMap();
+  } else {
+    showMap();
+  }
 
   switchButton.addEventListener('change', (e) => {
     if (switchButton.checked) {
