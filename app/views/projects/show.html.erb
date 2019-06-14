@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@project.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @project.description %>
+<% content_for :meta_image, @project.photo_url %>
+
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560255826/adult-african-afro-1083619_ngo8gi.jpg);">
 
   <div class="container-retour" data-aos="fade-up">
@@ -139,7 +143,3 @@
   </div>
 
 </div>
-
-<% content_for :meta_title, "HEY ! Rejoins moi sur cette super mission #{@project.name}" %>
-<% content_for :meta_description, @project.description %>
-<% content_for :meta_image, cl_image_path(@project.photo) %>
