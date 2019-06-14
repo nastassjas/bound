@@ -10,32 +10,26 @@
     <% end %>
   </div>
 
-  <div class="container">
-
-
-
-
-
-    <div class="row mission-card">
-      <div class="col-lg-3 no-gutter card-left">
-        <div class="card-mission-project card-one">
-          <strong><%= @project.category%></strong></p>
-          <h3><%= @project.name%></h3>
-          <p>Association: <strong><%= @project.charity.name%></strong></p>
-          <p><i class="fas fa-map-marker-alt"></i> <%= @project.address%></p>
-          <div
-            id="map"
-            style="width: 200px;
-            height: 100px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
+  <div id="show-project" class="container onebox">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card" id="mission-booking">
+        <p class="green"><strong><%= @project.category%></strong></p>
+        <h3><%= @project.name%></h3>
+        <p>Association: <strong><%= @project.charity.name%></strong></p>
+        <p><i class="fas fa-map-marker-alt"></i> <%= @project.address%></p>
+        <div
+          id="map"
+          style="width: 200px;
+          height: 100px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
         </div>
       </div>
 
-
-      <div class="col-lg-5 no-gutter">
-        <div class="card-mission-project card-two">
+      <div class="col-lg-5">
+        <div class="card" id="mission-description">
           <div
             style="
               background-image: url(<%= @project.photo %>);
@@ -52,88 +46,81 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-4 no-gutter">
-        <div class="card-mission-project card-three">
+      <div class="col-lg-4">
+          <div class="card" id="mission-booking-btn">
+
           <h4>Dates</h4>
           <% @project.missions.each do |mission| %>
             <div class ="pick-date">
               <div class="date-display">
-                <i class="fas fa-calendar-week"></i>  <strong><%= mission.start_time.strftime("%d/%m/%Y") %></strong> au: <strong><%= mission.end_time.strftime("%d/%m/%Y") %></strong>
+                <i class="fas fa-calendar-week"></i>  <strong><%= mission.start_time.strftime("%d/%m/%Y") %></strong> au <strong><%= mission.end_time.strftime("%d/%m/%Y") %></strong>
                 <p id="volunteers-count-mission_<%= mission.id %>" style="text-align: center;">
                   <strong><%= render 'bookings/volunteers_count', mission: mission %></strong>
                 </p>
               </div>
-            </div>
 
-            <div id="booking-mission_<%= mission.id %>">
-              <% if mission.volunteers_count - mission.bookings.count > 0 %>
-                <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
+              <div id="booking-mission_<%= mission.id %>">
+                <% if mission.volunteers_count - mission.bookings.count > 0 %>
+                  <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
                     <%= render 'bookings/confirmation' %>
-                <% else %>
-                  <% if user_signed_in? %>
-                    <div class = "button-display">
-                      <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
-                          <span id="add-booking">Participer</span>
-                          <svg width="13px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                          </svg>
-                      <% end %>
-                    </div>
                   <% else %>
-
-                      <%= link_to new_user_session_path, class: "cta add-booking" do %>
-                          <span id="add-booking">Participer</span>
-                          <svg width="13px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                          </svg>
-                      <% end %>
-
+                    <% if user_signed_in? %>
+                      <div class = "button-display">
+                        <%= link_to mission_bookings_path(mission), class: "cta add-booking", method: :post, remote: true do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                      </div>
+                    <% else %>
+                      <div class = "button-display">
+                        <%= link_to new_user_session_path, class: "cta add-booking" do %>
+                            <span id="add-booking">Participer</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        <% end %>
+                    <% end %>
                   <% end %>
-                <% end %>
-              <% else %>
-                <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
+                <% else %>
+                  <% if user_signed_in? && mission.bookings.where(user_id: current_user&.id).any? %>
                   <%= render 'bookings/confirmation' %>
                 <% else %>
                   <p style="color:rgb(60, 72, 89)"><strong>Aucune place disponible</strong></p>
                 <% end %>
+                <% end %>
+              </div>
+              <% if current_user %>
+                <%= render 'bookings/popup', mission: mission %>
               <% end %>
-            <%# end %>
-
-
-
+            </div>
           <% end %>
         </div>
       </div>
     </div>
   </div>
+<div style="height: 50px;"></div>
 </div>
-
-
-
-  <div style="height: 50px;"></div>
-</div>
-
-
-    <div class="container-fluid no-gutter">
-      <div class ="collapse color-custom" id="collapseAsso">
-        <div class="row">
-          <div class="container">
-            <div class="card-custom">
-              <div class="col-lg-3">
-                <h3>Plus d'infos</h3>
-              </div>
-              <div class="col-lg-4" id="mission-new">
-                <p><strong><%= @project.charity.name%></strong></p>
-                <p><%= @project.charity.description%></p>
-                <div class="col-lg-5" id="mission-new"></div>
-              </div>
-            </div>
-          </div>
+<div class ="collapse color-custom" id="collapseAsso">
+  <div class="container">
+    <div class="row">
+      <div class="card-custom">
+        <div class="col-lg-3">
+          <h3>Plus d'infos</h3>
+        </div>
+        <div class="col-lg-4" id="mission-new">
+          <p><strong><%= @project.charity.name%></strong></p>
+          <p><%= @project.charity.description%></p>
+        <div class="col-lg-5" id="mission-new">
+        </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 
 
