@@ -146,7 +146,7 @@
         // return capitalize(nouns[seedNoun]);
         // const charities = document.getElementById("btn-spinner").dataset.charity
         // console.log(charities);
-        const result = JSON.parse(document.getElementById("btn-spinner").dataset.project)[Math.floor(Math.random() * 9) + 1  ];
+        const result = JSON.parse(document.getElementById("btn-spinner").dataset.project);
         const name = result.name.toUpperCase()
         const url = result.url
         document.querySelector('.link').href = url

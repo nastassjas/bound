@@ -11,14 +11,15 @@ class CharitiesController < ApplicationController
   end
 
   def roulette
-    @projects = Project.all.map do |project|
-      if Rails.env.development?
-        url = project_path(project)
-      else
-        url = "https://www.wearebound.fr#{project_path(project)}"
-      end
-      { name: project.name, url: url }
-    end
+    # @projects = Project.all.map do |project|
+    #   if Rails.env.development?
+    #     url = project_path(project)
+    #   else
+    #     url = "https://www.wearebound.fr#{project_path(project)}"
+    #   end
+    # { name: project.name, url: url }
+    # end
+    @projects = { name: "Ateliers pour les enfants", url: 'https://www.wearebound.fr/projects/209' }
   end
 
   def new
