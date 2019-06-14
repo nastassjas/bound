@@ -19,7 +19,7 @@ class CharitiesController < ApplicationController
     #   end
     # { name: project.name, url: url }
     # end
-    @projects = { name: "Ateliers pour les enfants", url: 'https://www.wearebound.fr/projects/209' }
+    @projects = { name: "Ateliers pour les enfants", url: 'https://www.wearebound.fr/projects/224' }
   end
 
   def new
