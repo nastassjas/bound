@@ -13,21 +13,21 @@ const toggleMap = () => {
 
 
   const hideMap = () => {
-    mapContainer.style.width = '0%';
+    mapContainer.style.display = 'none';
     cardsGrid.classList.add('large');
   }
 
   const showMap = () => {
-    mapContainer.style.width = '40%';
+    mapContainer.style.display = 'block';
     cardsGrid.classList.remove('large');
     initMapbox();
   }
 
-  if (!switchButton.checked) {
-    hideMap();
-  } else {
-    showMap();
-  }
+  // if (!switchButton.checked) {
+  //   hideMap();
+  // } else {
+  //   showMap();
+  // }
 
   switchButton.addEventListener('change', (e) => {
     if (switchButton.checked) {

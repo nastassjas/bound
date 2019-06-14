@@ -5,15 +5,13 @@ initAutocomplete();
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { initMapbox } from '../plugins/init_mapbox';
+// import { initMapbox } from '../plugins/init_mapbox';
 
 // initMapbox();
 
 window.MyLib = {} // Security warning
-MyLib.mapbox = initMapbox
 
 import { categorySkill } from '../plugins/category_skill';
-
 
 import { paraxify } from '../plugins/paraxify';
 
@@ -23,6 +21,10 @@ import { addressSubmit, categorySubmit } from '../components/search';
 import "../plugins/flatpickr";
 
 import { toggleMap } from "../components/toggle_map";
+if (document.querySelector(".switch")) {
+  toggleMap();
+  MyLib.toggleMap = toggleMap
+}
 
 
 import { loadDynamicBannerText } from '../components/banner';
@@ -50,9 +52,5 @@ if (bannerCustom) {
 addressSubmit();
 categorySubmit();
 
-if (document.querySelector(".switch")) {
-  toggleMap();
-  MyLib.toggle = toggleMap
-}
 
 

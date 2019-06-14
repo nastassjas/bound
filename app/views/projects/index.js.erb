@@ -2,7 +2,9 @@ function refreshCards(){
   const containerCards = document.getElementById("main-container");
   containerCards.innerHTML = '<%= j render "projects/cards_index", projects: @projects, markers: @markers %>';
 }
-
+function renderSwitch() {
+  document.querySelector('.switch').innerHTML = '<%= j render "projects/map_switch" %>';
+}
+renderSwitch();
 refreshCards();
-MyLib.mapbox();
-MyLib.toggle();
+MyLib.toggleMap();

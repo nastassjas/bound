@@ -1,0 +1,27 @@
+<% if projects.empty? %>
+  <div id="no-mission-found">
+    <p>Aucune mission ne correspond à ta recherche.</p>
+    <%= link_to rollwithit_path do %>
+      <p><strong>No worries, tente notre roue de la chance!</strong></p>
+    <% end %>
+  </div>
+<% end %>
+<% projects.each do |project| %>
+<div class="card" data-aos="fade-up" style="position: relative;">
+  <%= link_to project_path(project) do%>
+    <div class="card-img-project" style="background-image: url(<%= project.photo %>)">
+    </div>
+    <div class="card-body">
+      <h3 class="project-name"><strong><%= project.name %></strong></h3>
+      <h5 class="charity-name"><%= project.charity.name %></h5>
+      <p class="card-text"><i class="fas fa-map-marker-alt"></i><%= project.address %></p>
+      <% if params[:address].present? && !params[:address].empty? %>
+        <p>A : <%= project.distance.round(1) %> km de vous</p>
+      <% end %>
+      <div style="position: absolute; bottom: 10px">
+
+      </div>
+    </div>
+  <%end%>
+  </div>
+<%end%>
