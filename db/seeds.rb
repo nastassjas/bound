@@ -74,13 +74,12 @@
   #SKILLS
 
     skill_legal = Skill.create!(name: "Juridique")
-    skill_it = Skill.create!(name: "Developpement Informatique")
+    skill_it = Skill.create!(name: "Web")
     skill_cooking = Skill.create!(name: "Cuisine")
     skill_medical = Skill.create!(name: "Medical")
     skill_psycho = Skill.create!(name: "Psychologie")
     skill_english = Skill.create!(name: "Anglophone")
     skill_photographer = Skill.create!(name: "Photographie")
-    skill_spanish = Skill.create!(name: "Bilingue Espagnol")
     skill_builder = Skill.create!(name: "Maçonnerie")
     skill_teaching = Skill.create!(name: "Professeur.e")
 
