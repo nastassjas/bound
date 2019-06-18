@@ -9,7 +9,7 @@
 .login-img-2 {
   background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 50%), url(https://res.cloudinary.com/dqi7etmsi/image/upload/v1560334382/black-and-white-elderly-grayscale-1266005_hu0ysp.jpg);
   background-size: cover !important;
-  height: 230vh;
+  height: 160vh;
 }
 
 // main-container
@@ -126,6 +126,12 @@
   color: white;
   opacity: 1;
   }
+}
+
+.custom-sign {
+  margin-left: 0px;
+  margin-right: 0px;
+  justify-content: space-between;
 }
 
 input[type=checkbox].hidden{

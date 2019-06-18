@@ -128,10 +128,44 @@ input:checked + .slider:before {
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
+  .container-search-bar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: stretch;
+  }
+
   #toggle-button-group {
     display: none;
   }
 
+  #date-mobile {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  #category-mobile {
+    justify-content: center;
+  }
+
+  #collapse-asso {
+    width: 100%;
+  }
+  #mission-description {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  #asso-section{
+    justify-content: center;
+    margin: 0px auto;
+  }
+
+  #bottom-home-right {
+    text-align: left;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -139,12 +173,18 @@ input:checked + .slider:before {
   #toggle-button-group {
     display: none;
   }
+  #search-date-category {
+    margin-left: 30px;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   #toggle-button-group {
     display: inline-flex;
+  }
+  #search-date-category {
+    margin-left: 0px;
   }
 
 }
@@ -154,12 +194,18 @@ input:checked + .slider:before {
   #toggle-button-group {
     display: inline-flex;
   }
+  #search-date-category {
+    margin-left: 0px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   #toggle-button-group {
     display: inline-flex;
+  }
+  #search-date-category {
+    margin-left: 0px;
   }
 }
 
